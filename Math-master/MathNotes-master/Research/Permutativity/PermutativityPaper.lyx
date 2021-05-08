@@ -4077,6 +4077,82 @@ end{rem}
 \end_layout
 
 \begin_layout Subsubsection
+Permutator and hom-associator
+\end_layout
+
+\begin_layout Standard
+The 
+\series bold
+permutator 
+\series default
+is the quadlinear map 
+\begin_inset Formula $[\cdot,\cdot,\cdot,\cdot]_{f,\mu}\colon A^{4}\to A$
+\end_inset
+
+ defined by
+\begin_inset Formula 
+\[
+[a,b,c,d]_{f,\mu}=f(ab)(f(c)f(d))-(f(a)f(b))f(cd)
+\]
+
+\end_inset
+
+for all 
+\begin_inset Formula $a,b,c,d\in A$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $f$
+\end_inset
+
+ and 
+\begin_inset Formula $\mu$
+\end_inset
+
+ are understood from context, then we simplify notation by writing 
+\begin_inset Formula $[\cdot,\cdot,\cdot,\cdot]=[\cdot,\cdot,\cdot,\cdot]_{f,\mu}$
+\end_inset
+
+.
+ The 
+\series bold
+hom-associator 
+\series default
+is the trilinear map 
+\begin_inset Formula $[\cdot,\cdot,\cdot]_{f,\mu}\colon A^{3}\to A$
+\end_inset
+
+ defined by
+\begin_inset Formula 
+\[
+[a,b,c]_{f,\mu}=(ab)f(c)-f(a)(bc)
+\]
+
+\end_inset
+
+for all 
+\begin_inset Formula $a,b,c\in A$
+\end_inset
+
+.
+ The permutator can be expressed in terms of the hom-associator as follows:
+ for all 
+\begin_inset Formula $a,b,c,d\in A$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\[
+[a,b,c,d]=f^{2}(a)[b,c,d]-[ab,f(c),f(d)]+[f(a),bc,f(d)]-[f(a),f(b),cd]+[a,b,c]f^{2}(d).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
 Obtaining a permutative 
 \begin_inset Formula $R$
 \end_inset
@@ -5439,7 +5515,7 @@ We list our summary in the table below
 \paragraph_spacing other 2.8
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="5" columns="3">
+<lyxtabular version="3" rows="6" columns="3">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -5582,7 +5658,7 @@ for each
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5591,11 +5667,47 @@ Hom-Associative + Abelian
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 \begin_inset Formula $0=\sum\limits _{j_{1},k_{1}}(a_{i_{1}}^{j_{1}}c_{i_{2},i_{3}}^{k_{1}}-a_{i_{3}}^{j_{1}}c_{i_{1},i_{2}}^{k_{1}})c_{j_{1},k_{1}}^{k}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+for each 
+\begin_inset Formula $1\leq i_{1},i_{2},i_{3},k\leq n$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Multiplicative
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0=\sum\limits _{k,l}c_{i_{1},i_{2}}^{k}a_{k}^{l}-\sum\limits _{j_{1},j_{2},l}c_{j_{1},j_{2}}^{l}a_{i_{1}}^{j_{1}}a_{i_{2}}^{j_{2}}$
 \end_inset
 
 
@@ -5608,7 +5720,7 @@ Hom-Associative + Abelian
 
 \begin_layout Plain Layout
 for each 
-\begin_inset Formula $1\leq i_{1},i_{2},i_{3},k\leq n$
+\begin_inset Formula $1\leq i_{1},i_{2},l\leq n$
 \end_inset
 
 

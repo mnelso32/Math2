@@ -1,5 +1,5 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -63,6 +63,8 @@ commutative diagrams/.cd,
 \font_osf true
 \font_sf_scale 100 100
 \font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -92,6 +94,7 @@ commutative diagrams/.cd,
 \suppress_date false
 \justification true
 \use_refstyle 1
+\use_minted 0
 \index Index
 \shortcut idx
 \color #008000
@@ -102,7 +105,10 @@ commutative diagrams/.cd,
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation 0bp
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -1358,7 +1364,7 @@ Conversely, suppose
 \begin_inset Formula $\langle fg\rangle\subset I(Z)$
 \end_inset
 
- and after applying 
+, and after applying 
 \begin_inset Formula $V$
 \end_inset
 
@@ -1436,7 +1442,7 @@ label{rem}
 
 \end_inset
 
- The Nullstellensatz was not used in this proof.
+ Note that the Nullstellensatz was not used in this proof.
  
 \begin_inset ERT
 status open
@@ -1917,9 +1923,9 @@ status open
 
 
 \backslash
-begin{lemma1.25}
+begin{lemma}
 \backslash
-label{lemma}
+label{lemma1.25}
 \end_layout
 
 \end_inset

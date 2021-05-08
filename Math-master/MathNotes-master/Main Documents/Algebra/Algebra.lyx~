@@ -12783,7 +12783,7 @@ begin{theorem}
  Then
 \begin_inset Formula 
 \[
-n_{p}\equiv1\mbox{ mod }p\qquad\mbox{and}\qquad n_{p}|m.
+n_{p}\equiv1\,\,\mathrm{mod}\,p\qquad\mbox{and}\qquad n_{p}\mid m.
 \]
 
 \end_inset
@@ -12818,24 +12818,16 @@ begin{proof}
 \end_inset
 
  We will prove 
-\begin_inset Formula $n_{p}\equiv1$
-\end_inset
-
- mod 
-\begin_inset Formula $p$
+\begin_inset Formula $n_{p}\equiv1\,\,\mathrm{mod}\,p$
 \end_inset
 
  and then 
-\begin_inset Formula $n_{p}|m$
+\begin_inset Formula $n_{p}\mid m$
 \end_inset
 
 .
  To show 
-\begin_inset Formula $n_{p}\equiv1$
-\end_inset
-
- mod 
-\begin_inset Formula $p$
+\begin_inset Formula $n_{p}\equiv1\,\,\mathrm{mod}\,p$
 \end_inset
 
 , consider the action of 
@@ -12843,10 +12835,10 @@ begin{proof}
 \end_inset
 
  on the set 
-\begin_inset Formula $Syl_{p}(G)$
+\begin_inset Formula $\mathrm{Syl}_{p}(G)$
 \end_inset
 
- by conjugation
+ by conjugation:
 \begin_inset Formula 
 \[
 P\cdot Q=PQP^{-1}.
@@ -12855,7 +12847,7 @@ P\cdot Q=PQP^{-1}.
 \end_inset
 
 The size of 
-\begin_inset Formula $Syl_{p}(G)$
+\begin_inset Formula $\mathrm{Syl}_{p}(G)$
 \end_inset
 
  is 
@@ -12874,7 +12866,7 @@ The size of
 -group
 \begin_inset Formula 
 \[
-n_{p}\equiv|\mbox{Fix}_{P}(Syl_{p}(G)|\mbox{ mod }p
+n_{p}\equiv|\mathrm{Fix}_{P}(\mathrm{Syl}_{p}(G))|\,\,\mathrm{mod}\,p
 \]
 
 \end_inset
@@ -12884,11 +12876,11 @@ Fixed points for
 \end_inset
 
  acting by conjugation on 
-\begin_inset Formula $Syl_{p}(G)$
+\begin_inset Formula $\mathrm{Syl}_{p}(G)$
 \end_inset
 
  are 
-\begin_inset Formula $Q\in Syl_{p}(G)$
+\begin_inset Formula $Q\in\mathrm{Syl}_{p}(G)$
 \end_inset
 
  such that 
@@ -12913,13 +12905,13 @@ Fixed points for
 \begin_inset Formula $Q$
 \end_inset
 
-, 
-\begin_inset Formula $P\subset N_{G}(Q)$
+, we have 
+\begin_inset Formula $P\subseteq\mathrm{N}_{G}(Q)$
 \end_inset
 
 .
  Also 
-\begin_inset Formula $Q\subset N_{G}(Q)$
+\begin_inset Formula $Q\subseteq\mathrm{N}_{G}(Q)$
 \end_inset
 
 , so 
@@ -12935,15 +12927,15 @@ Fixed points for
 \end_inset
 
 -Sylow subgroups in 
-\begin_inset Formula $N_{G}(Q)$
+\begin_inset Formula $\mathrm{N}_{G}(Q)$
 \end_inset
 
 .
  Applying Sylow II to the group 
-\begin_inset Formula $N_{G}(Q)$
+\begin_inset Formula $\mathrm{N}_{G}(Q)$
 \end_inset
 
-, 
+, we see that 
 \begin_inset Formula $P$
 \end_inset
 
@@ -12952,16 +12944,20 @@ Fixed points for
 \end_inset
 
  are conjugate in 
-\begin_inset Formula $N_{G}(Q)$
+\begin_inset Formula $\mathrm{N}_{G}(Q)$
 \end_inset
 
 .
  Since 
-\begin_inset Formula $Q\vartriangleleft N_{G}(Q)$
+\begin_inset Formula $Q$
+\end_inset
+
+ is a normal subgroup of 
+\begin_inset Formula $\mathrm{N}_{G}(Q)$
 \end_inset
 
 , the only subgroup of 
-\begin_inset Formula $N_{G}(Q)$
+\begin_inset Formula $\mathrm{N}_{Q}(Q)$
 \end_inset
 
  conjugate to 
@@ -12986,20 +12982,16 @@ Fixed points for
 \end_inset
 
  acts on 
-\begin_inset Formula $Syl_{p}(G)$
+\begin_inset Formula $\mathrm{Syl}_{p}(G)$
 \end_inset
 
 , so 
-\begin_inset Formula $n_{p}\equiv1$
-\end_inset
-
- mod 
-\begin_inset Formula $p$
+\begin_inset Formula $n_{p}\equiv1\,\,\mathrm{mod}\,p$
 \end_inset
 
 .
  To show 
-\begin_inset Formula $n_{p}|m$
+\begin_inset Formula $n_{p}\mid m$
 \end_inset
 
 , consider the action of 
@@ -13007,7 +12999,7 @@ Fixed points for
 \end_inset
 
  by conjugation on 
-\begin_inset Formula $Syl_{p}(G)$
+\begin_inset Formula $\mathrm{Syl}_{p}(G)$
 \end_inset
 
 .
@@ -13018,15 +13010,11 @@ Fixed points for
 -Sylow subgroups are conjugate to each other, there is one orbit.
  A set on which a group acts with one orbit has size dividing the size of
  the group, so 
-\begin_inset Formula $n_{p}||G|.$
+\begin_inset Formula $n_{p}\mid|G|$
 \end_inset
 
  From 
-\begin_inset Formula $n_{p}\equiv1$
-\end_inset
-
- mod 
-\begin_inset Formula $p$
+\begin_inset Formula $n_{p}\equiv1\,\,\mathrm{mod}\,p$
 \end_inset
 
 , the number 
@@ -13038,7 +13026,7 @@ Fixed points for
 \end_inset
 
 , so 
-\begin_inset Formula $n_{p}|m$
+\begin_inset Formula $n_{p}\mid m$
 \end_inset
 
 .
@@ -23423,7 +23411,7 @@ where
 
 \end_inset
 
-implies 
+fimplies 
 \begin_inset Formula $a_{g,i}=0$
 \end_inset
 
@@ -24383,7 +24371,7 @@ end{center}
 
 \begin_layout Standard
 We shall denote such an extension by 
-\begin_inset Formula $(E,\alpha,\beta)$
+\begin_inset Formula $(\alpha,E,\beta)$
 \end_inset
 
 .
@@ -24399,20 +24387,11 @@ We shall denote such an extension by
 \begin_inset Formula $G=E\slash A$
 \end_inset
 
-, then we will denote the extension simply by 
+, then this extension we will simply be denoted by 
 \begin_inset Formula $E$
 \end_inset
 
 .
- In this case 
-\begin_inset Formula $\alpha$
-\end_inset
-
- must be the inclusion map and 
-\begin_inset Formula $\pi$
-\end_inset
-
- must be the quotient map.
  
 \begin_inset ERT
 status open
@@ -24445,11 +24424,11 @@ label{defn}
 \end_inset
 
  Let 
-\begin_inset Formula $(E,\alpha,\beta)$
+\begin_inset Formula $(\alpha,E,\beta)$
 \end_inset
 
  and 
-\begin_inset Formula $(E',\alpha',\beta')$
+\begin_inset Formula $(\alpha',E',\beta')$
 \end_inset
 
  be two extensions of 
@@ -24469,7 +24448,16 @@ label{defn}
 \begin_inset Formula $\varphi\colon E\to E'$
 \end_inset
 
- such that the following diagram is commutative
+ such that 
+\begin_inset Formula $\varphi\alpha=\alpha'$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta'\varphi=\beta$
+\end_inset
+
+.
+ In other words, the following diagram is commutative
 \end_layout
 
 \begin_layout Standard
@@ -24603,7 +24591,7 @@ where
 \end_inset
 
  which are isomorphic to 
-\begin_inset Formula $(E,\alpha,\beta)$
+\begin_inset Formula $(\alpha,E,\beta)$
 \end_inset
 
  is called the 
@@ -24611,11 +24599,11 @@ where
 isomorphism class 
 \series default
 of 
-\begin_inset Formula $(E,\alpha,\beta)$
+\begin_inset Formula $(\alpha,E,\beta)$
 \end_inset
 
  and is denoted by 
-\begin_inset Formula $[E,\alpha,\beta]$
+\begin_inset Formula $[\alpha,E,\beta]$
 \end_inset
 
 .
@@ -24769,7 +24757,7 @@ label{prop}
 \end_inset
 
  Let 
-\begin_inset Formula $(E,\alpha,\beta)$
+\begin_inset Formula $(\alpha,E,\beta)$
 \end_inset
 
  be an extension of 
@@ -24781,7 +24769,11 @@ label{prop}
 \end_inset
 
 .
- Then we have a bijection of isomorphism classes
+ Then the isomorphism class of 
+\begin_inset Formula $(\alpha,E,\beta)$
+\end_inset
+
+ and we have a bijection of isomorphism classes
 \begin_inset Formula 
 \[
 [E,\alpha,\beta]\cong[E]
@@ -25525,7 +25517,7 @@ bijection.
  
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Sections
 \end_layout
 
@@ -25545,7 +25537,7 @@ label{defn}
 \end_inset
 
  Let 
-\begin_inset Formula $(E,\alpha,\beta)$
+\begin_inset Formula $(\alpha,E,\beta)$
 \end_inset
 
  be an extension of 
@@ -25570,7 +25562,7 @@ right
 \end_inset
 
  of 
-\begin_inset Formula $(E,\alpha,\beta)$
+\begin_inset Formula $(\alpha,E,\beta)$
 \end_inset
 
  is a function 
@@ -25579,19 +25571,6 @@ right
 
  such that 
 \begin_inset Formula $\beta\widetilde{\beta}=1_{G}$
-\end_inset
-
-.
- In other words, we have
-\begin_inset Formula 
-\[
-\beta(\widetilde{\beta}(g))=g
-\]
-
-\end_inset
-
-for all 
-\begin_inset Formula $g\in G$
 \end_inset
 
 .
@@ -25612,12 +25591,12 @@ and that it
 splits
 \series default
  
-\begin_inset Formula $(E,\alpha,\beta)$
+\begin_inset Formula $(\alpha,E,\beta)$
 \end_inset
 
  
 \series bold
-to the right
+on the right
 \series default
 .
 \end_layout
@@ -25632,7 +25611,7 @@ left
 \end_inset
 
  of 
-\begin_inset Formula $(E,\alpha,\beta)$
+\begin_inset Formula $(\alpha,E,\beta)$
 \end_inset
 
  is a function 
@@ -25641,19 +25620,6 @@ left
 
  such that 
 \begin_inset Formula $\widetilde{\alpha}\alpha=1_{A}$
-\end_inset
-
-.
- In other words, we have
-\begin_inset Formula 
-\[
-\widetilde{\alpha}(\alpha(a))=a
-\]
-
-\end_inset
-
-for all 
-\begin_inset Formula $a\in A$
 \end_inset
 
 .
@@ -25679,7 +25645,7 @@ splits
 
  
 \series bold
-to the left
+on the left
 \series default
 .
 \end_layout
@@ -25700,10 +25666,6 @@ end{defn}
 
 \end_layout
 
-\begin_layout Subsubsection
-Right Splitting Sections
-\end_layout
-
 \begin_layout Standard
 \begin_inset ERT
 status open
@@ -25720,7 +25682,7 @@ label{prop}
 \end_inset
 
  Let 
-\begin_inset Formula $(E,\alpha,\beta)$
+\begin_inset Formula $(\alpha,E,\beta)$
 \end_inset
 
  be be an extension of 
@@ -25733,7 +25695,7 @@ label{prop}
 
 .
  Then there exists a right splitting section of 
-\begin_inset Formula $(E,\alpha,\beta)$
+\begin_inset Formula $(\alpha,E,\beta)$
 \end_inset
 
  if and only if there exists a homomorphism 
@@ -25741,7 +25703,7 @@ label{prop}
 \end_inset
 
  such that 
-\begin_inset Formula $(E,\alpha,\beta)\cong(A\rtimes_{\rho}G,\iota_{1},\pi_{2})$
+\begin_inset Formula $(\alpha,E,\beta)\cong(\iota_{1},A\rtimes_{\rho}G,\pi_{2})$
 \end_inset
 
 .
@@ -25857,7 +25819,7 @@ for all
 
  is a homomorphism.
  Now define 
-\begin_inset Formula $\varphi\colon(E,\alpha,\beta)\to(A\rtimes G,\iota_{1},\pi_{2})$
+\begin_inset Formula $\varphi\colon(\alpha,E,\beta)\to(\iota_{1},A\rtimes G,\pi_{2})$
 \end_inset
 
  by
@@ -25977,10 +25939,6 @@ end{proof}
 \end_inset
 
 
-\end_layout
-
-\begin_layout Subsubsection
-Left Splitting Sections
 \end_layout
 
 \begin_layout Standard
@@ -26104,7 +26062,7 @@ Conjugation Action of
 
 \begin_layout Standard
 Let 
-\begin_inset Formula $(E,\alpha,\beta)$
+\begin_inset Formula $(\alpha,E,\beta)$
 \end_inset
 
  be a group extension of 
@@ -26116,7 +26074,7 @@ Let
 \end_inset
 
 .
- To simplify notation in what follows, assume that 
+ To simplify notation in what follows, we assume that 
 \begin_inset Formula $A$
 \end_inset
 
@@ -26137,33 +26095,29 @@ Let
 \begin_inset Formula $\mathrm{Z}(A)$
 \end_inset
 
- as follows: for each element 
+ as follows: for each 
 \begin_inset Formula $g\in G$
 \end_inset
 
-, we choose a lift 
+ we choose 
 \begin_inset Formula $e_{g}\in E$
 \end_inset
 
- with respect to 
-\begin_inset Formula $\beta$
-\end_inset
-
- (so 
+ such that 
 \begin_inset Formula $\beta(e_{g})=g$
 \end_inset
 
-).
+.
  Thus the map 
 \begin_inset Formula $g\mapsto e_{g}$
 \end_inset
 
  is a right section of 
-\begin_inset Formula $(E,\alpha,\beta)$
+\begin_inset Formula $(\alpha,E,\beta)$
 \end_inset
 
 .
- Furthermore, an element in 
+ Note that each element in 
 \begin_inset Formula $E$
 \end_inset
 
@@ -26171,56 +26125,29 @@ Let
 \begin_inset Formula $ae_{g}$
 \end_inset
 
- for a unique 
+ where 
 \begin_inset Formula $a\in A$
 \end_inset
 
- and a unique 
+ and 
 \begin_inset Formula $g\in G$
 \end_inset
 
 .
- Thus, if 
-\begin_inset Formula $x,y\in E$
-\end_inset
-
- are expressed as 
-\begin_inset Formula $x=ae_{\beta(x)}$
-\end_inset
-
- and 
-\begin_inset Formula $y=be_{\beta(y)}$
-\end_inset
-
-, then 
-\begin_inset Formula $x=y$
+ Furthermore, we have 
+\begin_inset Formula $ae_{g}=a'e_{g'}$
 \end_inset
 
  if and only if 
-\begin_inset Formula $\beta(x)=\beta(y)$
+\begin_inset Formula $a=a'$
 \end_inset
 
  and 
-\begin_inset Formula $a=b$
+\begin_inset Formula $g=g'$
 \end_inset
 
 .
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-Now, for each 
+ Now, for each 
 \begin_inset Formula $g\in G$
 \end_inset
 
@@ -26249,12 +26176,12 @@ ref{eq:welldefinedconjactiononcent})
 
 \end_inset
 
- is well-defined, but first let us note that 
+ is well-defined, but first let us check that 
 \begin_inset Formula $e_{g}xe_{g}^{-1}\in\mathrm{Z}(A)$
 \end_inset
 
 .
- Indeed, suppose 
+ Let 
 \begin_inset Formula $a\in A$
 \end_inset
 
@@ -99211,6 +99138,20 @@ over
 \end_inset
 
  to being additive.
+ In particular, we have 
+\begin_inset Formula 
+\[
+Q(v+w)=Q(v)+Q(v)+\beta_{Q}(v,w)
+\]
+
+\end_inset
+
+for all 
+\begin_inset Formula $v,w\in V$
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -164622,7 +164563,7 @@ label{theorem}
 \end_inset
 
  be a Noetherian ring, let 
-\begin_inset Formula $I=\langle x_{1},\dots,x_{n}\rangle=\langle\underline{x}\rangle$
+\begin_inset Formula $I=\langle x_{1},\dots,x_{n}\rangle=\langle\boldsymbol{x}\rangle$
 \end_inset
 
  an ideal of 
@@ -164643,7 +164584,7 @@ label{theorem}
 
 .
  Set 
-\begin_inset Formula $\delta=\sup\{i\mid\mathrm{H}_{i}(\underline{x},M)\neq0\}$
+\begin_inset Formula $\delta_{M}=\delta=\sup\{i\mid\mathrm{H}_{i}(\boldsymbol{x},M)\neq0\}$
 \end_inset
 
 .
@@ -164663,7 +164604,7 @@ label{theorem}
  In particular,
 \begin_inset Formula 
 \[
-\mathrm{depth}(I,M)=n-\sup\{i\mid\mathrm{H}_{i}(\underline{x},M)\neq0\}.
+\mathrm{depth}(I,M)=n-\sup\{i\mid\mathrm{H}_{i}(\boldsymbol{x},M)\neq0\}.
 \]
 
 \end_inset
@@ -164735,12 +164676,12 @@ begin{proof}
 \end_inset
 
 , hence 
-\begin_inset Formula $u\in0:_{M}I=\mathrm{H}_{n}(\underline{x},M)$
+\begin_inset Formula $u\in0:_{M}I=\mathrm{H}_{n}(\boldsymbol{x},M)$
 \end_inset
 
 .
  It follows that 
-\begin_inset Formula $\mathrm{H}_{n}(\underline{x},M)\neq0$
+\begin_inset Formula $\mathrm{H}_{n}(\boldsymbol{x},M)\neq0$
 \end_inset
 
 , so 
@@ -164773,7 +164714,7 @@ begin{proof}
 \end_inset
 
 Now suppose that 
-\begin_inset Formula $y_{1},\dots,y_{q}\in I$
+\begin_inset Formula $y_{1},\dots,y_{q}$
 \end_inset
 
  is a maximal 
@@ -164826,7 +164767,7 @@ This short exact sequence of
 -complexes
 \begin_inset Formula 
 \[
-0\to\mathcal{K}(\underline{x},M)\xrightarrow{y_{1}}\mathcal{K}(\underline{x},M)\to\mathcal{K}(\underline{x},M\slash y_{1}M)\to0.
+0\to\mathcal{K}(\boldsymbol{x},M)\xrightarrow{y_{1}}\mathcal{K}(\boldsymbol{x},M)\to\mathcal{K}(\boldsymbol{x},M\slash y_{1}M)\to0.
 \]
 
 \end_inset
@@ -164836,7 +164777,7 @@ Taking the long exact sequence in homology and using the fact that
 \end_inset
 
  kills 
-\begin_inset Formula $\mathrm{H}(\underline{x},M)$
+\begin_inset Formula $\mathrm{H}(\boldsymbol{x},M)$
 \end_inset
 
 , we obtain following short exact sequence of 
@@ -164846,7 +164787,7 @@ Taking the long exact sequence in homology and using the fact that
 -modules
 \begin_inset Formula 
 \begin{equation}
-0\to\mathrm{H}_{i+1}(\underline{x},M)\to\mathrm{H}_{i+1}(\underline{x},M\slash y_{1}M)\to\mathrm{H}_{i}(\underline{x},M)\to0\label{eq:shortexatcfjklsjfklsdmjfk}
+0\to\mathrm{H}_{i}(\boldsymbol{x},M)\to\mathrm{H}_{i}(\boldsymbol{x},M\slash y_{1}M)\to\mathrm{H}_{i-1}(\boldsymbol{x},M)\to0\label{eq:shortexatcfjklsjfklsdmjfk}
 \end{equation}
 
 \end_inset
@@ -164864,7 +164805,15 @@ for all
 \begin_inset Formula $M\slash y_{1}M$
 \end_inset
 
- sequence.
+-sequence in 
+\begin_inset Formula $I$
+\end_inset
+
+ of length 
+\begin_inset Formula $q-1$
+\end_inset
+
+.
  Also note that 
 \begin_inset Formula $I(M\slash y_{1}M)\neq M\slash y_{1}M$
 \end_inset
@@ -164874,8 +164823,8 @@ for all
 \end_inset
 
 .
- Thus we have by induction that 
-\begin_inset Formula $\mathrm{H}_{i+1}(\underline{x},M\slash y_{1}M)=0$
+ Thus by induction, we have 
+\begin_inset Formula $\mathrm{H}_{i}(\boldsymbol{x},M\slash y_{1}M)=0$
 \end_inset
 
  for all 
@@ -164883,7 +164832,7 @@ for all
 \end_inset
 
  and 
-\begin_inset Formula $\mathrm{H}_{n-q+1}(\underline{x},M\slash y_{1}M)\neq0$
+\begin_inset Formula $\mathrm{H}_{n-(q-1)}(\boldsymbol{x},M\slash y_{1}M)\neq0$
 \end_inset
 
 .
@@ -164901,7 +164850,7 @@ ref{eq:shortexatcfjklsjfklsdmjfk})
 \end_inset
 
  gives us 
-\begin_inset Formula $\mathrm{H}_{i}(\underline{x},M)=0$
+\begin_inset Formula $\mathrm{H}_{i}(\boldsymbol{x},M)=0$
 \end_inset
 
  for all 
@@ -164909,7 +164858,7 @@ ref{eq:shortexatcfjklsjfklsdmjfk})
 \end_inset
 
  and 
-\begin_inset Formula $\mathrm{H}_{n-q}(\underline{x},M)\neq0$
+\begin_inset Formula $\mathrm{H}_{n-q}(\boldsymbol{x},M)\neq0$
 \end_inset
 
 .
@@ -164964,17 +164913,17 @@ ref{eq:shortexatcfjklsjfklsdmjfk})
 \end_inset
 
  we obtain 
-\begin_inset Formula $\mathrm{H}_{\delta+1}(\underline{x},M\slash y_{1}M)\cong\mathrm{H}_{\delta}(\underline{x},M)$
+\begin_inset Formula $\mathrm{H}_{\delta+1}(\boldsymbol{x},M\slash y_{1}M)\cong\mathrm{H}_{\delta}(\boldsymbol{x},M)$
 \end_inset
 
 .
- An inductive argument then gives us
+ More generally, an inductive argument gives us
 \begin_inset Formula 
 \begin{align*}
-\mathrm{H}_{\delta}(\underline{x},M) & \cong\mathrm{H}_{n}(\underline{x},M\slash\underline{y}M)\\
- & \cong0:_{M\slash\underline{y}M}I\\
- & =\mathrm{Hom}_{R}(R\slash I,M\slash\underline{y}M)\\
- & \cong\mathrm{Ext}_{R}^{0}(R\slash I,M\slash\underline{y}M)\\
+\mathrm{H}_{\delta}(\boldsymbol{x},M) & \cong\mathrm{H}_{n}(\boldsymbol{x},M\slash\boldsymbol{y}M)\\
+ & \cong0:_{M\slash\boldsymbol{y}M}I\\
+ & =\mathrm{Hom}_{R}(R\slash I,M\slash\boldsymbol{y}M)\\
+ & \cong\mathrm{Ext}_{R}^{0}(R\slash I,M\slash\boldsymbol{y}M)\\
  & \cong\mathrm{Ext}_{R}^{q}(R\slash I,M).
 \end{align*}
 
@@ -165021,7 +164970,7 @@ label{koszulcomplexsequence}
 \end_inset
 
 -module and let 
-\begin_inset Formula $\underline{x}=x_{1},\dots,x_{n}$
+\begin_inset Formula $\boldsymbol{x}=x_{1},\dots,x_{n}$
 \end_inset
 
  be a sequence in 
@@ -165034,7 +164983,7 @@ label{koszulcomplexsequence}
 
 \begin_layout Enumerate
 If 
-\begin_inset Formula $\underline{x}$
+\begin_inset Formula $\boldsymbol{x}$
 \end_inset
 
  is an 
@@ -165042,7 +164991,7 @@ If
 \end_inset
 
 -sequence, then 
-\begin_inset Formula $\mathrm{H}_{i}(\underline{x},M)=0$
+\begin_inset Formula $\mathrm{H}_{i}(\boldsymbol{x},M)=0$
 \end_inset
 
  for all 
@@ -165059,7 +165008,7 @@ Suppose
 \end_inset
 
  is local with 
-\begin_inset Formula $\underline{x}\in\mathfrak{m}$
+\begin_inset Formula $\boldsymbol{x}\in\mathfrak{m}$
 \end_inset
 
 .
@@ -165068,11 +165017,11 @@ Suppose
 \end_inset
 
  is finitely generated and 
-\begin_inset Formula $\mathrm{H}_{1}(\underline{x},M)=0$
+\begin_inset Formula $\mathrm{H}_{1}(\boldsymbol{x},M)=0$
 \end_inset
 
 , then 
-\begin_inset Formula $\underline{x}$
+\begin_inset Formula $\boldsymbol{x}$
 \end_inset
 
  is an 
@@ -165145,7 +165094,7 @@ begin{proof}
 \begin_inset Formula $n>1$
 \end_inset
 
- and that we've shown the theorem to be true for all 
+ and assume that we've shown the theorem to be true for all 
 \begin_inset Formula $M$
 \end_inset
 
@@ -165155,7 +165104,7 @@ begin{proof}
 
 .
  Let 
-\begin_inset Formula $\underline{x}=x_{1},\dots,x_{n}$
+\begin_inset Formula $\boldsymbol{x}=x_{1},\dots,x_{n}$
 \end_inset
 
  be an 
@@ -165167,10 +165116,10 @@ begin{proof}
 \end_inset
 
  and let 
-\begin_inset Formula $\underline{x}'=x_{1},\dots,x_{n-1}$
+\begin_inset Formula $\boldsymbol{x}'=x_{1},\dots,x_{n-1}$
 \end_inset
 
- be an 
+ be the 
 \begin_inset Formula $M$
 \end_inset
 
@@ -165183,7 +165132,7 @@ begin{proof}
 \end_inset
 
  from 
-\begin_inset Formula $\underline{x}$
+\begin_inset Formula $\boldsymbol{x}$
 \end_inset
 
 .
@@ -165192,7 +165141,7 @@ begin{proof}
 \end_inset
 
  map from 
-\begin_inset Formula $\mathcal{K}(\underline{x}',M)$
+\begin_inset Formula $\mathcal{K}(\boldsymbol{x}',M)$
 \end_inset
 
  to itself induces a short exact sequence of 
@@ -165202,7 +165151,7 @@ begin{proof}
 -complexes
 \begin_inset Formula 
 \begin{equation}
-0\to\mathcal{K}(\underline{x}',M)\to\mathrm{C}(x_{n})\to\Sigma\mathcal{K}(\underline{x}',M)\to0,\label{eq:conemapdsifods}
+0\to\mathcal{K}(\boldsymbol{x}',M)\to\mathrm{C}(x_{n})\to\Sigma\mathcal{K}(\boldsymbol{x}',M)\to0,\label{eq:conemapdsifods}
 \end{equation}
 
 \end_inset
@@ -165217,7 +165166,7 @@ where
 
  map.
  Since 
-\begin_inset Formula $\mathrm{C}(x_{n})\cong\mathcal{K}(\underline{x},M)$
+\begin_inset Formula $\mathrm{C}(x_{n})\cong\mathcal{K}(\boldsymbol{x},M)$
 \end_inset
 
  and since the connecting map induced by 
@@ -165237,16 +165186,16 @@ ref{eq:conemapdsifods})
 \begin_inset Formula $x_{n}$
 \end_inset
 
-, we we obtain a long exact sequence in homology
+, we obtain a long exact sequence in homology
 \begin_inset Formula 
 \begin{equation}
-\cdots\to\mathrm{H}_{i}(\underline{x}',M)\to\mathrm{H}_{i}(\underline{x},M)\to\mathrm{H}_{i-1}(\underline{x}',M)\xrightarrow{x_{n}}\mathrm{H}_{i-1}(\underline{x}',M)\to\cdots.\label{eq:longdskljflksef}
+\cdots\to\mathrm{H}_{i}(\boldsymbol{x}',M)\to\mathrm{H}_{i}(\boldsymbol{x},M)\to\mathrm{H}_{i-1}(\boldsymbol{x}',M)\xrightarrow{x_{n}}\mathrm{H}_{i-1}(\boldsymbol{x}',M)\to\cdots.\label{eq:longdskljflksef}
 \end{equation}
 
 \end_inset
 
 Since 
-\begin_inset Formula $\underline{x}'$
+\begin_inset Formula $\boldsymbol{x}'$
 \end_inset
 
  is an 
@@ -165258,7 +165207,7 @@ Since
 \end_inset
 
 , we have by induction 
-\begin_inset Formula $\mathrm{H}_{i}(\underline{x}',M)=0$
+\begin_inset Formula $\mathrm{H}_{i}(\boldsymbol{x}',M)=0$
 \end_inset
 
  for all 
@@ -165280,7 +165229,7 @@ ref{eq:longdskljflksef})
 \end_inset
 
  implies 
-\begin_inset Formula $\mathrm{H}_{i}(\underline{x},M)=0$
+\begin_inset Formula $\mathrm{H}_{i}(\boldsymbol{x},M)=0$
 \end_inset
 
  for all 
@@ -165289,7 +165238,7 @@ ref{eq:longdskljflksef})
 
 .
  The vanishing of 
-\begin_inset Formula $\mathrm{H}_{1}(\underline{x},M)$
+\begin_inset Formula $\mathrm{H}_{1}(\boldsymbol{x},M)$
 \end_inset
 
  follows from taking 
@@ -165310,7 +165259,7 @@ ref{eq:longdskljflksef})
 \end_inset
 
  together with the fact that 
-\begin_inset Formula $\mathrm{H}_{0}(\underline{x}',M)\cong M\slash x'M$
+\begin_inset Formula $\mathrm{H}_{0}(\boldsymbol{x}',M)\cong M\slash\boldsymbol{x}'M$
 \end_inset
 
  and 
@@ -165318,7 +165267,7 @@ ref{eq:longdskljflksef})
 \end_inset
 
  is 
-\begin_inset Formula $(M\slash\underline{x}'M)$
+\begin_inset Formula $(M\slash\boldsymbol{x}'M)$
 \end_inset
 
 -regular.
@@ -165367,7 +165316,7 @@ hfill
 
 .
  Let 
-\begin_inset Formula $\underline{x}=x_{1},\dots,x_{n}\in\mathfrak{m}$
+\begin_inset Formula $\boldsymbol{x}=x_{1},\dots,x_{n}$
 \end_inset
 
  be a sequence in 
@@ -165379,15 +165328,15 @@ hfill
 \end_inset
 
  and suppose that 
-\begin_inset Formula $\mathrm{H}_{1}(\underline{x},M)=0$
+\begin_inset Formula $\mathrm{H}_{1}(\boldsymbol{x},M)=0$
 \end_inset
 
 .
- As in 1, let let 
-\begin_inset Formula $\underline{x}'=x_{1},\dots,x_{n-1}$
+ As in 1, let 
+\begin_inset Formula $\boldsymbol{x}'=x_{1},\dots,x_{n-1}$
 \end_inset
 
- be a sequence in 
+ be the sequence in 
 \begin_inset Formula $\mathfrak{m}$
 \end_inset
 
@@ -165400,34 +165349,34 @@ hfill
 \end_inset
 
  from 
-\begin_inset Formula $\underline{x}$
+\begin_inset Formula $\boldsymbol{x}$
 \end_inset
 
 .
  By the same argument as in 1, we obtain a long exact sequence in homology
 \begin_inset Formula 
 \begin{equation}
-\cdots\to\mathrm{H}_{i+1}(\underline{x},M)\to\mathrm{H}_{i}(\underline{x}',M)\xrightarrow{x_{n}}\mathrm{H}_{i}(\underline{x}',M)\to\mathrm{H}_{i}(\underline{x},M)\to\cdots.\label{eq:longdskljflksef-1}
+\cdots\to\mathrm{H}_{i+1}(\boldsymbol{x},M)\to\mathrm{H}_{i}(\boldsymbol{x}',M)\xrightarrow{x_{n}}\mathrm{H}_{i}(\boldsymbol{x}',M)\to\mathrm{H}_{i}(\boldsymbol{x},M)\to\cdots.\label{eq:longdskljflksef-1}
 \end{equation}
 
 \end_inset
 
 In particular, since 
-\begin_inset Formula $\mathrm{H}_{1}(\underline{x},M)=0$
+\begin_inset Formula $\mathrm{H}_{1}(\boldsymbol{x},M)=0$
 \end_inset
 
 , we have a surjective map 
-\begin_inset Formula $\mathrm{H}_{1}(\underline{x}',M)\xrightarrow{x_{n}}\mathrm{H}_{1}(\underline{x}',M)$
+\begin_inset Formula $\mathrm{H}_{1}(\boldsymbol{x}',M)\xrightarrow{x_{n}}\mathrm{H}_{1}(\boldsymbol{x}',M)$
 \end_inset
 
 .
  By Nakayama's lemma, this implies 
-\begin_inset Formula $\mathrm{H}_{1}(\underline{x}',M)=0$
+\begin_inset Formula $\mathrm{H}_{1}(\boldsymbol{x}',M)=0$
 \end_inset
 
 .
  Using induction, we obtain that 
-\begin_inset Formula $\underline{x}'$
+\begin_inset Formula $\boldsymbol{x}'$
 \end_inset
 
  is an 
@@ -165436,7 +165385,7 @@ In particular, since
 
 -sequence.
  Finally, using the fact that 
-\begin_inset Formula $\mathrm{H}_{1}(\underline{x},M)=0$
+\begin_inset Formula $\mathrm{H}_{1}(\boldsymbol{x},M)=0$
 \end_inset
 
  together with the long exact sequence in 
@@ -165453,16 +165402,16 @@ ref{eq:longdskljflksef-1})
 \end_inset
 
  we see that 
-\begin_inset Formula $\mathrm{H}_{0}(\underline{x}',M)\xrightarrow{x_{n}}\mathrm{H}_{0}(\underline{x}',M)$
+\begin_inset Formula $\mathrm{H}_{0}(\boldsymbol{x}',M)\xrightarrow{x_{n}}\mathrm{H}_{0}(\boldsymbol{x}',M)$
 \end_inset
 
  is injective.
  Since 
-\begin_inset Formula $\mathrm{H}_{0}(\underline{x}',M)\cong M\slash x'M$
+\begin_inset Formula $\mathrm{H}_{0}(\boldsymbol{x}',M)\cong M\slash\boldsymbol{x}'M$
 \end_inset
 
 , it follows that 
-\begin_inset Formula $\underline{x}$
+\begin_inset Formula $\boldsymbol{x}$
 \end_inset
 
  is an 
@@ -165506,7 +165455,7 @@ label{cor}
 \end_inset
 
  be a local ring, let 
-\begin_inset Formula $I=\langle x_{1},\dots,x_{n}\rangle=\langle\underline{x}\rangle$
+\begin_inset Formula $I=\langle x_{1},\dots,x_{n}\rangle=\langle\boldsymbol{x}\rangle$
 \end_inset
 
  be a proper ideal of 
@@ -165523,7 +165472,7 @@ label{cor}
 
 -module.
  Suppose 
-\begin_inset Formula $\underline{y}=y_{1},\dots,y_{n}$
+\begin_inset Formula $\boldsymbol{y}=y_{1},\dots,y_{n}$
 \end_inset
 
  is an 
@@ -165540,7 +165489,7 @@ label{cor}
 
 .
  Then 
-\begin_inset Formula $\underline{x}$
+\begin_inset Formula $\boldsymbol{x}$
 \end_inset
 
  is an 
@@ -165578,7 +165527,7 @@ begin{proof}
 \end_inset
 
  Since 
-\begin_inset Formula $\underline{y}$
+\begin_inset Formula $\boldsymbol{y}$
 \end_inset
 
  is an 
@@ -165603,12 +165552,12 @@ begin{proof}
 
 .
  In particular, this implies 
-\begin_inset Formula $\mathrm{H}_{1}(\underline{x},M)=0$
+\begin_inset Formula $\mathrm{H}_{1}(\boldsymbol{x},M)=0$
 \end_inset
 
 .
  Therefore 
-\begin_inset Formula $\underline{x}$
+\begin_inset Formula $\boldsymbol{x}$
 \end_inset
 
  must be an 
@@ -194320,6 +194269,15 @@ Shifting an
 \end_layout
 
 \begin_layout Standard
+We often find ourselves needing to shift the homological degree of an 
+\begin_inset Formula $R$
+\end_inset
+
+-complex.
+ To do this, we introduce the following definition:
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -194335,41 +194293,20 @@ label{defn}
 \end_inset
 
  Let 
-\begin_inset Formula $(A,\mathrm{d})$
+\begin_inset Formula $A$
 \end_inset
 
  be an 
 \begin_inset Formula $R$
 \end_inset
 
--complex.
- We define the 
-\series bold
-shift 
-\series default
-of 
-\begin_inset Formula $(A,\mathrm{d})$
-\end_inset
-
- to be the 
-\begin_inset Formula $R$
-\end_inset
-
--complex
-\begin_inset Formula 
-\[
-\Sigma(A,\mathrm{d}):=(A(-1),-\mathrm{d}).
-\]
-
-\end_inset
-
-More generally, let 
-\begin_inset Formula $k\in\mathbb{Z}$
+-complex and let 
+\begin_inset Formula $n\in\mathbb{Z}$
 \end_inset
 
 .
  We define the 
-\begin_inset Formula $k$
+\begin_inset Formula $n$
 \end_inset
 
 th 
@@ -194377,18 +194314,64 @@ th
 shift 
 \series default
 of 
-\begin_inset Formula $(A,\mathrm{d})$
+\begin_inset Formula $A$
 \end_inset
 
- to be the 
+, denoted 
+\begin_inset Formula $\Sigma^{n}A$
+\end_inset
+
+, to be the 
 \begin_inset Formula $R$
 \end_inset
 
--complex 
+-complex whose underlying graded 
+\begin_inset Formula $R$
+\end_inset
+
+-module is 
+\begin_inset Formula $A(-n)$
+\end_inset
+
+ and whose differential, when viewed as a map from 
+\begin_inset Formula $A$
+\end_inset
+
+ to 
+\begin_inset Formula $A$
+\end_inset
+
+, is defined by 
 \begin_inset Formula 
-\[
-\Sigma^{k}(A,\mathrm{d})=(A(-k),(-1)^{k}\mathrm{d}).
-\]
+\begin{equation}
+\mathrm{d}_{\Sigma^{n}A}=(-1)^{n}\Sigma^{n}\mathrm{d}_{A}\label{eq:equalitymakessense}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\Sigma^{n}\mathrm{d}_{A}$
+\end_inset
+
+ is just the map 
+\begin_inset Formula $\mathrm{d}_{A}\colon A\to A$
+\end_inset
+
+ but with the grading shifted down by 
+\begin_inset Formula $n$
+\end_inset
+
+, that is, given 
+\begin_inset Formula $i\in\mathbb{Z}$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\begin{align*}
+(\Sigma^{n}\mathrm{d}_{A})_{i} & =(\Sigma^{n}\mathrm{d}_{A})|_{A(-n)_{i}} &  & \text{(this is just an equality in notation)}\\
+ & :=\mathrm{d}_{A}|_{A_{i-n}}\\
+ & =(\mathrm{d}_{A})_{i-n} &  & \text{(this is just an equality in notation)}
+\end{align*}
 
 \end_inset
 
@@ -194409,6 +194392,83 @@ end{defn}
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Technically speaking, the equality 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+(
+\backslash
+ref{eq:equalitymakessense})
+\end_layout
+
+\end_inset
+
+ is not correct in the category of graded 
+\begin_inset Formula $R$
+\end_inset
+
+-modules.
+ Indeed, in the category of graded 
+\begin_inset Formula $R$
+\end_inset
+
+-modules, 
+\begin_inset Formula $\mathrm{d}_{\Sigma^{n}A}$
+\end_inset
+
+ is a graded map of degree 
+\begin_inset Formula $-1$
+\end_inset
+
+ from the graded 
+\begin_inset Formula $R$
+\end_inset
+
+-module 
+\begin_inset Formula $\Sigma^{n}A$
+\end_inset
+
+ to itself, whereas 
+\begin_inset Formula $(-1)^{n}\Sigma^{n}\mathrm{d}_{A}$
+\end_inset
+
+ is a graded map of degree 
+\begin_inset Formula $-1$
+\end_inset
+
+ from the graded 
+\begin_inset Formula $R$
+\end_inset
+
+-module 
+\begin_inset Formula $A$
+\end_inset
+
+ to itself.
+ The equality 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+(
+\backslash
+ref{eq:equalitymakessense})
+\end_layout
+
+\end_inset
+
+ only makes sense in the category of 
+\begin_inset Formula $R$
+\end_inset
+
+-modules where we forget the grading.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -194447,20 +194507,7 @@ label{prop}
 
 \end_inset
 
-In particular,
-\begin_inset Formula 
-\[
-\mathrm{H}_{i}(\Sigma^{n}A)=\mathrm{H}_{i-n}(A)
-\]
 
-\end_inset
-
-for all 
-\begin_inset Formula $i\in\mathbb{Z}$
-\end_inset
-
-.
- 
 \begin_inset ERT
 status open
 
@@ -194489,18 +194536,27 @@ begin{proof}
 
 \end_inset
 
- We have
+ Indeed, let 
+\begin_inset Formula $i\in\mathbb{Z}$
+\end_inset
+
+.
+ Then we have
 \begin_inset Formula 
 \begin{align*}
-\mathrm{H}(\Sigma^{n}A) & =\ker\left(\mathrm{d}_{\Sigma^{n}A}\right)\slash\mathrm{im}\left(\mathrm{d}_{\Sigma^{n}A}\right)\\
- & =\ker\left((-1)^{n}\mathrm{d}_{A(-n)}\right)\slash\mathrm{im}\left((-1)^{n}\mathrm{d}_{A(-n)}\right)\\
- & =\ker\left(\mathrm{d}_{A(-n)}\right)\slash\mathrm{im}\left(\mathrm{d}_{A(-n)}\right)\\
- & =\mathrm{H}(A)(-n).
+\mathrm{H}_{i}(\Sigma^{n}A) & =\ker\left((\mathrm{d}_{\Sigma^{n}A})_{i}\right)\slash\mathrm{im}\left((\mathrm{d}_{\Sigma^{n}A})_{i+1}\right)\\
+ & =\ker\left((\mathrm{d}_{A})_{i-n}\right)\slash\mathrm{im}\left((\mathrm{d}_{A})_{i+1-n}\right)\\
+ & =\mathrm{H}_{i-n}(A).
 \end{align*}
 
 \end_inset
 
+It follows that 
+\begin_inset Formula $\mathrm{H}(\Sigma^{n}A)=\mathrm{H}(A)(-n)$
+\end_inset
 
+.
+ 
 \begin_inset ERT
 status open
 
@@ -198600,7 +198656,7 @@ If
 \end_layout
 
 \begin_layout Subsection
-Hom
+Hom Complex
 \end_layout
 
 \begin_layout Standard
@@ -198619,11 +198675,11 @@ label{defn}
 \end_inset
 
  Let 
-\begin_inset Formula $(A,\mathrm{d})$
+\begin_inset Formula $X$
 \end_inset
 
  and 
-\begin_inset Formula $(A',\mathrm{d}')$
+\begin_inset Formula $Y$
 \end_inset
 
  be two 
@@ -198631,434 +198687,75 @@ label{defn}
 \end_inset
 
 -complexes.
- We define
-\begin_inset Formula 
-\[
-\text{Hom}_{R}((A,\mathrm{d}),(A',\mathrm{d}')):=(\text{Hom}_{R}^{\star}(A,A'),\mathrm{d}^{\mathrm{Hom}_{R}^{\star}(A,A')})
-\]
+ We define the 
+\series bold
+hom complex 
+\series default
+with respect to 
+\begin_inset Formula $X$
+\end_inset
 
+ and 
+\begin_inset Formula $Y$
 \end_inset
 
  to be the 
 \begin_inset Formula $R$
 \end_inset
 
--complex whose graded 
+-complex 
+\begin_inset Formula $\mathrm{Hom}_{R}^{\star}(X,Y)$
+\end_inset
+
+ whose underlying graded 
 \begin_inset Formula $R$
 \end_inset
 
--module 
-\begin_inset Formula $\text{Hom}_{R}^{\star}(A,A')$
-\end_inset
-
- has
-\begin_inset Formula 
-\[
-\text{Hom}_{R}^{\star}(A,A')_{i}=\prod_{n\in\mathbb{Z}}\text{Hom}_{R}(A_{n},A_{n+i}')
-\]
-
-\end_inset
-
-as its 
-\begin_inset Formula $i$
-\end_inset
-
-th homogeneous component and whose differential 
-\begin_inset Formula $\mathrm{d}^{\mathrm{Hom}_{R}^{\star}(A,A')}$
-\end_inset
-
- is defined by 
-\begin_inset Formula 
-\begin{align}
-\mathrm{d}^{\mathrm{Hom}_{R}^{\star}(A,A')}((\varphi_{n}^{i})_{n\in\mathbb{Z}}) & =(\mathrm{d}'\varphi_{n}^{i}-(-1)^{i}\varphi_{n-1}^{i}\mathrm{d})_{n\in\mathbb{Z}}\label{eq:homsign}
-\end{align}
-
-\end_inset
-
-for all 
-\begin_inset Formula $i,n\in\mathbb{Z}$
-\end_inset
-
- and 
-\begin_inset Formula $\varphi_{n,i}\in\text{Hom}_{R}(A_{j},A_{i+j}')$
-\end_inset
-
-.
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{defn}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-If context is clear, we will denote 
-\begin_inset Formula $\mathrm{d}^{\mathrm{Hom}_{R}^{\star}(A,A')}$
-\end_inset
-
- simply as 
-\begin_inset Formula $\mathrm{d}^{\star}$
-\end_inset
-
-.
- We also write 
-\begin_inset Formula $(\varphi_{n}^{i})$
-\end_inset
-
- instead of
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\begin_inset Formula $(\varphi_{n}^{i})_{n\in\mathbb{Z}}$
-\end_inset
-
-.
- The subscript 
-\begin_inset Formula $n$
-\end_inset
-
- will clue us in on the fact that 
-\begin_inset Formula $(\varphi_{n}^{i})$
-\end_inset
-
- is a sequence of homomorphisms.
- Sometimes we
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
- will also write 
-\begin_inset Formula $\mathrm{Hom}_{R}^{\star}(A,A')$
-\end_inset
-
- (rather than the more cumbersome notation 
-\begin_inset Formula $\text{Hom}_{R}((A,\mathrm{d}),(A',\mathrm{d}'))$
-\end_inset
-
-) and specify that 
-\begin_inset Formula $\mathrm{Hom}_{R}^{\star}(A,A')$
-\end_inset
-
- refers to the 
-\begin_inset Formula $R$
-\end_inset
-
--complex hom and not just the graded 
-\begin_inset Formula $R$
-\end_inset
-
--module hom.
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-Let us check that 
-\begin_inset Formula $\mathrm{d}^{\star}\mathrm{d}^{\star}=0$
-\end_inset
-
-.
- Let 
-\begin_inset Formula $(\varphi_{n}^{i})\in\text{Hom}_{R}^{\star}(A,A')_{i}$
-\end_inset
-
-.
- Then we have
-\begin_inset Formula 
-\begin{align*}
-\mathrm{d}^{\star}\mathrm{d}^{\star}(\varphi_{n}^{i}) & =\mathrm{d}^{\star}(\mathrm{d}'\varphi_{n}^{i}-(-1)^{i}\varphi_{n-1}^{i}\mathrm{d})\\
- & =(\mathrm{d}'(\mathrm{d}'\varphi_{n}^{i}-(-1)^{i}\varphi_{n-1}^{i}\mathrm{d})-(-1)^{i-1}(\mathrm{d}'\varphi_{n-1}^{i}-(-1)^{i}\varphi_{n-2}^{i}\mathrm{d})\mathrm{d})\\
- & =-(-1)^{i}\mathrm{d}'\varphi_{n-1}^{i}\mathrm{d}-(-1)^{i-1}\mathrm{d}'\varphi_{n-1}^{i}\mathrm{d}\\
- & =0.
-\end{align*}
-
-\end_inset
-
-Thus 
-\begin_inset Formula $\mathrm{d}^{\star}\mathrm{d}^{\star}=0$
-\end_inset
-
-.
- Note that the sign 
-\begin_inset Formula $-(-1)^{i}$
-\end_inset
-
- in 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-(
-\backslash
-ref{eq:homsign})
-\end_layout
-
-\end_inset
-
- is a little unusual.
- In the tensor product differential 
-\begin_inset Formula $\mathrm{d}^{\otimes}$
-\end_inset
-
-, we had
-\begin_inset Formula 
-\[
-\mathrm{d}^{\otimes}(a\otimes a')=\mathrm{d}(a)\otimes a'+(-1)^{i}a\otimes\mathrm{d}'(a')
-\]
-
-\end_inset
-
-whenever 
-\begin_inset Formula $a\in A_{i}$
-\end_inset
-
- and 
-\begin_inset Formula $a'\in A'_{i'}$
-\end_inset
-
-.
- If we replace the sign 
-\begin_inset Formula $-(-1)^{i}$
-\end_inset
-
- with the sign 
-\begin_inset Formula $(-1)^{i}$
-\end_inset
-
- in 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-(
-\backslash
-ref{eq:homsign})
-\end_layout
-
-\end_inset
-
-, we would still get 
-\begin_inset Formula $\mathrm{d}^{\star}\mathrm{d}^{\star}=0$
-\end_inset
-
-.
- However, for reasons to be clarified later on, we keep the sign 
-\begin_inset Formula $-(-1)^{i}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-Note that if 
-\begin_inset Formula $A'$
-\end_inset
-
- is just an 
-\begin_inset Formula $R$
-\end_inset
-
--module (so trivially graded with 
-\begin_inset Formula $\mathrm{d}'=0$
-\end_inset
-
-), then
-\begin_inset Formula 
-\[
-\text{Hom}_{R}^{\star}(A,A')_{i}\cong\mathrm{Hom}_{R}(A_{-i},A').
-\]
-
-\end_inset
-
-In this case, we have
-\begin_inset Formula 
-\[
-\mathrm{d}^{\star}(\varphi)=-(-1)^{i}\varphi\mathrm{d}
-\]
-
-\end_inset
-
-whenever 
-\begin_inset Formula $\varphi\in\mathrm{Hom}_{R}(A_{-i},A')$
-\end_inset
-
-.
- Also, if 
-\begin_inset Formula $A$
-\end_inset
-
- is just an 
-\begin_inset Formula $R$
-\end_inset
-
--module (so trivially graded with 
-\begin_inset Formula $\mathrm{d}=0$
-\end_inset
-
-), then
-\begin_inset Formula 
-\[
-\text{Hom}_{R}^{\star}(A,A')_{i}\cong\mathrm{Hom}_{R}(A,A'_{i}).
-\]
-
-\end_inset
-
-In this case, we have
-\begin_inset Formula 
-\[
-\mathrm{d}^{\star}(\varphi)=\mathrm{d}'\varphi
-\]
-
-\end_inset
-
-whenever 
-\begin_inset Formula $\varphi\in\mathrm{Hom}_{R}(A,A'_{i})$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Subsubsection
-Reinterpretation of Hom
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{defn}
-\backslash
-label{defn}
-\end_layout
-
-\end_inset
-
- Let 
-\begin_inset Formula $A$
-\end_inset
-
- and 
-\begin_inset Formula $A'$
-\end_inset
-
- be two 
-\begin_inset Formula $R$
-\end_inset
-
--complexes.
- We define their 
-\series bold
-hom complex
-\series default
-, denoted 
-\begin_inset Formula $(\mathrm{Hom}_{R}^{\star}(A,A'),\mathrm{d}_{(A,A')}^{\star})$
-\end_inset
-
-, to be the 
-\begin_inset Formula $R$
-\end_inset
-
--complex whose underlying graded 
-\begin_inset Formula $R$
-\end_inset
-
--module 
-\begin_inset Formula $\mathrm{Hom}_{R}^{\star}(A,A')$
-\end_inset
-
- has
-\begin_inset Formula 
-\[
-\text{Hom}_{R}^{\star}(A,A')_{i}=\{\alpha\colon A\to A'\mid\alpha\text{ is graded of degree }i\}
-\]
-
-\end_inset
-
-as its homogeneous component in degree 
-\begin_inset Formula $i$
-\end_inset
-
-, and whose differential is defined by 
-\begin_inset Formula 
-\[
-\mathrm{d}_{(A,A')}^{\star}(\alpha)=\mathrm{d}_{A'}\alpha-(-1)^{i}\alpha\mathrm{d}_{A}
-\]
-
-\end_inset
-
-for all 
-\begin_inset Formula $\alpha\in\text{Hom}_{R}^{\star}(A,A')_{i}$
-\end_inset
-
- for all 
+-module has homogeneous component in degree 
 \begin_inset Formula $i\in\mathbb{Z}$
 \end_inset
 
+ given by
+\begin_inset Formula 
+\[
+\mathrm{Hom}_{R}^{\star}(X,Y)=\{\varphi\colon X\to Y\mid\varphi\text{ is \ensuremath{R}-linear and graded of degree }i\}
+\]
+
+\end_inset
+
+and whose differential, denoted 
+\begin_inset Formula $\mathrm{d}_{X,Y}^{\star}$
+\end_inset
+
+ (or more simply 
+\begin_inset Formula $\mathrm{d}^{\star}$
+\end_inset
+
+ if 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ are understood from context), is defined by
+\begin_inset Formula 
+\begin{equation}
+\mathrm{d}_{X,Y}^{\star}(\varphi)=\mathrm{d}_{Y}\varphi-(-1)^{|\varphi|}\varphi\mathrm{d}_{X}.\label{eq:homcomplexdifferential}
+\end{equation}
+
+\end_inset
+
+for all homogeneous 
+\begin_inset Formula $\varphi\in\mathrm{Hom}_{R}^{\star}(X,Y)$
+\end_inset
+
 .
  
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -199074,8 +198771,85 @@ end{defn}
 
 \end_layout
 
-\begin_layout Subsubsection
-Homology of Hom
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+The sign 
+\begin_inset Formula $-(-1)^{|\varphi|}$
+\end_inset
+
+ in 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+(
+\backslash
+ref{eq:homcomplexdifferential})
+\end_layout
+
+\end_inset
+
+ may seem a little unusual at first glance.
+ Indeed, the differential for the tensor compex with respect to 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ is defined by
+\begin_inset Formula 
+\[
+\mathrm{d}_{X,Y}^{\otimes}(x\otimes y)=\mathrm{d}_{X}(x)\otimes y+(-1)^{|x|}x\otimes\mathrm{d}_{Y}(y)
+\]
+
+\end_inset
+
+for all homogeneous 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ and 
+\begin_inset Formula $y\in Y$
+\end_inset
+
+.
+ In fact , if we had replaced 
+\begin_inset Formula $-(-1)^{|\varphi|}$
+\end_inset
+
+ in 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+(
+\backslash
+ref{eq:homcomplexdifferential})
+\end_layout
+
+\end_inset
+
+ with 
+\begin_inset Formula $(-1)^{|\varphi|}$
+\end_inset
+
+, then we would still still obtain a differential.
+ So why should we change things up here? There are many reasons for doing
+ so, but let us explain one important reason now:
 \end_layout
 
 \begin_layout Standard
@@ -199094,11 +198868,244 @@ label{prop}
 \end_inset
 
  Let 
-\begin_inset Formula $A$
+\begin_inset Formula $(A,\mathrm{d})$
+\end_inset
+
+ be a DG 
+\begin_inset Formula $R$
+\end_inset
+
+-algebra.
+ Define 
+\begin_inset Formula $\mathrm{m}_{(-)}\colon A\to\mathrm{Hom}_{R}^{\star}(A,A)$
+\end_inset
+
+ by 
+\begin_inset Formula 
+\[
+\mathrm{m}_{(-)}(a)=\mathrm{m}_{a}
+\]
+
+\end_inset
+
+for all 
+\begin_inset Formula $a\in A$
+\end_inset
+
+, where 
+\begin_inset Formula $\mathrm{m}_{a}\colon A\to A$
+\end_inset
+
+ is the multiplication by 
+\begin_inset Formula $a$
+\end_inset
+
+ map defined by
+\begin_inset Formula 
+\[
+\mathrm{m}_{a}(x)=ax
+\]
+
+\end_inset
+
+for all 
+\begin_inset Formula $x\in A$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $\mathrm{m}_{(-)}$
+\end_inset
+
+ is an injective DG 
+\begin_inset Formula $R$
+\end_inset
+
+-algebra homomorphism.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{prop}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ Observe that 
+\begin_inset Formula $\mathrm{m}_{(-)}$
+\end_inset
+
+ is graded of degree 
+\begin_inset Formula $0$
+\end_inset
+
+ since if 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ is homogeneous, then 
+\begin_inset Formula $\mathrm{m}_{a}$
+\end_inset
+
+ is graded of degree 
+\begin_inset Formula $|a|$
+\end_inset
+
+; hence 
+\begin_inset Formula $|\mathrm{m}_{(-)}|=0$
+\end_inset
+
+.
+ Next note that 
+\begin_inset Formula $\mathrm{m}_{(-)}$
+\end_inset
+
+ commutes with the differentials.
+ Indeed, given homogeneous 
+\begin_inset Formula $a\in A$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\begin{align*}
+\mathrm{d}_{A,A}^{\star}\mathrm{m}_{(-)}(a) & =\mathrm{d}_{A,A}^{\star}(\mathrm{m}_{a})\\
+ & =\mathrm{d}\mathrm{m}_{a}-(-1)^{|a|}\mathrm{m}_{a}\mathrm{d}\\
+ & =\mathrm{m}_{\mathrm{d}(a)}\\
+ & =\mathrm{m}_{(-)}\mathrm{d}(a)
+\end{align*}
+
+\end_inset
+
+where the we obtained the third line from the second line from the fact
+ that for all 
+\begin_inset Formula $x\in A$
+\end_inset
+
+ we have
+\begin_inset Formula 
+\begin{align*}
+\left(\mathrm{d}\mathrm{m}_{a}-(-1)^{|a|}\mathrm{m}_{a}\mathrm{d}\right)(x) & =\mathrm{d}\mathrm{m}_{a}(x)-(-1)^{|a|}\mathrm{m}_{a}\mathrm{d}(x)\\
+ & =\mathrm{d}(ax)-(-1)^{|a|}a\mathrm{d}(x)\\
+ & =\mathrm{d}(a)x+(-1)^{|a|}a\mathrm{d}(x)-(-1)^{|a|}a\mathrm{d}(x)\\
+ & =\mathrm{d}(a)x\\
+ & =\mathrm{m}_{\mathrm{d}(a)}(x).
+\end{align*}
+
+\end_inset
+
+Thus we have 
+\begin_inset Formula $\mathrm{m}_{\mathrm{d}(a)}=\mathrm{d}_{A,A}^{\star}(\mathrm{m}_{a})$
+\end_inset
+
+ (which depended on the sign in 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+(
+\backslash
+ref{eq:homcomplexdifferential})
+\end_layout
+
+\end_inset
+
+!).
+ It is easy to see why 
+\begin_inset Formula $\mathrm{m}_{(-)}$
+\end_inset
+
+ is an algebra homorphism.
+ Furthermore it is injective since 
+\begin_inset Formula $1\in A$
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Here's another important reason why the sign in 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+(
+\backslash
+ref{eq:homcomplexdifferential})
+\end_layout
+
+\end_inset
+
+ matters:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{prop}
+\backslash
+label{prop}
+\end_layout
+
+\end_inset
+
+ Let 
+\begin_inset Formula $X$
 \end_inset
 
  and 
-\begin_inset Formula $A'$
+\begin_inset Formula $Y$
 \end_inset
 
  be two 
@@ -199106,10 +199113,10 @@ label{prop}
 \end_inset
 
 -complexes.
- Then 
+ Then
 \begin_inset Formula 
 \[
-\mathrm{H}_{0}(\mathrm{Hom}_{R}^{\star}(A,A'))=\{\text{homotopy classes of chain maps }A\to A'\}.
+\mathrm{H}_{0}(\mathrm{Hom}_{R}^{\star}(X,Y))=\{\text{homotopy classes of chain maps }X\to Y\}.
 \]
 
 \end_inset
@@ -199151,102 +199158,93 @@ begin{proof}
 \end_inset
 
  on the set of all chain maps 
-\begin_inset Formula $\mathcal{C}(A,A')$
+\begin_inset Formula $\mathcal{C}(X,Y)$
 \end_inset
 
  from 
-\begin_inset Formula $A$
+\begin_inset Formula $X$
 \end_inset
 
  to 
-\begin_inset Formula $A'$
+\begin_inset Formula $Y$
 \end_inset
 
 .
  Thus we are saying that
 \begin_inset Formula 
 \[
-\mathrm{H}_{0}(\mathrm{Hom}_{R}^{\star}(A,A'))=\mathcal{C}(A,A')\slash\sim.
+\mathrm{H}_{0}(\mathrm{Hom}_{R}^{\star}(X,Y))=\mathcal{C}(X,Y)\slash\sim.
 \]
 
 \end_inset
 
 Let 
-\begin_inset Formula $\alpha\in\mathrm{Z}_{0}(\mathrm{Hom}_{R}^{\star}(A,A'))$
+\begin_inset Formula $\varphi\colon X\to Y$
 \end_inset
 
-, so 
-\begin_inset Formula $\alpha\colon A\to A'$
-\end_inset
-
- be a graded 
+ be 
 \begin_inset Formula $R$
 \end_inset
 
--linear map of degree 
+-linear and graded of degree 
 \begin_inset Formula $0$
 \end_inset
 
- such that
+.
+ Then observe that
 \begin_inset Formula 
 \begin{align*}
-0 & =\mathrm{d}_{(A,A')}^{\star}(\alpha)\\
- & =\mathrm{d}_{A'}\alpha-\alpha\mathrm{d}_{A}.
+\varphi\in\mathrm{Z}_{0}(\mathrm{Hom}_{R}^{\star}(X,Y)) & \iff\mathrm{d}_{X,Y}^{\star}(\varphi)=0\\
+ & \iff\mathrm{d}_{Y}\varphi-\varphi\mathrm{d}_{X}=0\\
+ & \iff\mathrm{d}_{Y}\varphi=\varphi\mathrm{d}_{X}\\
+ & \iff\varphi\in\mathcal{C}(X,Y).
 \end{align*}
 
 \end_inset
 
-In other words, 
-\begin_inset Formula $\alpha$
+Thus 
+\begin_inset Formula $\mathrm{Z}_{0}(\mathrm{Hom}_{R}^{\star}(X,Y))=\mathcal{C}(X,Y)$
 \end_inset
 
- is a chain map.
- It follows that 
-\begin_inset Formula 
-\[
-\mathrm{Z}_{0}(\mathrm{Hom}_{R}^{\star}(A,A'))=\mathcal{C}(A,A').
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Next we observe that elements in 
-\begin_inset Formula $\mathrm{B}_{0}(\mathrm{Hom}_{R}^{\star}(A,A'))$
+.
+ Next observe that elements in 
+\begin_inset Formula $\mathrm{B}_{0}(\mathrm{Hom}_{R}^{\star}(X,Y))$
 \end_inset
 
  are of the form
 \begin_inset Formula 
-\begin{align*}
-\mathrm{d}_{(A,A')}^{\star}(\beta) & =\mathrm{d}_{A'}\beta+\beta\mathrm{d}_{A}
-\end{align*}
+\[
+\mathrm{d}_{X,Y}^{\star}(\mathrm{h})=\mathrm{h}\mathrm{d}_{X}+\mathrm{d}_{Y}\mathrm{h}
+\]
 
 \end_inset
 
 where 
-\begin_inset Formula $\beta\colon A\to A'$
+\begin_inset Formula $\mathrm{h}\colon X\to Y$
 \end_inset
 
- be a graded 
+ is an 
 \begin_inset Formula $R$
 \end_inset
 
--linear map of degree 
+-linear and graded of degree 
 \begin_inset Formula $1$
 \end_inset
 
 .
- Thus two chain maps 
-\begin_inset Formula $\alpha_{1}$
+ In particular, two 
+\begin_inset Formula $0$
+\end_inset
+
+-cycles 
+\begin_inset Formula $\varphi$
 \end_inset
 
  and 
-\begin_inset Formula $\alpha_{2}$
+\begin_inset Formula $\psi$
 \end_inset
 
- represent the same class in homology if and only if they are homotopic
+ respresent the same class in homology if and only if they are homotopic
  to each other.
  
 \begin_inset ERT
@@ -199257,77 +199255,6 @@ status open
 
 \backslash
 end{proof}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{rem}
-\backslash
-label{rem}
-\end_layout
-
-\end_inset
-
- More generally, 
-\begin_inset Formula $\mathrm{H}_{i}(\mathrm{Hom}_{R}^{\star}(A,A'))$
-\end_inset
-
- is exact if and only if for all graded 
-\begin_inset Formula $R$
-\end_inset
-
--linear maps 
-\begin_inset Formula $\alpha\colon A\to A'$
-\end_inset
-
- of degree 
-\begin_inset Formula $i$
-\end_inset
-
- such that
-\begin_inset Formula 
-\[
-\mathrm{d}_{A'}\alpha=(-1)^{i}\alpha\mathrm{d}_{A},
-\]
-
-\end_inset
-
-there exists a graded 
-\begin_inset Formula $R$
-\end_inset
-
--linear map 
-\begin_inset Formula $\beta\colon A\to A'$
-\end_inset
-
- such that
-\begin_inset Formula 
-\[
-\alpha=\mathrm{d}_{A}\beta+(-1)^{i}\beta\mathrm{d}_{A'}.
-\]
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{rem}
 \end_layout
 
 \end_inset
@@ -223993,110 +223920,14 @@ end{proof}
 Special Complexes
 \end_layout
 
-\begin_layout Subsection
-Taylor Resolution
+\begin_layout Standard
+There are many special complexes which show up in Mathematics.
+ In this section, we want to discuss some of them.
+ 
 \end_layout
 
-\begin_layout Standard
-Throughout this subsection, let 
-\begin_inset Formula $\underline{m}=m_{1},\dots,m_{r}$
-\end_inset
-
- be monomials in 
-\begin_inset Formula $R=K[x_{1},\dots,x_{n}]$
-\end_inset
-
-.
- For each subset 
-\begin_inset Formula $\sigma$
-\end_inset
-
- of 
-\begin_inset Formula $\{1,\dots,r\}$
-\end_inset
-
- we set 
-\begin_inset Formula $m_{\sigma}:=\text{lcm}(m_{\lambda}\mid\lambda\in\sigma)$
-\end_inset
-
-.
- Let 
-\begin_inset Formula $a_{\sigma}\in\mathbb{N}^{n}$
-\end_inset
-
- be the exponent vector of 
-\begin_inset Formula $m_{\sigma}$
-\end_inset
-
- and let 
-\begin_inset Formula $R(-a_{\sigma})$
-\end_inset
-
- be the free 
-\begin_inset Formula $R$
-\end_inset
-
--module with one generator in multidegree 
-\begin_inset Formula $a_{\sigma}$
-\end_inset
-
-.
- The 
-\series bold
-Taylor resolution 
-\series default
-of 
-\begin_inset Formula $R\slash\langle\underline{m}\rangle$
-\end_inset
-
- is the 
-\begin_inset Formula $R$
-\end_inset
-
--complex 
-\begin_inset Formula $(\mathcal{T}(\underline{m}),d^{\mathcal{T}(\underline{m})})$
-\end_inset
-
- whose graded 
-\begin_inset Formula $R$
-\end_inset
-
--module 
-\begin_inset Formula $\mathcal{T}(\underline{m})$
-\end_inset
-
- has
-\begin_inset Formula 
-\begin{align*}
-\mathcal{T}_{i}(\underline{m}) & :=\begin{cases}
-\bigoplus_{\sigma\in S_{i}[n]}Re_{\sigma} & \text{if }0\leq i\leq n\\
-0 & \text{if }i>n\text{ or if }i<0.
-\end{cases}
-\end{align*}
-
-\end_inset
-
-as its 
-\begin_inset Formula $i$
-\end_inset
-
-th homogeneous component, and whose differential 
-\begin_inset Formula $d^{\mathcal{T}(\underline{m})}$
-\end_inset
-
- is uniquely determined by
-\begin_inset Formula 
-\[
-d^{\mathcal{T}(\underline{m})}(e_{\sigma})=\sum_{\lambda\in\sigma}\langle\lambda,\sigma\backslash\lambda\rangle\frac{m_{\sigma}}{m_{\sigma\backslash\lambda}}e_{\sigma\backslash\lambda}
-\]
-
-\end_inset
-
-for all nonempty 
-\begin_inset Formula $\sigma\subseteq[n]$
-\end_inset
-
-.
+\begin_layout Subsection
+Simplicial Complexes
 \end_layout
 
 \begin_layout Standard
@@ -224107,34 +223938,1154 @@ status open
 
 
 \backslash
-begin{rem}
+begin{defn}
 \backslash
-label{rem}
+label{defn}
 \end_layout
 
 \end_inset
 
- We need to check that the differential defined above really is a differential.
- Denote 
-\begin_inset Formula $d:=d^{\mathcal{T}(\underline{m})}$
+ A 
+\series bold
+simplicial complex 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ 
+\series default
+on the set 
+\begin_inset Formula $\{x_{1},\dots,x_{n}\}$
+\end_inset
+
+ is a collection of subsets of 
+\begin_inset Formula $\{x_{1},\dots,x_{n}\}$
+\end_inset
+
+ such that
+\end_layout
+
+\begin_layout Enumerate
+The simplicial complex 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ contains all singletons: 
+\begin_inset Formula $\{x_{\lambda}\}\in\Delta$
+\end_inset
+
+ for all 
+\begin_inset Formula $\lambda=1,\dots,n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+The simplicial complex 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ is closed under containment: if 
+\begin_inset Formula $\sigma\subseteq\{x_{1},\dots,x_{n}\}$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma\supseteq\tau$
+\end_inset
+
+, then 
+\begin_inset Formula $\tau\in\Delta$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+An element of a simplicial complex is called a 
+\series bold
+face 
+\series default
+of 
+\begin_inset Formula $\Delta$
+\end_inset
+
+.
+ A face of 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ which is not properly contained in another face in 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ is called a 
+\series bold
+facet
+\series default
+ in 
+\begin_inset Formula $\Delta$
+\end_inset
+
+.
+ A face 
+\begin_inset Formula $\sigma\in\Delta$
+\end_inset
+
+ of cardinality 
+\begin_inset Formula $i+1$
+\end_inset
+
+ is called an 
+\begin_inset Formula $i$
+\end_inset
+
+-
+\series bold
+dimensional
+\series default
+ 
+\series bold
+face
+\series default
+ or an 
+\begin_inset Formula $i$
+\end_inset
+
+-face of 
+\begin_inset Formula $\Delta$
+\end_inset
+
+.
+ For an 
+\begin_inset Formula $i$
+\end_inset
+
+-dimensional face 
+\begin_inset Formula $\sigma\in\Delta$
+\end_inset
+
+, we set 
+\begin_inset Formula 
+\[
+\dim\sigma=i=\#\sigma-1,
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\#\sigma$
+\end_inset
+
+ denotes the cardinality of 
+\begin_inset Formula $\sigma$
+\end_inset
+
+.
+ The empty set 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+, is the unique face of dimension 
+\begin_inset Formula $-1$
+\end_inset
+
+, as long as 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ is not the 
+\series bold
+void complex 
+\series default
+
+\begin_inset Formula $\{\}$
+\end_inset
+
+ consisting of no subsets of 
+\begin_inset Formula $\{x_{1},\dots,x_{n}\}$
+\end_inset
+
+.
+ The 
+\series bold
+dimension 
+\series default
+of 
+\begin_inset Formula $\Delta$
+\end_inset
+
+, denoted 
+\begin_inset Formula $\dim\Delta$
+\end_inset
+
+, is defined to be the maximum of the dimensions of its faces (or 
+\begin_inset Formula $-\infty$
+\end_inset
+
+ if 
+\begin_inset Formula $\Delta=\{\}$
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{defn}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+The following example will help clarify some of the concepts introduced
+ above.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{example}
+\backslash
+label{examplesimplicialcomplex}
+\end_layout
+
+\end_inset
+
+ The simplicial complex 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ on 
+\begin_inset Formula $\{x_{1},x_{2},x_{3},x_{4},x_{5}\}$
+\end_inset
+
+ consisting of all subsets of 
+\begin_inset Formula $\{x_{1},x_{2},x_{3}\}$
+\end_inset
+
+, 
+\begin_inset Formula $\{x_{2},x_{4}\}$
+\end_inset
+
+, 
+\begin_inset Formula $\{x_{3},x_{4}\}$
+\end_inset
+
+, and 
+\begin_inset Formula $\{x_{4}\}$
+\end_inset
+
+ is pictured below
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[fill=gray!20] (0,0) -- (2,2) -- (4,0)-- (0,0);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw (2,2) -- (6,2) -- (4,0);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[circle, fill=black, inner sep=2pt, label=below left:$x_1 $] (a) at
+ (0,0) {};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[circle, fill=black, inner sep=2pt, label=above left:$x_3 $] (b) at
+ (2,2) {};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[circle, fill=black, inner sep=2pt, label=below right:$x_2 $] (c) at
+ (4,0) {};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[circle, fill=black, inner sep=2pt, label=above right:$x_4 $] (c) at
+ (6,2) {};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[circle, fill=black, inner sep=2pt, label=below right:$x_5 $] (c) at
+ (8,0) {};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture} 
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We often use squarefree monomial notation to denote faces of 
+\begin_inset Formula $\Delta$
+\end_inset
+
+.
+ Thus, instead of 
+\begin_inset Formula $\{x_{2},x_{4}\}$
+\end_inset
+
+, we write 
+\begin_inset Formula $x_{2}x_{4}$
+\end_inset
+
+, similarly instead of 
+\begin_inset Formula $\{x_{1},x_{2},x_{3}\}$
+\end_inset
+
+, we write 
+\begin_inset Formula $x_{1}x_{2}x_{3}$
+\end_inset
+
+.
+ More generally, if 
+\begin_inset Formula $\sigma=\{x_{i_{1}},\dots,x_{i_{k}}\mid1\leq i_{1}<\cdots<i_{k}\leq n\}$
+\end_inset
+
+, then the corresponding squarefree monomial is denoted 
+\begin_inset Formula $\boldsymbol{x}^{\sigma}=x_{i_{1}}\cdots x_{i_{k}}$
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{example}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Simplicial Homology
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{defn}
+\backslash
+label{defn}
+\end_layout
+
+\end_inset
+
+ Let 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ be a simplicial complex on 
+\begin_inset Formula $\{x_{1},\dots,x_{n}\}$
 \end_inset
 
  and let 
-\begin_inset Formula $\sigma\subseteq[n]$
+\begin_inset Formula $K$
+\end_inset
+
+ be a field.
+ We define a 
+\begin_inset Formula $K$
+\end_inset
+
+-complex, denoted 
+\begin_inset Formula $\mathcal{S}(\Delta)$
+\end_inset
+
+ and called the 
+\series bold
+augmented 
+\series default
+(or 
+\series bold
+reduced
+\series default
+) 
+\series bold
+chain complex of
+\series default
+ 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ 
+\series bold
+over 
+\begin_inset Formula $K$
+\end_inset
+
+
+\series default
+, as follows: the homogeneous component of degree 
+\begin_inset Formula $i\in\mathbb{Z}$
+\end_inset
+
+ of the underlying graded 
+\begin_inset Formula $K$
+\end_inset
+
+-vector space 
+\begin_inset Formula $\mathcal{S}(\Delta)$
+\end_inset
+
+ is given by
+\begin_inset Formula 
+\[
+\mathcal{S}_{i}(\Delta):=\begin{cases}
+\mathrm{span}_{K}\{\sigma\in\Delta\mid\dim\sigma=i\} & \text{if }-1\leq i\leq\dim\Delta\\
+0 & \text{else}
+\end{cases}
+\]
+
+\end_inset
+
+and the differential 
+\begin_inset Formula $\partial$
+\end_inset
+
+ is defined by 
+\begin_inset Formula $\partial(\emptyset)=0$
+\end_inset
+
+ and
+\begin_inset Formula 
+\[
+\partial(\sigma)=\sum_{\lambda\in\sigma}\langle\lambda,\sigma\backslash\lambda\rangle\sigma\backslash\{\lambda\}.
+\]
+
+\end_inset
+
+for all 
+\begin_inset Formula $\sigma\in\Delta\backslash\{\emptyset\}$
+\end_inset
+
+.
+ The homology of 
+\begin_inset Formula $\mathcal{S}(\Delta)$
+\end_inset
+
+ is called the 
+\series bold
+reduced simplicial homology 
+\series default
+of 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ over 
+\begin_inset Formula $K$
+\end_inset
+
+, and is commonly denoted as 
+\begin_inset Formula $\widetilde{H}(\Delta,K)$
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{defn}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{example}
+\backslash
+label{example}
+\end_layout
+
+\end_inset
+
+ For 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ as in 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+Example~(
+\backslash
+ref{examplesimplicialcomplex})
+\end_layout
+
+\end_inset
+
+, we have 
+\begin_inset Formula 
+\begin{align*}
+S_{2}(\Delta) & =Kx_{1}x_{2}x_{3}\\
+S_{1}(\Delta) & =Kx_{1}x_{2}+Kx_{1}x_{3}+Kx_{2}x_{3}+Kx_{2}x_{4}+Kx_{3}x_{4}\\
+S_{0}(\Delta) & =Kx_{1}+Kx_{2}+Kx_{3}+Kx_{4}+Kx_{5}\\
+S_{-1}(\Delta) & =K
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Choosing bases for the 
+\begin_inset Formula $S_{i}(\Delta)$
+\end_inset
+
+ as suggested by the ordering of the faces listed above, the chain complex
+ for 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ becomes 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\backslash
+begin{tikzcd}[ampersand replacement=
+\backslash
+&] 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0 
+\backslash
+arrow[r] 
+\backslash
+& K 
+\backslash
+arrow[swap]{rr}{
+\backslash
+begin{pmatrix} 1 
+\backslash
+
+\backslash
+ 1 
+\backslash
+
+\backslash
+ 1 
+\backslash
+
+\backslash
+ 0 
+\backslash
+
+\backslash
+ 0 
+\backslash
+end{pmatrix} } 
+\backslash
+& 
+\backslash
+& K^5 
+\backslash
+arrow[swap]{rrrr}{ 
+\backslash
+begin{pmatrix} 1 & 1 & 0 & 0 & 0 
+\backslash
+
+\backslash
+ 1 & 0 & 1 & 1 & 0 
+\backslash
+
+\backslash
+ 0 & 1 & 1 & 0 & 1  
+\backslash
+
+\backslash
+ 0 & 0 & 0 & 1 & 1 
+\backslash
+
+\backslash
+ 0 & 0 & 0 & 0 & 0 
+\backslash
+end{pmatrix} } 
+\backslash
+& 
+\backslash
+& 
+\backslash
+& 
+\backslash
+& K^5 
+\backslash
+arrow[swap]{rrr}{
+\backslash
+begin{pmatrix} 1 & 1 & 1 & 1 & 1 
+\backslash
+end{pmatrix} } 
+\backslash
+& 
+\backslash
+& 
+\backslash
+& K 
+\backslash
+arrow[r] 
+\backslash
+& 0
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzcd}
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For example, 
+\begin_inset Formula $\partial_{2}(e_{\{1,2,3\}})=e_{\{2,3\}}+e_{\{1,3\}}+e_{\{1,2\}}$
+\end_inset
+
+, which we identify with the vector 
+\begin_inset Formula $(1,1,1,0,0)$
+\end_inset
+
+.
+ The mapping 
+\begin_inset Formula $\partial_{1}$
+\end_inset
+
+ has rank 
+\begin_inset Formula $3$
+\end_inset
+
+, so 
+\begin_inset Formula $\widetilde{H}_{0}(\Delta;K)\cong\widetilde{H}_{1}(\Delta;K)\cong K$
+\end_inset
+
+ and the other homology groups are 
+\begin_inset Formula $0$
+\end_inset
+
+.
+ Geometrically, 
+\begin_inset Formula $\widetilde{H}_{0}(\Delta;K)$
+\end_inset
+
+ is nontrivial since 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ is disconnected and 
+\begin_inset Formula $\widetilde{H}_{1}(\Delta;K)$
+\end_inset
+
+ is nontrivial since 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ contains a triangle which is not the boundary of an element of 
+\begin_inset Formula $\Delta$
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{example}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subsection
+Monomial Resolution from a Labeled Simplicial Complex
+\end_layout
+
+\begin_layout Standard
+Throughout this subsection, let 
+\begin_inset Formula $\boldsymbol{x}=x_{1},\dots,x_{n}$
+\end_inset
+
+, let 
+\begin_inset Formula $R=K[\boldsymbol{x}]$
+\end_inset
+
+, and let 
+\begin_inset Formula $\boldsymbol{m}=m_{1},\dots,m_{r}$
+\end_inset
+
+ be monomials in 
+\begin_inset Formula $R$
+\end_inset
+
+.
+ For each nonempty subset 
+\begin_inset Formula $\sigma\subseteq[r]$
+\end_inset
+
+, we set 
+\begin_inset Formula $m_{\sigma}:=\text{lcm}(m_{\lambda}\mid\lambda\in\sigma)$
+\end_inset
+
+ and we set 
+\begin_inset Formula $\boldsymbol{a}_{\sigma}\in\mathbb{N}^{n}$
+\end_inset
+
+ to be the exponent vector of 
+\begin_inset Formula $m_{\sigma}$
+\end_inset
+
+.
+ For completeness, we set 
+\begin_inset Formula $m_{\emptyset}=1$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{\emptyset}=(0,\dots,0)$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $Re_{\sigma}$
+\end_inset
+
+ be the free 
+\begin_inset Formula $R$
+\end_inset
+
+-module generated by 
+\begin_inset Formula $e_{\sigma}$
+\end_inset
+
+ whose multidegree is 
+\begin_inset Formula $\boldsymbol{a}_{\sigma}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ be a simplical complex on 
+\begin_inset Formula $[r]$
+\end_inset
+
+.
+ We label the vertices of 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ by 
+\begin_inset Formula $m_{1},\dots,m_{r}$
+\end_inset
+
+.
+ More generally, if 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ is a face of 
+\begin_inset Formula $\Delta$
+\end_inset
+
+, then we label it by 
+\begin_inset Formula $m_{\sigma}$
+\end_inset
+
+.
+ For each 
+\begin_inset Formula $\boldsymbol{a}\in\mathbb{N}^{n}$
+\end_inset
+
+, let 
+\begin_inset Formula $\Delta_{\boldsymbol{a}}$
+\end_inset
+
+ be the subcomplex of 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ defined by 
+\begin_inset Formula $\Delta_{\boldsymbol{a}}=\{\sigma\in\Delta\mid\boldsymbol{a}_{\sigma}\leq\boldsymbol{a}\}$
+\end_inset
+
+.
+ The differential on 
+\begin_inset Formula $\mathcal{S}(\Delta)$
+\end_inset
+
+ is denoted 
+\begin_inset Formula $\partial$
+\end_inset
+
+, and the differential on 
+\begin_inset Formula $\mathcal{S}(\Delta_{\boldsymbol{a}})$
+\end_inset
+
+ is denoted 
+\begin_inset Formula $\partial_{\boldsymbol{a}}$
+\end_inset
+
+.
+ Note that 
+\begin_inset Formula $\partial_{\boldsymbol{a}}$
+\end_inset
+
+ is just the restriction of 
+\begin_inset Formula $\partial$
+\end_inset
+
+ to 
+\begin_inset Formula $\mathcal{S}(\Delta_{\boldsymbol{a}})$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{defn}
+\backslash
+label{defn}
+\end_layout
+
+\end_inset
+
+ With the notation above, we define an 
+\begin_inset Formula $R$
+\end_inset
+
+-complex, denoted 
+\begin_inset Formula $F_{\Delta}$
+\end_inset
+
+ and called 
+\begin_inset Formula $R$
+\end_inset
+
+-
+\series bold
+complex induced by 
+\begin_inset Formula $\Delta$
+\end_inset
+
+
+\series default
+ (or the 
+\series bold
+
+\begin_inset Formula $R$
+\end_inset
+
+-complex of 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ over 
+\begin_inset Formula $R$
+\end_inset
+
+
+\series default
+),
+\series bold
+ 
+\series default
+as follows: the homogeneous component in degree 
+\begin_inset Formula $i\in\mathbb{Z}$
+\end_inset
+
+ of the underlying graded 
+\begin_inset Formula $R$
+\end_inset
+
+-module of 
+\begin_inset Formula $F_{\Delta}$
+\end_inset
+
+ is given by
+\begin_inset Formula 
+\begin{align*}
+F_{\Delta,i} & :=\begin{cases}
+\bigoplus\limits _{\substack{\dim\sigma=i-1}
+}Re_{\sigma} & \text{if }0\leq i\leq\dim\Delta+1\\
+0 & \text{else}
+\end{cases}
+\end{align*}
+
+\end_inset
+
+and the differential 
+\begin_inset Formula $\mathrm{d}_{\Delta}$
+\end_inset
+
+ is defined by 
+\begin_inset Formula $\mathrm{d}_{\Delta}(e_{\emptyset})=0$
+\end_inset
+
+ and
+\begin_inset Formula 
+\[
+\mathrm{d}_{\Delta}(e_{\sigma})=\sum_{\lambda\in\sigma}\langle\lambda,\sigma\backslash\lambda\rangle\frac{m_{\sigma}}{m_{\sigma\backslash\lambda}}e_{\sigma\backslash\lambda}
+\]
+
+\end_inset
+
+for all 
+\begin_inset Formula $\sigma\in\Delta\backslash\{\emptyset\}$
+\end_inset
+
+.
+ In the case where 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ is the 
+\begin_inset Formula $r$
+\end_inset
+
+-simplex, we call 
+\begin_inset Formula $F_{\Delta}$
+\end_inset
+
+ the 
+\series bold
+Taylor complex 
+\series default
+of 
+\begin_inset Formula $R\slash\boldsymbol{m}$
+\end_inset
+
+ over 
+\begin_inset Formula $R$
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{defn}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Let us check that 
+\begin_inset Formula $\mathrm{d}_{\Delta}^{2}=0$
+\end_inset
+
+: it suffices to check this on the generators 
+\begin_inset Formula $e_{\sigma}$
+\end_inset
+
+ for all 
+\begin_inset Formula $\sigma\in\Delta$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $|\sigma|\leq1$
+\end_inset
+
+, then we clearly 
+\begin_inset Formula $\mathrm{d}_{\Delta}^{2}(e_{\sigma})=0$
+\end_inset
+
+, thus assume that 
+\begin_inset Formula $|\sigma|>1$
 \end_inset
 
 .
  Then
 \begin_inset Formula 
 \begin{align*}
-d^{2}(e_{\sigma}) & =d(d(e_{\sigma}))\\
- & =d\left(\sum_{\lambda\in\sigma}\langle\lambda,\sigma\backslash\lambda\rangle\frac{m_{\sigma}}{m_{\sigma\backslash\lambda}}e_{\sigma\backslash\lambda}\right)\\
- & =\sum_{\lambda\in\sigma}\langle\lambda,\sigma\backslash\lambda\rangle\frac{m_{\sigma}}{m_{\sigma\backslash\lambda}}d(e_{\sigma\backslash\lambda})\\
- & =\sum_{\lambda\in\sigma}\langle\lambda,\sigma\backslash\lambda\rangle\frac{m_{\sigma}}{m_{\sigma\backslash\lambda}}\sum_{\mu\in\sigma\backslash\lambda}\langle\mu,\sigma\backslash\{\lambda,\mu\}\rangle\frac{m_{\sigma\backslash\lambda}}{m_{\sigma\backslash\{\lambda,\mu\}}}d(e_{\sigma\backslash\{\lambda,\mu\}})\\
+\mathrm{d}_{\Delta}^{2}(e_{\sigma}) & =\mathrm{d}_{\Delta}\mathrm{d}_{\Delta}(e_{\sigma})\\
+ & =\mathrm{d}_{\Delta}\left(\sum_{\lambda\in\sigma}\langle\lambda,\sigma\backslash\lambda\rangle\frac{m_{\sigma}}{m_{\sigma\backslash\lambda}}e_{\sigma\backslash\lambda}\right)\\
+ & =\sum_{\lambda\in\sigma}\langle\lambda,\sigma\backslash\lambda\rangle\frac{m_{\sigma}}{m_{\sigma\backslash\lambda}}\mathrm{d}_{\Delta}(e_{\sigma\backslash\lambda})\\
+ & =\sum_{\lambda\in\sigma}\langle\lambda,\sigma\backslash\lambda\rangle\frac{m_{\sigma}}{m_{\sigma\backslash\lambda}}\sum_{\mu\in\sigma\backslash\lambda}\langle\mu,\sigma\backslash\{\lambda,\mu\}\rangle\frac{m_{\sigma\backslash\lambda}}{m_{\sigma\backslash\{\lambda,\mu\}}}\mathrm{d}_{\Delta}(e_{\sigma\backslash\{\lambda,\mu\}})\\
  & =\sum_{\substack{\lambda,\mu\in\sigma\\
 \lambda\neq\mu
 }
-}\langle\lambda,\sigma\backslash\lambda\rangle\langle\mu,\sigma\backslash\{\lambda,\mu\}\rangle\frac{m_{\sigma}}{m_{\sigma\backslash\{\lambda,\mu\}}}d(e_{\sigma\backslash\{\lambda,\mu\}})\\
+}\langle\lambda,\sigma\backslash\lambda\rangle\langle\mu,\sigma\backslash\{\lambda,\mu\}\rangle\frac{m_{\sigma}}{m_{\sigma\backslash\{\lambda,\mu\}}}\mathrm{d}_{\Delta}(e_{\sigma\backslash\{\lambda,\mu\}})\\
  & =0,
 \end{align*}
 
@@ -224164,45 +225115,11 @@ where the last part follows from symmetry in
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{rem}
-\end_layout
-
+Observe that 
+\begin_inset Formula $F_{\Delta}$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Subsubsection
-Taylor Resolution as 
-\begin_inset Formula $\mathbb{N}^{n}$
-\end_inset
-
--Graded 
-\begin_inset Formula $k$
-\end_inset
-
--Algebra
-\end_layout
-
-\begin_layout Standard
-The Taylor resolution has an extra graded structure present which is not
- necessarily shared by the Koszul complex.
- The underlying graded 
-\begin_inset Formula $R$
-\end_inset
-
--module 
-\begin_inset Formula $\mathcal{T}(\underline{m})$
-\end_inset
-
- has an 
+ also has the structure of a 
 \begin_inset Formula $\mathbb{N}^{n}$
 \end_inset
 
@@ -224210,95 +225127,117 @@ The Taylor resolution has an extra graded structure present which is not
 \begin_inset Formula $K$
 \end_inset
 
--module structure.
- Indeed, for 
-\begin_inset Formula $\mathbf{b}\in\mathbb{N}^{n}$
+-complex.
+ In other words, we have a decomposition of 
+\begin_inset Formula $K$
 \end_inset
 
-, the 
-\begin_inset Formula $\mathbf{b}$
-\end_inset
-
-th homogeneous component of is given by
+-vector spaces
 \begin_inset Formula 
 \[
-\mathcal{T}_{\mathbf{b}}(\underline{m})=\bigoplus_{m_{\sigma}|\mathbf{x^{b}}}K\cdot\frac{\mathbf{x^{b}}}{m_{\sigma}}e_{\sigma}.
+F_{\Delta}=\bigoplus_{\boldsymbol{a}\in\mathbb{N}^{n}}F_{\Delta,\boldsymbol{a}},
 \]
 
 \end_inset
 
-Moreover, the differential is an 
-\begin_inset Formula $\mathbb{N}^{n}$
+where the homogeneous component in multidegree 
+\begin_inset Formula $\boldsymbol{a}\in\mathbb{N}^{n}$
 \end_inset
 
--graded 
-\begin_inset Formula $K$
+ is given by
+\begin_inset Formula 
+\[
+F_{\Delta,\boldsymbol{a}}=\bigoplus_{m_{\sigma}\mid\boldsymbol{x}^{\boldsymbol{a}}}K\frac{\boldsymbol{x}^{\boldsymbol{a}}}{m_{\sigma}}e_{\sigma}.
+\]
+
 \end_inset
 
--endormorphism (of degree 
-\begin_inset Formula $0$
+Moreover, for each 
+\begin_inset Formula $\boldsymbol{a}\in\mathbb{N}^{n}$
 \end_inset
 
-): For any 
-\begin_inset Formula $\sigma\subseteq[n]$
+, the differential 
+\begin_inset Formula $\mathrm{d}_{\Delta}$
 \end_inset
 
- such that 
-\begin_inset Formula $m_{\sigma}|\mathbf{x^{b}}$
+ restricts to a differential on 
+\begin_inset Formula $F_{\Delta,\boldsymbol{a}}$
 \end_inset
 
-, we have 
+ (which we denote by 
+\begin_inset Formula $\mathrm{d}_{\Delta,\boldsymbol{a}}$
+\end_inset
+
+).
+ Indeed, we have
 \begin_inset Formula 
 \begin{align*}
-d^{\mathcal{T}(\underline{m})}\left(\frac{\mathbf{x^{b}}}{m_{\sigma}}e_{\sigma}\right) & =\frac{\mathbf{x^{b}}}{m_{\sigma}}d^{\mathcal{T}(\underline{m})}(e_{\sigma})\\
- & =\frac{\mathbf{x^{b}}}{m_{\sigma}}\sum_{\lambda\in\sigma}\langle\lambda,\sigma\backslash\lambda\rangle\frac{m_{\sigma}}{m_{\sigma\backslash\lambda}}e_{\sigma\backslash\lambda}\\
- & =\sum_{\lambda\in\sigma}\langle\lambda,\sigma\backslash\lambda\rangle\frac{\mathbf{x^{b}}}{m_{\sigma\backslash\lambda}}e_{\sigma\backslash\lambda}\\
- & \in\mathcal{T}_{\mathbf{b}}(\underline{m}).
+\mathrm{d}_{\Delta,\boldsymbol{a}}\left(\frac{\boldsymbol{x}^{\boldsymbol{a}}}{m_{\sigma}}e_{\sigma}\right) & =\frac{\boldsymbol{x}^{\boldsymbol{a}}}{m_{\sigma}}\mathrm{d}_{\Delta}(e_{\sigma})\\
+ & =\frac{\boldsymbol{x}^{\boldsymbol{a}}}{m_{\sigma}}\sum_{\lambda\in\sigma}\langle\lambda,\sigma\backslash\lambda\rangle\frac{m_{\sigma}}{m_{\sigma\backslash\lambda}}e_{\sigma\backslash\lambda}\\
+ & =\sum_{\lambda\in\sigma}\langle\lambda,\sigma\backslash\lambda\rangle\frac{\boldsymbol{x}^{\boldsymbol{a}}}{m_{\sigma}}\frac{m_{\sigma}}{m_{\sigma\backslash\lambda}}e_{\sigma\backslash\lambda}\\
+ & =\sum_{\lambda\in\sigma}\langle\lambda,\sigma\backslash\lambda\rangle\frac{\boldsymbol{x}^{\boldsymbol{a}}}{m_{\sigma\backslash\lambda}}e_{\sigma\backslash\lambda}\\
+ & \in F_{\Delta,\boldsymbol{a}}.
 \end{align*}
 
 \end_inset
 
-In particular, 
-\begin_inset Formula $\text{ker}(d^{\mathcal{T}(\underline{m})})$
+Thus 
+\begin_inset Formula $F_{\Delta,\boldsymbol{a}}$
 \end_inset
 
- and 
-\begin_inset Formula $\text{im}(d^{\mathcal{T}(\underline{m})})$
-\end_inset
-
- have induced 
-\begin_inset Formula $\mathbb{N}^{n}$
-\end_inset
-
--graded 
+ has the structure of a 
 \begin_inset Formula $K$
 \end_inset
 
--module structures and hence 
-\begin_inset Formula $\text{H}(\mathcal{T}(\underline{m}))$
+-complex.
+ In fact, letting 
+\begin_inset Formula $\varphi_{\boldsymbol{a}}\colon F_{\Delta,\boldsymbol{a}}\to\mathcal{S}(\Delta_{\boldsymbol{a}})$
 \end_inset
 
- has an induced 
-\begin_inset Formula $\mathbb{N}^{n}$
-\end_inset
-
--graded 
+ be the unique graded 
 \begin_inset Formula $K$
 \end_inset
 
--module structure: For 
-\begin_inset Formula $\mathbf{b}\in\mathbb{N}^{n}$
+-linear isomorphism such that 
+\begin_inset Formula $\varphi_{\boldsymbol{a}}\left(\frac{\boldsymbol{x}^{\boldsymbol{a}}}{m_{\sigma}}e_{\sigma}\right)=\sigma$
 \end_inset
 
-, the 
-\begin_inset Formula $\mathbf{b}$
+, then from the computation above, we see that 
+\begin_inset Formula $\mathrm{d}_{\Delta,\boldsymbol{a}}\partial_{\boldsymbol{a}}=\partial_{\boldsymbol{a}}\mathrm{d}_{\Delta,\boldsymbol{a}}$
 \end_inset
 
-th homogeneous component of 
-\begin_inset Formula $\text{H}(\mathcal{T}(\underline{m}))$
+; hence 
+\begin_inset Formula $\varphi_{\boldsymbol{a}}$
 \end_inset
 
- is
+ is an isomorphism of 
+\begin_inset Formula $K$
+\end_inset
+
+-complexes.
+ In particular, we have
+\begin_inset Formula 
+\begin{align*}
+\mathrm{H}(F_{\Delta},\mathrm{d}_{\Delta}) & =\ker\mathrm{d}_{\Delta}\slash\mathrm{im}\,\mathrm{d}_{\Delta}\\
+ & =\left(\bigoplus_{\boldsymbol{a}\in\mathbb{N}^{n}}\ker\mathrm{d}_{\Delta,\boldsymbol{a}}\right)\slash\left(\bigoplus_{\boldsymbol{a}\in\mathbb{N}^{n}}\mathrm{im}\,\mathrm{d}_{\Delta,\boldsymbol{a}}\right)\\
+ & \cong\bigoplus_{\boldsymbol{a}\in\mathbb{N}^{n}}(\ker\mathrm{d}_{\Delta,\boldsymbol{a}}\slash\mathrm{im}\,\mathrm{d}_{\Delta,\boldsymbol{a}})\\
+ & =\bigoplus_{\boldsymbol{a}\in\mathbb{N}^{n}}\mathrm{H}(F_{\Delta,\boldsymbol{a}},\mathrm{d}_{\Delta,\boldsymbol{a}})\\
+ & \cong\bigoplus_{\boldsymbol{a}\in\mathbb{N}^{n}}\mathrm{H}(\Delta_{\boldsymbol{a}},K),
+\end{align*}
+
+\end_inset
+
+where the last homology is the simplicial homology of the simplicial complex
+ 
+\begin_inset Formula $\Delta_{\boldsymbol{a}}$
+\end_inset
+
+ over 
+\begin_inset Formula $K$
+\end_inset
+
+.
+ From this, we obtain the following theorem:
 \end_layout
 
 \begin_layout Standard
@@ -224309,15 +225248,69 @@ status open
 
 
 \backslash
-begin{prop}
+begin{theorem}
 \backslash
-label{prop}
+label{theoremresolutionsimpcomp}
 \end_layout
 
 \end_inset
 
- The Taylor complex is a free resolution of 
-\begin_inset Formula $R\slash I$
+ 
+\begin_inset Formula $F_{\Delta}$
+\end_inset
+
+ is a free resolution of 
+\begin_inset Formula $R\slash\boldsymbol{m}$
+\end_inset
+
+ over 
+\begin_inset Formula $R$
+\end_inset
+
+ if and only if the reduced simplicial homology 
+\begin_inset Formula $\widetilde{\mathrm{H}}(\Delta_{\boldsymbol{a}},K)$
+\end_inset
+
+ vanishes for all 
+\begin_inset Formula $\boldsymbol{a}\in\mathbb{N}^{n}$
+\end_inset
+
+.
+ In particular, the Taylor complex of 
+\begin_inset Formula $R\slash\boldsymbol{m}$
+\end_inset
+
+ over 
+\begin_inset Formula $R$
+\end_inset
+
+ is a free resolution of 
+\series bold
+
+\begin_inset Formula $R\slash\boldsymbol{m}$
+\end_inset
+
+ 
+\series default
+over 
+\begin_inset Formula $R$
+\end_inset
+
+.
+ Moreover, 
+\begin_inset Formula $F_{\Delta}$
+\end_inset
+
+ is minimal if and only if 
+\begin_inset Formula $m_{\sigma}\neq m_{\sigma'}$
+\end_inset
+
+ for every proper subface 
+\begin_inset Formula $\sigma'$
+\end_inset
+
+ of a face 
+\begin_inset Formula $\sigma$
 \end_inset
 
 .
@@ -224329,146 +225322,12 @@ status open
 
 
 \backslash
-end{prop}
+end{theorem}
 \end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{proof}
-\end_layout
-
-\end_inset
-
- It suffices to show 
-\begin_inset Formula $\text{H}_{\mathbf{b}}(\mathcal{T}(\underline{m}))\cong0$
-\end_inset
-
- for all 
-\begin_inset Formula $\mathbf{b}\in\mathbb{N}^{n}\backslash\{0\}$
-\end_inset
-
-.
- Observe that the simplicial complex 
-\begin_inset Formula 
-\[
-\Delta[\mathbf{x^{b}}]:=\{\sigma\subseteq[n]\mid m_{\sigma}\text{ divides }\mathbf{x^{b}}\}
-\]
 
 \end_inset
 
  
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{proof}
-\end_layout
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\text{H}_{\mathbf{b}}(\mathcal{T}(\underline{m}))=\frac{\text{ker}_{\mathbf{b}}(d^{\mathcal{T}(\underline{m})})}{\text{im}_{\mathbf{b}}(d^{\mathcal{T}(\underline{m})})}.
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection
-The 
-\begin_inset Formula $K$
-\end_inset
-
--Complex in Degree 
-\begin_inset Formula $\mathbf{b}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Let 
-\begin_inset Formula $\mathbf{b}\in\mathbb{N}^{n}$
-\end_inset
-
-.
- The complex 
-\begin_inset Formula $(\mathcal{T}_{\mathbf{b}}(\underline{m}),d^{\mathcal{T}_{\mathbf{b}}(\underline{m})})$
-\end_inset
-
- is the 
-\begin_inset Formula $K$
-\end_inset
-
--complex whose underlying graded 
-\begin_inset Formula $K$
-\end_inset
-
--module has 
-\begin_inset Formula 
-\[
-\mathcal{T}_{i,\mathbf{b}}(\underline{m})=\bigoplus_{\substack{m_{\sigma}|\mathbf{x^{b}}\\
-\sigma\in S_{i}(n)
-}
-}K\cdot\frac{\mathbf{x^{b}}}{m_{\sigma}}e_{\sigma}
-\]
-
-\end_inset
-
-as its 
-\begin_inset Formula $i$
-\end_inset
-
-th homogeneous and whose differential is the unique differential such that
-\begin_inset Formula 
-\[
-d^{\mathcal{T}_{\mathbf{b}}(\underline{m})}\left(\frac{\mathbf{x^{b}}}{m_{\sigma}}e_{\sigma}\right)=\sum_{\lambda\in\sigma}\langle\lambda,\sigma\backslash\lambda\rangle\frac{\mathbf{x^{b}}}{m_{\sigma\backslash\lambda}}e_{\sigma\backslash\lambda}.
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection
-Taylor Complex is a Free Resolution
-\end_layout
-
-\begin_layout Standard
-In this section, we want to show that the Taylor complex defined above is
- a free resolution of 
-\begin_inset Formula $R\slash I$
-\end_inset
-
-.
- We do this by induction on 
-\begin_inset Formula $n$
-\end_inset
-
-.
- The case 
-\begin_inset Formula $n=1$
-\end_inset
-
- is trivial.
- A
 \end_layout
 
 \begin_layout Subsubsection
@@ -225145,143 +226004,6 @@ status open
 \backslash
 end{proof}
 \end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection
-Taylor Complex is a Free Resolution
-\end_layout
-
-\begin_layout Standard
-In this section, we want to show that the Taylor complex defined above is
- a free resolution of 
-\begin_inset Formula $R\slash I$
-\end_inset
-
-.
- We do this by induction on 
-\begin_inset Formula $r$
-\end_inset
-
-.
- The case 
-\begin_inset Formula $r=1$
-\end_inset
-
- being trivial.
- Let 
-\begin_inset Formula $\underline{m}'=m_{2},\dots,m_{r}$
-\end_inset
-
-.
- By induction, 
-\begin_inset Formula $\mathcal{T}(\underline{m})$
-\end_inset
-
- is a free resolution of 
-\begin_inset Formula $R\slash\langle\underline{m}'\rangle$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Subsection
-Generalizing Taylor Complex
-\end_layout
-
-\begin_layout Standard
-Let 
-\begin_inset Formula $R$
-\end_inset
-
- and 
-\begin_inset Formula $S$
-\end_inset
-
- be rings such that 
-\begin_inset Formula $R\subset S$
-\end_inset
-
-.
- Let 
-\begin_inset Formula $(A,\mathrm{d})$
-\end_inset
-
- be an 
-\begin_inset Formula $S$
-\end_inset
-
--complex.
- Suppose 
-\begin_inset Formula $A$
-\end_inset
-
- is an 
-\begin_inset Formula $\mathbb{N}^{n}$
-\end_inset
-
--graded 
-\begin_inset Formula $R$
-\end_inset
-
--module and 
-\begin_inset Formula $\mathrm{d}$
-\end_inset
-
- is homogeneous with respect to the 
-\begin_inset Formula $\mathbb{N}^{n}$
-\end_inset
-
--grading.
- Then for each 
-\begin_inset Formula $\boldsymbol{\alpha}\in\mathbb{N}^{n}$
-\end_inset
-
- we obtain an 
-\begin_inset Formula $R$
-\end_inset
-
--complex 
-\begin_inset Formula $(A_{\boldsymbol{\alpha}},\mathrm{d}_{\boldsymbol{\alpha}})$
-\end_inset
-
- whose graded 
-\begin_inset Formula $R$
-\end_inset
-
--module in degree 
-\begin_inset Formula $i$
-\end_inset
-
- is 
-\begin_inset Formula $A_{i,\boldsymbol{\alpha}}:=A_{i}\cap A_{\boldsymbol{\alpha}}$
-\end_inset
-
- and whose differential 
-\begin_inset Formula $\mathrm{d}_{\boldsymbol{\alpha}}:=\mathrm{d}|_{A_{\boldsymbol{\alpha}}}$
-\end_inset
-
- is the restriction of 
-\begin_inset Formula $\mathrm{d}$
-\end_inset
-
- to 
-\begin_inset Formula $A_{\alpha}$
-\end_inset
-
-.
- Moreover, we have
-\begin_inset Formula 
-\begin{align*}
-\mathrm{H}(A,\mathrm{d}) & :=\text{ker }\mathrm{d}\slash\text{im }\mathrm{d}\\
- & =\left(\bigoplus_{\boldsymbol{\alpha}\in\mathbb{N}^{n}}\text{ker }\mathrm{d}_{\boldsymbol{\alpha}}\right)\slash\left(\bigoplus_{\boldsymbol{\alpha}\in\mathbb{N}^{n}}\text{im }\mathrm{d}_{\boldsymbol{\alpha}}\right)\\
- & \cong\bigoplus_{\boldsymbol{\alpha}\in\mathbb{N}^{n}}\text{ker }\mathrm{d}_{\boldsymbol{\alpha}}\slash\text{im }\mathrm{d}_{\boldsymbol{\alpha}}\\
- & :=\bigoplus_{\boldsymbol{\alpha}\in\mathbb{N}^{n}}\text{H}(A_{\boldsymbol{\alpha}},\mathrm{d}_{\boldsymbol{\alpha}})\\
- & \cong\bigoplus_{\boldsymbol{\alpha}\in\mathbb{N}^{n}}\bigoplus_{i\in\mathbb{Z}}\text{H}_{i,\boldsymbol{\alpha}}(A_{\boldsymbol{\alpha}},\mathrm{d}_{\boldsymbol{\alpha}}.)
-\end{align*}
 
 \end_inset
 

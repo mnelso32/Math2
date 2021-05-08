@@ -192,7 +192,7 @@ begin{defn}
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\mathrm{V}(S)=\{x\in K^{n}\mid f(x)=0\mbox{ for all }f\in S\}.
+\mathrm{V}(S)=\{\boldsymbol{x}\in K^{n}\mid f(\boldsymbol{x})=0\mbox{ for all }f\in S\}.
 \]
 
 \end_inset
@@ -11276,35 +11276,20 @@ end{defn}
 As in the affine case, we speak of projective varieties rather than prevarieties.
  Similarly, we will talk about subvarieties of projective space, instead
  of subprevarieties.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-For 
-\begin_inset Formula $x=(x_{0}:\cdots:x_{n})\in\mathbb{P}^{n}(k)$
+ For 
+\begin_inset Formula $[\boldsymbol{x}]\in\mathbb{P}^{n}(k)$
 \end_inset
 
  and 
-\begin_inset Formula $f\in k[X_{0},\dots,X_{n}]$
+\begin_inset Formula $f\in k[\boldsymbol{X}]$
 \end_inset
 
  the value 
-\begin_inset Formula $f(x_{0},\dots,x_{n})$
+\begin_inset Formula $f([\boldsymbol{x}])$
 \end_inset
 
  obviously depends on the choice of the representative of 
-\begin_inset Formula $x$
+\begin_inset Formula $[\boldsymbol{x}]$
 \end_inset
 
  and we cannot consider 
@@ -11322,11 +11307,39 @@ For
 
  is homogeneous, at least the question whether the value is zero or nonzero
  is independent of the choice of a representative.
- Thus we define for homogeneous polynomials 
-\begin_inset Formula $f_{1},\dots,f_{m}\in k[X_{0},\dots,X_{n}]$
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
 \end_inset
 
- (not necessarily of the same degree) the vanishing set 
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Let 
+\begin_inset Formula $\boldsymbol{f}=f_{1},\dots,f_{m}$
+\end_inset
+
+ be a finite collection of homogeneous polynomials in 
+\begin_inset Formula $k[\boldsymbol{X}]$
+\end_inset
+
+.
+ We define
+\begin_inset Formula 
+\[
+\mathrm{V}_{+}(\boldsymbol{f})=\{[\boldsymbol{x}]\in\mathbb{P}^{n}(k)\mid f_{i}(\boldsymbol{x})=0\text{ for all }i=1,\dots,m\}.
+\]
+
+\end_inset
+
+
 \begin_inset Formula 
 \[
 V_{+}(f_{1},\dots,f_{m})=\{(x_{0}:\cdots:x_{n})\in\mathbb{P}^{n}(k)\mid f_{i}(x_{0}:\cdots:x_{n})=0\text{ for all }i=1,\dots,m\}.

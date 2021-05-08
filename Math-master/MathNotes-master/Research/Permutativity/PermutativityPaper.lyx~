@@ -5500,7 +5500,7 @@ Permutatitive
 
 \begin_layout Plain Layout
 for each 
-\begin_inset Formula $1\leq i_{1},i_{2},i_{3},i_{4},k\leq2$
+\begin_inset Formula $1\leq i_{1},i_{2},i_{3},i_{4},k\leq n$
 \end_inset
 
 
@@ -5536,7 +5536,7 @@ Permutative + Abelian
 
 \begin_layout Plain Layout
 for each 
-\begin_inset Formula $1\leq i_{1},i_{2},i_{3},i_{4},k\leq2$
+\begin_inset Formula $1\leq i_{1},i_{2},i_{3},i_{4},k\leq n$
 \end_inset
 
 
@@ -5572,7 +5572,7 @@ Hom-Associative
 
 \begin_layout Plain Layout
 for each 
-\begin_inset Formula $1\leq i_{1},i_{2},i_{3},k\leq2$
+\begin_inset Formula $1\leq i_{1},i_{2},i_{3},k\leq n$
 \end_inset
 
 
@@ -5608,7 +5608,7 @@ Hom-Associative + Abelian
 
 \begin_layout Plain Layout
 for each 
-\begin_inset Formula $1\leq i_{1},i_{2},i_{3},k\leq2$
+\begin_inset Formula $1\leq i_{1},i_{2},i_{3},k\leq n$
 \end_inset
 
 

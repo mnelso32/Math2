@@ -120,7 +120,7 @@ commutative diagrams/.cd,
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
-\suppress_date false
+\suppress_date true
 \justification true
 \use_refstyle 1
 \use_minted 0
@@ -2944,7 +2944,7 @@ e_{r} & \text{if }\mathfrak{p}=\mathfrak{p}_{r}\text{ for some }r=1,\dots,s\\
 
 \end_inset
 
-Finally, the 
+The 
 \series bold
 norm 
 \series default
@@ -2983,11 +2983,18 @@ where
 .
 \end_layout
 
-\begin_layout Subsection*
-Prime Counting Functions
-\end_layout
-
 \begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
 For each 
 \begin_inset Formula $x\in\mathbb{R}_{\geq0}$
 \end_inset
@@ -3043,7 +3050,7 @@ for all
 .
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsubsection
 Generalized Theorem
 \end_layout
 

@@ -208,8 +208,8 @@ closed
 \series bold
 reducible 
 \series default
-if it can be written as a union of two non-empty closed subsets which are
- not necessarily disjoint.
+if it can be written as a union of two non-empty proper+ closed subsets
+ which are not necessarily disjoint.
  It is called 
 \series bold
 irreducible 
