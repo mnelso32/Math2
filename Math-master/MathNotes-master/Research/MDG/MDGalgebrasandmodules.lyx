@@ -17,14 +17,16 @@
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{prop}{Proposition}[section]
-\newtheorem*{cor}{Corollary}
+\newtheorem{cor}{Corollary}
+\newtheorem{conj}{Conjecture}
 \theoremstyle{definition}
 \newtheorem{defn}{Definition}[section]
-\newtheorem{ex}{Exercise} 
+\newtheorem{ex}{Exercise}
+\newtheorem{sol}{Solution} 
 \newtheorem{example}{Example}[section]
 \theoremstyle{remark}
-\newtheorem*{rem}{Remark}
-\newtheorem*{note}{Note}
+\newtheorem{rem}{Remark}
+\newtheorem{note}{Note}
 \newtheorem{case}{Case}
 \usepackage{graphicx}
 \usepackage{amssymb}
@@ -72,6 +74,15 @@ commutative diagrams/.cd,
 \blocktheorem{rem}% Make rem into a block
 \blocktheorem{cor}% Make col into a block
 \blocktheorem{prop}% Make prop into a block
+
+
+\makeatletter
+\newcommand*{\@old@slash}{}\let\@old@slash\slash
+\def\slash{\relax\ifmmode\delimiter"502F30E\mathopen{}\else\@old@slash\fi}
+\makeatother
+
+\def\backslash{\delimiter"526E30F\mathopen{}}
+
 
 
 \usepackage[bottom]{footmisc}
@@ -779,7 +790,7 @@ between them is just an MDG
 
 .
  We have an inclusion of categories 
-\begin_inset Formula $\mathbf{DG}_{R}\hookrightarrow\mathbf{NDG}_{R}$
+\begin_inset Formula $\mathbf{DG}_{R}\hookrightarrow\mathbf{MDG}_{R}$
 \end_inset
 
  which is fully faithful but not essentially surjective on objects.
@@ -1975,7 +1986,7 @@ let
 \begin_inset Formula $\varphi\colon X\to Y$
 \end_inset
 
- be an NDG 
+ be an MDG 
 \begin_inset Formula $A$
 \end_inset
 
@@ -1991,7 +2002,7 @@ let
 \begin_inset Formula $A$
 \end_inset
 
- is an NDG 
+ is an MDG 
 \begin_inset Formula $R$
 \end_inset
 
@@ -2003,7 +2014,7 @@ let
 \begin_inset Formula $Y$
 \end_inset
 
- are NDG 
+ are MDG 
 \begin_inset Formula $A$
 \end_inset
 
@@ -3494,7 +3505,7 @@ label{defn}
 \begin_inset Formula $X$
 \end_inset
 
- be an NDG 
+ be an MDG 
 \begin_inset Formula $A$
 \end_inset
 
@@ -3550,7 +3561,7 @@ Let
 \begin_inset Formula $X$
 \end_inset
 
- be an NDG 
+ be an MDG 
 \begin_inset Formula $A$
 \end_inset
 
@@ -4206,89 +4217,6 @@ Thus, in this case, the lower associative index of
 \end_layout
 
 \begin_layout Subsubsection
-The lower associative index of a free resolution
-\end_layout
-
-\begin_layout Standard
-Assume that 
-\begin_inset Formula $(R,\mathfrak{m})$
-\end_inset
-
- is local, let 
-\begin_inset Formula $I\subseteq\mathfrak{m}$
-\end_inset
-
- be an ideal of 
-\begin_inset Formula $R$
-\end_inset
-
-, and let 
-\begin_inset Formula $\tau\colon F\to R\slash I$
-\end_inset
-
- be a free resolution of 
-\begin_inset Formula $R\slash I$
-\end_inset
-
- over 
-\begin_inset Formula $R$
-\end_inset
-
-.
- iewing 
-\begin_inset Formula $R\slash I$
-\end_inset
-
- as a (, it is clear that 
-\begin_inset Formula $\mathrm{la}(R\slash I)=-\infty$
-\end_inset
-
- for trivial reasons.
- However 
-\end_layout
-
-\begin_layout Standard
-The 
-\series bold
-lower associative index 
-\series default
-of 
-\begin_inset Formula $R\slash I$
-\end_inset
-
-, denoted 
-\begin_inset Formula $\mathrm{la}(R\slash I)$
-\end_inset
-
-, is defined to be 
-\begin_inset Formula 
-\[
-\mathrm{la}(R\slash I)=\sup_{\mu}\{\mathrm{la}(\mu)\},
-\]
-
-\end_inset
-
-where the supremum is taken over all multiplications 
-\begin_inset Formula $\mu\colon F\otimes F\to F$
-\end_inset
-
- which lifts the multiplication map 
-\begin_inset Formula $R\slash I\otimes R\slash I\to R\slash I$
-\end_inset
-
- and which gives 
-\begin_inset Formula $F$
-\end_inset
-
- the structure of a PDG 
-\begin_inset Formula $R$
-\end_inset
-
--algebra.
- 
-\end_layout
-
-\begin_layout Subsubsection
 Nuclei
 \end_layout
 
@@ -4598,7 +4526,7 @@ label{defnnucleus}
 \begin_inset Formula $A$
 \end_inset
 
- be a PDG 
+ be an MDG 
 \begin_inset Formula $R$
 \end_inset
 
@@ -4611,7 +4539,7 @@ Suppose
 \begin_inset Formula $X$
 \end_inset
 
- is a left PDG 
+ is a left MDG 
 \begin_inset Formula $A$
 \end_inset
 
@@ -4648,7 +4576,7 @@ Suppose
 \begin_inset Formula $X$
 \end_inset
 
- is a right PDG 
+ is a right MDG 
 \begin_inset Formula $A$
 \end_inset
 
@@ -4685,7 +4613,7 @@ Suppose
 \begin_inset Formula $X$
 \end_inset
 
- is two-sided PDG 
+ is two-sided MDG 
 \begin_inset Formula $A$
 \end_inset
 
@@ -4811,7 +4739,7 @@ label{rem}
 \begin_inset Formula $X$
 \end_inset
 
- is a two-sided PDG 
+ is a two-sided MDG 
 \begin_inset Formula $A$
 \end_inset
 
@@ -4924,7 +4852,7 @@ Continuing our conversation as before, we claim that if we replace
 \begin_inset Formula $0:_{A}\mathcal{S}''$
 \end_inset
 
- will become a PDG 
+ will become an MDG 
 \begin_inset Formula $A$
 \end_inset
 
@@ -4992,7 +4920,7 @@ label{lemmapdgikills}
 \begin_inset Formula $(A,\mathrm{d},\mu)$
 \end_inset
 
- be a PDG 
+ be an MDG 
 \begin_inset Formula $R$
 \end_inset
 
@@ -7539,7 +7467,6 @@ Throughout this subsection, let
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout Subsection
@@ -8762,7 +8689,7 @@ where
 \begin{align*}
 \mathrm{H}([F])_{S} & \cong\mathrm{H}([F]_{S})\\
  & \cong\mathrm{H}([F_{S}])\\
- & \cong\bigoplus_{\boldsymbol{a}\in\mathbb{N}^{n}}\mathrm{H}([F_{S,\boldsymbol{a}}]).
+ & \cong\bigoplus_{\boldsymbol{a}\in\mathbb{Z}^{n}}\mathrm{H}([F_{S,\boldsymbol{a}}]).
 \end{align*}
 
 \end_inset
@@ -9123,7 +9050,7 @@ Let
 \end_inset
 
  part of 
-\begin_inset Formula $F\otimes_{R}R_{x_{1}\cdots x_{n}}$
+\begin_inset Formula $F_{\{x_{1}\cdots x_{n}\}}$
 \end_inset
 
  and denote 

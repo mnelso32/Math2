@@ -115860,7 +115860,7 @@ end{proof}
 \end_layout
 
 \begin_layout Subsubsection
-Right Exactness of 
+Right exactness of 
 \begin_inset Formula $-\otimes_{R}N$
 \end_inset
 
@@ -116115,7 +116115,7 @@ status open
 
 Proposition~(
 \backslash
-ref{contravarianthomleftexact})
+ref{propcontravarianthomleftexact})
 \end_layout
 
 \end_inset
@@ -116784,6 +116784,32 @@ ref{eq:isotenhom-1})
 \end_inset
 
 .
+ In particular, for any 
+\begin_inset Formula $B$
+\end_inset
+
+-module 
+\begin_inset Formula $N$
+\end_inset
+
+, the functor 
+\begin_inset Formula $-\otimes_{B}N\colon\mathbf{Mod}_{A}\to\mathbf{Mod}_{B}$
+\end_inset
+
+ is the left adjoint to the functor 
+\begin_inset Formula $\mathrm{Hom}_{A}(N,-)\colon\mathbf{Mod}_{B}\to\mathbf{Mod}_{A}$
+\end_inset
+
+.
+ Hence 
+\begin_inset Formula $-\otimes_{B}N$
+\end_inset
+
+ preserves all colimits and 
+\begin_inset Formula $\mathrm{Hom}_{A}(N,-)$
+\end_inset
+
+ preserves all limits.
  
 \begin_inset ERT
 status open
@@ -128530,7 +128556,7 @@ end{proof}
 
 \begin_layout Subsubsection
 Left Exactness of 
-\begin_inset Formula $\mathrm{Hom}_{R}(-N)$
+\begin_inset Formula $\mathrm{Hom}_{R}(-,N)$
 \end_inset
 
 
@@ -128545,6 +128571,8 @@ status open
 
 \backslash
 begin{prop}
+\backslash
+label{propcontravarianthomleftexact}
 \end_layout
 
 \end_inset
@@ -147050,7 +147078,11 @@ label{defn}
 \end_inset
 
 -module.
- We say 
+ 
+\end_layout
+
+\begin_layout Enumerate
+We say 
 \begin_inset Formula $F$
 \end_inset
 
@@ -147084,7 +147116,50 @@ if for every injective
 \end_inset
 
 -module.
- 
+\end_layout
+
+\begin_layout Enumerate
+We say 
+\begin_inset Formula $F$
+\end_inset
+
+ is 
+\series bold
+faithfully flat 
+\series default
+if for every 
+\begin_inset Formula $R$
+\end_inset
+
+-linear map 
+\begin_inset Formula $\varphi\colon M\to N$
+\end_inset
+
+, we have 
+\begin_inset Formula $\varphi\colon M\to N$
+\end_inset
+
+ is injective if and only 
+\begin_inset Formula $1\otimes\varphi\colon F\otimes_{R}M\to F\otimes_{R}N$
+\end_inset
+
+ is injective.
+ An 
+\begin_inset Formula $R$
+\end_inset
+
+-algebra 
+\begin_inset Formula $A$
+\end_inset
+
+ is called faithfully flat if it is faithfully flat as an 
+\begin_inset Formula $R$
+\end_inset
+
+-module.
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -147101,6 +147176,17 @@ end{defn}
 \end_layout
 
 \begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
 An equivalent definition of being flat is given in the following proposition:
 \end_layout
 
@@ -147311,6 +147397,435 @@ end{proof}
 \end_layout
 
 \begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Faithful flatness can also be characterized in terms of short exact sequences.
+ In particular, 
+\begin_inset Formula $F$
+\end_inset
+
+ is faithfully flat if it satisfies the following property: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\backslash
+begin{tikzcd} 0 
+\backslash
+arrow[r] & M_1 
+\backslash
+arrow[r,"
+\backslash
+varphi _1 "]  & M_2 
+\backslash
+arrow[r,"
+\backslash
+varphi _2 "] & M_3  
+\backslash
+arrow[r] & 0   
+\backslash
+end{tikzcd}
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+is exact if and only if
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\backslash
+begin{tikzcd} 0 
+\backslash
+arrow[r] & F
+\backslash
+otimes _R M_1 
+\backslash
+arrow[r,"1 
+\backslash
+otimes 
+\backslash
+varphi _1 "]  & F
+\backslash
+otimes _R  M_2 
+\backslash
+arrow[r,"1 
+\backslash
+otimes 
+\backslash
+varphi _2 "] & F 
+\backslash
+otimes _R M_3  
+\backslash
+arrow[r] & 0   
+\backslash
+end{tikzcd}
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+ Here's an alternative characterization of faithful flatness:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{prop}
+\backslash
+label{prop}
+\end_layout
+
+\end_inset
+
+ Let 
+\begin_inset Formula $F$
+\end_inset
+
+ be a flat 
+\begin_inset Formula $R$
+\end_inset
+
+-module.
+ Then 
+\begin_inset Formula $F$
+\end_inset
+
+ is faithfully flat if and only if 
+\begin_inset Formula $F\otimes_{R}M=0$
+\end_inset
+
+ implies 
+\begin_inset Formula $M=0$
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{prop}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proof}
+\backslash
+label{proof}
+\end_layout
+
+\end_inset
+
+ Suppose 
+\begin_inset Formula $F$
+\end_inset
+
+ is faithfully flat and let 
+\begin_inset Formula $M$
+\end_inset
+
+ be an 
+\begin_inset Formula $R$
+\end_inset
+
+-module such that 
+\begin_inset Formula $F\otimes_{R}M=0$
+\end_inset
+
+.
+ Then since 
+\begin_inset Formula $F$
+\end_inset
+
+ is faithfully flat, exactness of the 
+\begin_inset Formula $F\otimes_{R}0\to F\otimes_{R}M\to F\otimes_{R}0$
+\end_inset
+
+ implies exactness of 
+\begin_inset Formula $0\to M\to0$
+\end_inset
+
+ which implies 
+\begin_inset Formula $M=0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Conversely, suppose 
+\begin_inset Formula $F\otimes_{R}M\neq0$
+\end_inset
+
+ for every nonzero 
+\begin_inset Formula $R$
+\end_inset
+
+-module 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\varphi\colon M\to N$
+\end_inset
+
+ be an 
+\begin_inset Formula $R$
+\end_inset
+
+-module homomorphism such that 
+\begin_inset Formula $1\otimes\varphi\colon F\otimes_{R}M\to F\otimes_{R}N$
+\end_inset
+
+ is injective.
+ Since 
+\begin_inset Formula $F$
+\end_inset
+
+ is flat, the short exact sequence
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\backslash
+begin{tikzcd} 0 
+\backslash
+arrow[r] & 
+\backslash
+ker 
+\backslash
+varphi 
+\backslash
+arrow[r,hookrightarrow,
+\begin_inset Quotes erd
+\end_inset
+
+
+\backslash
+iota 
+\begin_inset Quotes eld
+\end_inset
+
+]  &  M 
+\backslash
+arrow[r," 
+\backslash
+varphi "] & N  
+\backslash
+arrow[r] & 0   
+\backslash
+end{tikzcd}
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+induces the short exact sequence
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\backslash
+begin{tikzcd} 0 
+\backslash
+arrow[r] & F 
+\backslash
+otimes _R 
+\backslash
+ker 
+\backslash
+varphi 
+\backslash
+arrow[r, 
+\begin_inset Quotes eld
+\end_inset
+
+1 
+\backslash
+otimes 
+\backslash
+iota 
+\begin_inset Quotes eld
+\end_inset
+
+]  &  F 
+\backslash
+otimes _R  M 
+\backslash
+arrow[r," 1 
+\backslash
+otimes 
+\backslash
+varphi "] & F
+\backslash
+otimes _R N  
+\backslash
+arrow[r] & 0   
+\backslash
+end{tikzcd}
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+which implies 
+\begin_inset Formula $\ker\varphi\otimes_{R}F=0$
+\end_inset
+
+ since 
+\begin_inset Formula $1\otimes\varphi\colon F\otimes_{R}M\to F\otimes_{R}N$
+\end_inset
+
+ is injective.
+ It follows that 
+\begin_inset Formula $\ker\varphi=0$
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{example}
+\backslash
+label{example}
+\end_layout
+
+\end_inset
+
+ Let 
+\begin_inset Formula $S$
+\end_inset
+
+ be a multiplicative subset of 
+\begin_inset Formula $R$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $R_{S}$
+\end_inset
+
+ is a flat 
+\begin_inset Formula $R$
+\end_inset
+
+-module.
+ Indeed, this follows from the fact that 
+\begin_inset Formula $R_{S}\otimes_{R}-$
+\end_inset
+
+ is an exact.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{example}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -147323,7 +147838,33 @@ begin{example}
 
 \end_inset
 
- Free modules are flat.
+ Let 
+\begin_inset Formula $F$
+\end_inset
+
+ be a free 
+\begin_inset Formula $R$
+\end_inset
+
+-module, say 
+\begin_inset Formula $F=\bigoplus_{\lambda\in\Lambda}R$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $F$
+\end_inset
+
+ is a flat 
+\begin_inset Formula $R$
+\end_inset
+
+-module.
+ Indeed, this follows from the fact that 
+\begin_inset Formula $\bigoplus_{\lambda\in\Lambda}R\otimes_{R}-$
+\end_inset
+
+ is exact: since tensor products commutes with colimits.
  
 \begin_inset ERT
 status open
@@ -180452,6 +180993,129 @@ label{defn}
 
 \end_inset
 
+ A directed set 
+\begin_inset Formula $(\Lambda,\leq)$
+\end_inset
+
+ is a nonempty set 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+ equipped with a binary relation 
+\begin_inset Formula $\leq$
+\end_inset
+
+ on 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+ such that
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\leq$
+\end_inset
+
+ is a preorder, meaning
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+it is reflexive: 
+\begin_inset Formula $\lambda\leq\mu$
+\end_inset
+
+ and 
+\begin_inset Formula $\mu\leq\lambda$
+\end_inset
+
+ implies 
+\begin_inset Formula $\lambda=\mu$
+\end_inset
+
+ for all 
+\begin_inset Formula $\lambda,\mu\in\Lambda$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+it is transitive: if 
+\begin_inset Formula $\lambda\leq\mu$
+\end_inset
+
+ and 
+\begin_inset Formula $\mu\leq\kappa$
+\end_inset
+
+, then 
+\begin_inset Formula $\lambda\leq\kappa$
+\end_inset
+
+ for all 
+\begin_inset Formula $\lambda,\mu,\kappa,\in\Lambda$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\leq$
+\end_inset
+
+ is directed, meaning for all 
+\begin_inset Formula $\lambda,\mu\in\Lambda$
+\end_inset
+
+, there exists 
+\begin_inset Formula $\kappa\in\Lambda$
+\end_inset
+
+ such that 
+\begin_inset Formula $\lambda\leq\kappa$
+\end_inset
+
+ and 
+\begin_inset Formula $\mu\leq\kappa$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{defn}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{defn}
+\backslash
+label{defn}
+\end_layout
+
+\end_inset
+
  Let 
 \begin_inset Formula $(\Lambda,\leq)$
 \end_inset
@@ -180531,7 +181195,27 @@ If
 directed system
 \series default
 .
- We say the pair 
+ If 
+\begin_inset Formula $M$
+\end_inset
+
+ is an 
+\begin_inset Formula $R$
+\end_inset
+
+-module and 
+\begin_inset Formula $\{\psi_{\lambda}\colon M_{\lambda}\to M\}$
+\end_inset
+
+ is a collection of 
+\begin_inset Formula $R$
+\end_inset
+
+-linear maps indexed over 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+, then we say the pair 
 \begin_inset Formula $(M,\psi_{\lambda})$
 \end_inset
 
@@ -180539,11 +181223,11 @@ directed system
 \series bold
 compatible 
 \series default
-with the inverse system 
+with the direct system 
 \begin_inset Formula $(M_{\lambda},\varphi_{\lambda\mu})$
 \end_inset
 
- if
+ if 
 \begin_inset Formula 
 \[
 \psi_{\mu}\varphi_{\lambda\mu}=\psi_{\lambda}
@@ -180556,91 +181240,66 @@ for all
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-Suppose 
+ The 
+\series bold
+direct limit 
+\series default
+(or the 
+\series bold
+colimit) 
+\series default
+of the direct system 
 \begin_inset Formula $(M_{\lambda},\varphi_{\lambda\mu})$
 \end_inset
 
- and 
-\begin_inset Formula $(M_{\lambda}',\varphi_{\lambda\mu}')$
+ is the pair 
+\begin_inset Formula $(\lim\limits _{\longrightarrow}M_{\lambda},\overline{\iota}_{\lambda})$
 \end_inset
 
- are two direct systems over a partially ordered set 
-\begin_inset Formula $(\Lambda,\leq)$
+ which is universally compatible with the direct system 
+\begin_inset Formula $(M_{\lambda},\varphi_{\lambda\mu})$
 \end_inset
 
-.
- A 
-\series bold
-morphism
-\series default
- 
-\begin_inset Formula $\psi\colon(M_{\lambda},\varphi_{\lambda\mu})\to(M_{\lambda}',\varphi_{\lambda\mu}')$
+ in the following sense: for all pairs 
+\begin_inset Formula $(M,\psi_{\lambda})$
 \end_inset
 
- of direct systems consists of a collection of graded 
-\begin_inset Formula $R$
+ which are compatible with the direct system 
+\begin_inset Formula $(M_{\lambda},\varphi_{\lambda\mu})$
 \end_inset
 
--linear maps 
-\begin_inset Formula $\psi_{\lambda}\colon M_{\lambda}\to M_{\lambda}'$
-\end_inset
-
- indexed by 
-\begin_inset Formula $\Lambda$
-\end_inset
-
- such that for all 
-\begin_inset Formula $\lambda\leq\mu$
-\end_inset
-
- we have
-\begin_inset Formula 
-\[
-\varphi_{\lambda\mu}'\psi_{\lambda}=\psi_{\mu}\varphi_{\lambda\mu}.
-\]
-
-\end_inset
-
-The morphism 
-\begin_inset Formula $\psi$
-\end_inset
-
- induces a graded 
+, there exists a unique graded 
 \begin_inset Formula $R$
 \end_inset
 
 -linear map 
-\begin_inset Formula $\lim\limits _{\longrightarrow}\psi_{\lambda}\colon\lim\limits _{\longrightarrow}M_{\lambda}\to\lim\limits _{\longrightarrow}M_{\lambda}'$
+\begin_inset Formula $\psi\colon\lim\limits _{\longrightarrow}M_{\lambda}\to M_{\lambda}$
 \end_inset
 
- uniquely determined by
+ such that
 \begin_inset Formula 
 \[
-\lim\limits _{\longrightarrow}\psi_{\lambda}(\overline{u_{\lambda}})=\overline{\psi_{\lambda}(u_{\lambda})}
+\psi\overline{\iota}_{\lambda}=\psi_{\lambda}
 \]
 
 \end_inset
 
 for all 
-\begin_inset Formula $u_{\lambda}\in M_{\lambda}$
+\begin_inset Formula $\lambda\in\Lambda$
 \end_inset
 
- for all 
-\begin_inset Formula $\lambda\in\Lambda$
+.
+ This universal mapping property characterizes 
+\begin_inset Formula $(\lim\limits _{\longrightarrow}M_{\lambda},\overline{\iota}_{\lambda})$
+\end_inset
+
+ up to a unique isomorphism.
+ Often we denote the colimit by 
+\begin_inset Formula $\lim\limits _{\longrightarrow}M_{\lambda}$
+\end_inset
+
+ instead of 
+\begin_inset Formula $(\lim\limits _{\longrightarrow}M_{\lambda},\overline{\iota}_{\lambda})$
 \end_inset
 
 .
@@ -180715,7 +181374,7 @@ of this system, denoted
 together with the inclusion maps 
 \begin_inset Formula 
 \[
-\iota_{\lambda}\colon M_{\lambda}\to\lim_{\longrightarrow}M_{\lambda}
+\overline{\iota}_{\lambda}\colon M_{\lambda}\to\lim\limits _{\longrightarrow}M_{\lambda}
 \]
 
 \end_inset
@@ -180724,12 +181383,24 @@ for all
 \begin_inset Formula $\lambda\in\Lambda$
 \end_inset
 
-.
- In particular, the homogeneous component of degree 
-\begin_inset Formula $i$
+, where 
+\begin_inset Formula $\overline{\iota}_{\lambda}$
 \end_inset
 
- in 
+ is the composite of the inclusion map 
+\begin_inset Formula $\iota_{\lambda}\colon M_{\lambda}\to\bigoplus_{\lambda\in\Lambda}M_{\lambda}$
+\end_inset
+
+ together with the quotient map 
+\begin_inset Formula $\bigoplus_{\lambda\in\Lambda}M_{\lambda}\to\lim\limits _{\longrightarrow}M_{\lambda}$
+\end_inset
+
+.
+ The homogeneous component of degree 
+\begin_inset Formula $i\in\mathbb{Z}$
+\end_inset
+
+ of 
 \begin_inset Formula $\lim\limits _{\longrightarrow}M_{\lambda}$
 \end_inset
 
@@ -180863,7 +181534,7 @@ We need to show that
 \end_inset
 
 , so 
-\begin_inset Formula $\varphi_{\lambda\mu}\psi_{\lambda}=\psi_{\mu}$
+\begin_inset Formula $\psi_{\mu}\varphi_{\lambda\mu}=\psi_{\lambda}$
 \end_inset
 
  for all 
@@ -180889,15 +181560,7 @@ We need to show that
 \end_inset
 
 .
- In fact, this map induces a well-defined graded 
-\begin_inset Formula $R$
-\end_inset
-
--linear map 
-\begin_inset Formula $\overline{\psi}\colon\lim\limits _{\longrightarrow}M_{\lambda}\to M$
-\end_inset
-
- since
+ In fact, since
 \begin_inset Formula 
 \begin{align*}
 \psi(\iota_{\lambda}-\iota_{\mu}\varphi_{\lambda\mu})(u_{\lambda}) & =\psi\iota_{\lambda}(u_{\lambda})-\psi\iota_{\mu}\varphi_{\lambda\mu}(u_{\lambda})\\
@@ -180916,7 +181579,28 @@ for all
 \begin_inset Formula $\lambda\in\Lambda$
 \end_inset
 
-.
+, the universal mapping property of quotients implies there exists a unique
+ graded 
+\begin_inset Formula $R$
+\end_inset
+
+-linear map 
+\begin_inset Formula $\overline{\psi}\colon\lim\limits _{\longrightarrow}M_{\lambda}\to M$
+\end_inset
+
+ such that 
+\begin_inset Formula 
+\[
+\overline{\psi}\overline{\iota}_{\lambda}=\psi\iota_{\lambda}=\psi_{\lambda}.
+\]
+
+\end_inset
+
+This shows that 
+\begin_inset Formula $\lim\limits _{\longrightarrow}M_{\lambda}$
+\end_inset
+
+ satisfies the universal mapping property.
  
 \begin_inset ERT
 status open
@@ -180931,6 +181615,122 @@ end{proof}
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+To simplify notation, we often write 
+\begin_inset Formula $\overline{u}_{\lambda}$
+\end_inset
+
+ instead of 
+\begin_inset Formula $\overline{\iota}(u_{\lambda})$
+\end_inset
+
+ whenever 
+\begin_inset Formula $u_{\lambda}\in M_{\lambda}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Suppose 
+\begin_inset Formula $(M_{\lambda},\varphi_{\lambda\mu})$
+\end_inset
+
+ and 
+\begin_inset Formula $(M_{\lambda}',\varphi_{\lambda\mu}')$
+\end_inset
+
+ are two direct systems over a partially ordered set 
+\begin_inset Formula $(\Lambda,\leq)$
+\end_inset
+
+.
+ A 
+\series bold
+morphism
+\series default
+ 
+\begin_inset Formula $\psi\colon(M_{\lambda},\varphi_{\lambda\mu})\to(M_{\lambda}',\varphi_{\lambda\mu}')$
+\end_inset
+
+ of direct systems consists of a collection of graded 
+\begin_inset Formula $R$
+\end_inset
+
+-linear maps 
+\begin_inset Formula $\psi_{\lambda}\colon M_{\lambda}\to M_{\lambda}'$
+\end_inset
+
+ indexed by 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+ such that for all 
+\begin_inset Formula $\lambda\leq\mu$
+\end_inset
+
+ we have
+\begin_inset Formula 
+\[
+\varphi_{\lambda\mu}'\psi_{\lambda}=\psi_{\mu}\varphi_{\lambda\mu}.
+\]
+
+\end_inset
+
+The morphism 
+\begin_inset Formula $\psi$
+\end_inset
+
+ induces a graded 
+\begin_inset Formula $R$
+\end_inset
+
+-linear map 
+\begin_inset Formula $\lim\limits _{\longrightarrow}\psi_{\lambda}\colon\lim\limits _{\longrightarrow}M_{\lambda}\to\lim\limits _{\longrightarrow}M_{\lambda}'$
+\end_inset
+
+ uniquely determined by
+\begin_inset Formula 
+\[
+\lim\limits _{\longrightarrow}\psi_{\lambda}(\overline{u}_{\lambda})=\overline{\psi_{\lambda}(u_{\lambda})}
+\]
+
+\end_inset
+
+for all 
+\begin_inset Formula $u_{\lambda}\in M_{\lambda}$
+\end_inset
+
+ for all 
+\begin_inset Formula $\lambda\in\Lambda$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -180960,7 +181760,11 @@ label{prop}
 \begin_inset Formula $R$
 \end_inset
 
--linear maps.
+-linear maps over a directed set 
+\begin_inset Formula $(\Lambda,\leq)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
@@ -180969,7 +181773,7 @@ Each element of
 \end_inset
 
  has the form 
-\begin_inset Formula $\overline{u_{\lambda}}$
+\begin_inset Formula $\overline{u}_{\lambda}$
 \end_inset
 
  for some 
@@ -180980,7 +181784,7 @@ Each element of
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $\overline{u_{\lambda}}=0$
+\begin_inset Formula $\overline{u}_{\lambda}=0$
 \end_inset
 
  if and only if 
@@ -181029,10 +181833,10 @@ begin{proof}
 \end_inset
 
  has the form 
-\begin_inset Formula $\overline{u_{\lambda_{1}}+\cdots+u_{\lambda_{n}}}$
+\begin_inset Formula $\sum_{i=1}^{n}\overline{u}_{\lambda_{i}}$
 \end_inset
 
-, where 
+ where 
 \begin_inset Formula $\lambda_{1},\dots,\lambda_{n}\in\Lambda$
 \end_inset
 
@@ -181065,16 +181869,15 @@ begin{proof}
  Then we have
 \begin_inset Formula 
 \begin{align*}
-\overline{u_{\lambda_{1}}+\cdots+u_{\lambda_{n}}} & =\overline{u_{\lambda_{1}}}+\cdots+\overline{u_{\lambda_{n}}}\\
- & =\overline{\varphi_{\lambda_{1},\lambda}(u_{\lambda_{1}})}+\cdots+\overline{\varphi_{\lambda_{n},\lambda}(u_{\lambda_{n}})}\\
- & =\overline{\varphi_{\lambda_{1},\lambda}(u_{\lambda_{1}})+\cdots+\varphi_{\lambda_{n},\lambda}(u_{\lambda_{n}})}\\
- & =\overline{u_{\lambda}},
+\sum_{i=1}^{n}\overline{u}_{\lambda_{i}} & =\sum_{i=1}^{n}\overline{\varphi_{\lambda_{i},\lambda}(u_{\lambda_{i}})}\\
+ & =\overline{\sum_{i=1}^{n}\varphi_{\lambda_{i},\lambda}(u_{\lambda_{i}})}\\
+ & =\overline{u}_{\lambda},
 \end{align*}
 
 \end_inset
 
 where 
-\begin_inset Formula $u_{\lambda}=\varphi_{\lambda_{1},\lambda}(u_{\lambda_{1}})+\cdots+\varphi_{\lambda_{n},\lambda}(u_{\lambda_{n}})$
+\begin_inset Formula $\overline{u}_{\lambda}=\sum_{i=1}^{n}\varphi_{\lambda_{i},\lambda}(u_{\lambda_{i}})$
 \end_inset
 
 .
@@ -181120,20 +181923,20 @@ hfill
 \end_inset
 
 , then 
-\begin_inset Formula $\overline{u_{\lambda}}=\overline{\varphi_{\lambda\mu}(u_{\lambda})}=0$
+\begin_inset Formula $\overline{u}_{\lambda}=\overline{\varphi_{\lambda\mu}(u_{\lambda})}=0$
 \end_inset
 
 .
  Conversely, suppose 
-\begin_inset Formula $\overline{u_{\lambda}}=0$
+\begin_inset Formula $\overline{u}_{\lambda}=0$
 \end_inset
 
 .
  Then we have
 \begin_inset Formula 
-\[
-u_{\lambda}=u_{\lambda_{1}}-\varphi_{\lambda_{1}\mu_{1}}(u_{\lambda_{1}})+\cdots+u_{\lambda_{n}}-\varphi_{\lambda_{n}\mu_{n}}(u_{\lambda_{n}})
-\]
+\begin{equation}
+\iota_{\lambda}(u_{\lambda})=\sum_{i=1}^{n}\iota_{\lambda_{i}}(u_{\lambda_{i}})-\sum_{i=1}^{n}\iota_{\mu_{i}}\varphi_{\lambda_{i},\mu_{i}}(u_{\lambda_{i}})\label{eq:identitycoijilfksd}
+\end{equation}
 
 \end_inset
 
@@ -181149,13 +181952,60 @@ for some
 \begin_inset Formula $1\leq i\leq n$
 \end_inset
 
+, where we may assume that 
+\begin_inset Formula $\lambda_{i}\neq\mu_{i}$
+\end_inset
+
+ since otherwise we have 
+\begin_inset Formula $\iota_{\lambda_{i}}-\iota_{\mu_{i}}\varphi_{\lambda_{i},\mu_{i}}=0$
+\end_inset
+
 .
- Choose 
+ Since 
+\begin_inset Formula $u_{\lambda}\in M_{\lambda}$
+\end_inset
+
+, we may assume that 
+\begin_inset Formula $u_{\lambda_{i}}\in M_{\lambda}$
+\end_inset
+
+ for each 
+\begin_inset Formula $1\leq i\leq n$
+\end_inset
+
+.
+ In particular, this implies
+\begin_inset Formula 
+\[
+u_{\lambda}=\sum_{i=1}^{n}u_{\lambda_{i}}\quad\text{and}\quad\sum_{i=1}^{n}\varphi_{\lambda,\mu_{i}}(u_{\lambda_{i}})=0.
+\]
+
+\end_inset
+
+Now if 
+\begin_inset Formula $\mu_{i}=\mu=\mu_{j}$
+\end_inset
+
+ for each 
+\begin_inset Formula $1\leq i,j\leq n$
+\end_inset
+
+, then clearly we have
+\begin_inset Formula 
+\begin{align*}
+\varphi_{\lambda,\mu}(u_{\lambda}) & =\varphi_{\lambda,\mu}\left(\sum_{i=1}^{n}u_{\lambda_{i}}\right)\\
+ & =\sum_{i=1}^{n}\varphi_{\lambda,\mu}(u_{\lambda_{i}})\\
+ & =0.
+\end{align*}
+
+\end_inset
+
+Otherwise, choose 
 \begin_inset Formula $\mu\in\Lambda$
 \end_inset
 
  such that 
-\begin_inset Formula $\lambda,\lambda_{i},\mu_{i}\leq\mu$
+\begin_inset Formula $\mu_{i}\leq\mu$
 \end_inset
 
  for all 
@@ -181163,24 +182013,12 @@ for some
 \end_inset
 
 .
- Then
-\begin_inset Formula 
-\begin{align*}
-\varphi_{\lambda\mu}(u_{\lambda}) & =\varphi_{\lambda\mu}(u_{\lambda})-u_{\lambda}+u_{\lambda}\\
- & =(\varphi_{\lambda\mu}(u_{\lambda})-u_{\lambda})+(u_{\lambda_{1}}-\varphi_{\lambda_{1}\mu_{1}}u_{\lambda_{1}})+\cdots+(u_{\lambda_{n}}-\varphi_{\lambda_{n}\mu_{n}}u_{\lambda_{n}})\\
- & =(\varphi_{\lambda\mu}(u_{\lambda})-u_{\lambda})+(u_{\lambda_{1}}-\varphi_{\lambda_{1}\mu_{1}}u_{\lambda_{1}}+\varphi_{\lambda_{1}\mu}u_{\lambda_{1}}-\varphi_{\lambda_{1}\mu}u_{\lambda_{1}})+\cdots+(u_{\lambda_{n}}-\varphi_{\lambda_{n}\mu_{n}}u_{\lambda_{n}}+\varphi_{\lambda_{n}\mu}u_{n}-\varphi_{\lambda_{n}\mu}u_{\lambda_{n}})\\
- & =(\varphi_{\lambda\mu}(u_{\lambda})-u_{\lambda})+(u_{\lambda_{1}}-\varphi_{\lambda_{1}\mu_{1}}u_{\lambda_{1}}+\varphi_{\lambda_{1}\mu_{1}}\varphi_{\mu_{1}\mu}u_{\lambda_{1}}-\varphi_{\lambda_{1}\mu}u_{\lambda_{1}})+\cdots+(u_{\lambda_{n}}-\varphi_{\lambda_{n}\mu_{n}}u_{\lambda_{n}}+\varphi_{\lambda_{n}\mu_{1}}\varphi_{\mu_{1}\mu}u_{n}-\varphi_{\lambda_{n}\mu}u_{\lambda_{n}})\\
- & =(\varphi_{\lambda\mu}(u_{\lambda})-u_{\lambda})+(u_{\lambda_{1}}-\varphi_{\lambda_{1}\mu}u_{\lambda_{1}})+\varphi_{\lambda_{1}\mu_{1}}(\varphi_{\mu_{1}\mu}u_{\lambda_{1}}-u_{\lambda_{1}})+\cdots+(u_{\lambda_{n}}-\varphi_{\lambda_{n}\mu}u_{\lambda_{n}})+\varphi_{\lambda_{n}\mu_{n}}(\varphi_{\mu_{n}\mu}u_{n}-u_{\lambda_{n}})\\
- & =\varphi_{\lambda\mu}(u_{\lambda})-u_{\lambda_{1}}+\varphi_{\lambda_{1}\mu_{1}}u_{\lambda_{1}}+\cdots-u_{\lambda_{n}}+\varphi_{\lambda_{n}\mu_{n}}u_{\lambda_{n}}+u_{\lambda_{1}}-\varphi_{\lambda_{1}\mu}u_{\lambda_{1}}+\varphi_{\lambda_{1}\mu_{1}}(\varphi_{\mu_{1}\mu}u_{\lambda_{1}}-u_{\lambda_{1}})+\cdots+u_{\lambda_{n}}-\varphi_{\lambda_{n}\mu}u_{\lambda_{n}}+\varphi_{\lambda_{n}\mu_{n}}(\varphi_{\mu_{n}\mu}u_{n}-u_{\lambda_{n}})\\
- & =\varphi_{\lambda\mu}(u_{\lambda})+\cdots-\varphi_{\lambda_{1}\mu}u_{\lambda_{1}}+\varphi_{\lambda_{1}\mu_{1}}\varphi_{\mu_{1}\mu}u_{\lambda_{1}}+\cdots-\varphi_{\lambda_{n}\mu}u_{\lambda_{n}}+\varphi_{\lambda_{n}\mu_{n}}\varphi_{\mu_{n}\mu}u_{n}
-\end{align*}
-
+ Then it's easy to see that we still have 
+\begin_inset Formula $\varphi_{\lambda,\mu}(u_{\lambda})=0$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
+.
+ 
 \begin_inset ERT
 status open
 
@@ -181408,7 +182246,7 @@ begin{proof}
 
  is injective.
  Let 
-\begin_inset Formula $\overline{u_{\lambda}}\in\lim\limits _{\longrightarrow}M_{\lambda}$
+\begin_inset Formula $\overline{u}_{\lambda}\in\lim\limits _{\longrightarrow}M_{\lambda}$
 \end_inset
 
  and suppose 
@@ -181420,12 +182258,7 @@ begin{proof}
 \begin_inset Formula $\mu\geq\lambda$
 \end_inset
 
- such that 
-\begin_inset Formula $\varphi_{\lambda\mu}'\psi_{\lambda}u_{\lambda}=0$
-\end_inset
-
-.
- In other words,
+ such that
 \begin_inset Formula 
 \begin{align*}
 0 & =\varphi_{\lambda\mu}'\psi_{\lambda}u_{\lambda}\\
@@ -181434,36 +182267,46 @@ begin{proof}
 
 \end_inset
 
-This implies 
+Since 
+\begin_inset Formula $\psi_{\lambda}$
+\end_inset
+
+ is injective, we have 
 \begin_inset Formula $\varphi_{\lambda\mu}u_{\lambda}=0$
 \end_inset
 
- since 
-\begin_inset Formula $\psi_{\mu}$
+, which implies 
+\begin_inset Formula $\overline{u}_{\lambda}=0$
 \end_inset
 
- is injective.
- Thus 
-\begin_inset Formula 
-\begin{align*}
-\overline{u_{\lambda}} & =\overline{\varphi_{\lambda\mu}u_{\lambda}}\\
- & =0.
-\end{align*}
-
-\end_inset
-
-So 
+.
+ So 
 \begin_inset Formula $\lim\limits _{\longrightarrow}\psi_{\lambda}$
 \end_inset
 
  is injective.
- Next we show exactness at 
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Next we show exactness at 
 \begin_inset Formula $\lim\limits _{\longrightarrow}M_{\lambda}'$
 \end_inset
 
 .
  Let 
-\begin_inset Formula $\overline{u_{\lambda}'}\in\lim\limits _{\longrightarrow}M_{\lambda}'$
+\begin_inset Formula $\overline{u'}_{\lambda}\in\lim\limits _{\longrightarrow}M_{\lambda}'$
 \end_inset
 
  and suppose 
@@ -181475,12 +182318,7 @@ So
 \begin_inset Formula $\mu\geq\lambda$
 \end_inset
 
- such that 
-\begin_inset Formula $\varphi_{\lambda\mu}''\psi_{\lambda}'u_{\lambda}'=0$
-\end_inset
-
-.
- In other words,
+ such that
 \begin_inset Formula 
 \begin{align*}
 0 & =\varphi_{\lambda\mu}''\psi_{\lambda}'u_{\lambda}'\\
@@ -200481,6 +201319,32 @@ ref{eq:isotenhom-1})
 \end_inset
 
 .
+ In particular, for any 
+\begin_inset Formula $S$
+\end_inset
+
+-complex 
+\begin_inset Formula $N$
+\end_inset
+
+, the functor 
+\begin_inset Formula $-\otimes_{S}N\colon\mathbf{Comp}_{R}\to\mathbf{Comp}_{S}$
+\end_inset
+
+ is the left adjoint to the functor 
+\begin_inset Formula $\mathrm{Hom}_{R}^{\star}(N,-)\colon\mathbf{Comp}_{S}\to\mathbf{Comp}_{R}$
+\end_inset
+
+.
+ Hence 
+\begin_inset Formula $-\otimes_{S}N$
+\end_inset
+
+ preserves all colimits and 
+\begin_inset Formula $\mathrm{Hom}_{R}^{\star}(N,-)$
+\end_inset
+
+ preserves all limits.
  
 \begin_inset ERT
 status open
@@ -201623,6 +202487,32 @@ ref{eq:isotenhom-1})
 \end_inset
 
 .
+ In particular, for any 
+\begin_inset Formula $S$
+\end_inset
+
+-complex 
+\begin_inset Formula $N$
+\end_inset
+
+, the functor 
+\begin_inset Formula $-\otimes_{S}N\colon\mathbf{Comp}_{R}\to\mathbf{Comp}_{S}$
+\end_inset
+
+ is the left adjoint to the functor 
+\begin_inset Formula $\mathrm{Hom}_{R}^{\star}(N,-)\colon\mathbf{Comp}_{S}\to\mathbf{Comp}_{R}$
+\end_inset
+
+.
+ Hence 
+\begin_inset Formula $-\otimes_{S}N$
+\end_inset
+
+ preserves all colimits and 
+\begin_inset Formula $\mathrm{Hom}_{R}^{\star}(N,-)$
+\end_inset
+
+ preserves all limits.
  
 \begin_inset ERT
 status open
@@ -229136,10 +230026,6 @@ end{proof}
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 
 \end_layout
 

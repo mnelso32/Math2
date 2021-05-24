@@ -1,5 +1,5 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -68,6 +68,8 @@ commutative diagrams/.cd,
 \font_osf true
 \font_sf_scale 100 100
 \font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -97,6 +99,7 @@ commutative diagrams/.cd,
 \suppress_date false
 \justification true
 \use_refstyle 1
+\use_minted 0
 \index Index
 \shortcut idx
 \color #008000
@@ -109,7 +112,10 @@ commutative diagrams/.cd,
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation 0bp
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -152,12 +158,16 @@ Let
 \end_inset
 
  respectively and let 
-\begin_inset Formula $U\subseteq V$
+\begin_inset Formula $U$
 \end_inset
 
- be an open subset.
+ be an open set of 
+\begin_inset Formula $V$
+\end_inset
+
+.
  A map 
-\begin_inset Formula $f:U\to W$
+\begin_inset Formula $f\colon U\to W$
 \end_inset
 
  is 
@@ -169,13 +179,13 @@ if and only if for each
 \end_inset
 
  there exists a (necessarily unique) linear map 
-\begin_inset Formula $Df(u):V\to W$
+\begin_inset Formula $\mathrm{D}f(u)\colon V\to W$
 \end_inset
 
  such that 
 \begin_inset Formula 
 \[
-\frac{\|f(u+h)-f(u)-(Df(u))(h)\|}{\|h\|}\to0
+\frac{\|f(u+h)-f(u)-(\mathrm{D}f(u))(h)\|}{\|h\|}\to0
 \]
 
 \end_inset
@@ -202,38 +212,66 @@ as
 \end_inset
 
 -vector space are bounded by a constant positive multiple of each other).
- 
-\end_layout
-
-\begin_layout Subsection
-Jacobian
-\end_layout
-
-\begin_layout Standard
-Consider the case where 
-\begin_inset Formula $V=\mathbb{R}^{m}$
+ If we fixed ordered bases for 
+\begin_inset Formula $V$
 \end_inset
 
  and 
-\begin_inset Formula $W=\mathbb{R}^{n}$
+\begin_inset Formula $W$
+\end_inset
+
+, then we can identity 
+\begin_inset Formula $V$
+\end_inset
+
+ with 
+\begin_inset Formula $\mathbb{R}^{m}$
+\end_inset
+
+, 
+\begin_inset Formula $W$
+\end_inset
+
+ with 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+, 
+\begin_inset Formula $U$
+\end_inset
+
+ with an open subset of 
+\begin_inset Formula $\mathbb{R}^{m}$
+\end_inset
+
+, and 
+\begin_inset Formula $\mathrm{D}f(u)$
+\end_inset
+
+ with an 
+\begin_inset Formula $n\times m$
+\end_inset
+
+ matrix over 
+\begin_inset Formula $\mathbb{R}$
 \end_inset
 
 .
- Then as a map, 
-\begin_inset Formula $f$
+ In this case, the map 
+\begin_inset Formula $f\colon U\to W$
 \end_inset
 
  has the form
 \begin_inset Formula 
 \begin{eqnarray*}
-f:U & \longrightarrow & W\\
+f\colon U & \longrightarrow & W\\
 u=(u_{1},\dots,u_{m})^{\top} & \mapsto & (f_{1}(u),\dots,f_{n}(u))^{\top}=f(u),
 \end{eqnarray*}
 
 \end_inset
 
 where the 
-\begin_inset Formula $f_{j}$
+\begin_inset Formula $f_{j}\colon U\to\mathbb{R}$
 \end_inset
 
  for 
@@ -249,20 +287,15 @@ of
 \end_inset
 
 .
- Suppose that 
-\begin_inset Formula $f$
-\end_inset
-
- is differentiable.
- Then for all 
+ We claim that for each 
 \begin_inset Formula $u\in U$
 \end_inset
 
-, we claim that 
-\begin_inset Formula $Df(u)$
+, the linear map 
+\begin_inset Formula $\mathrm{D}f(u)$
 \end_inset
 
- is given by the 
+ is none other than the 
 \series bold
 Jacobian matrix
 \series default
@@ -277,7 +310,7 @@ Jacobian matrix
 :
 \begin_inset Formula 
 \[
-Df(u)=Jf(u):=\begin{pmatrix}(\partial_{x_{1}}f_{1})(u) & \cdots & (\partial_{x_{m}}f_{1})(u)\\
+\mathrm{D}f(u)=\mathrm{J}_{f}(u):=\begin{pmatrix}(\partial_{x_{1}}f_{1})(u) & \cdots & (\partial_{x_{m}}f_{1})(u)\\
 \vdots & \ddots & \vdots\\
 (\partial_{x_{1}}f_{n})(u) & \cdots & (\partial_{x_{m}}f_{n})(u)
 \end{pmatrix}.
@@ -290,11 +323,11 @@ Indeed, suppose
 \end_inset
 
  and let 
-\begin_inset Formula $Jf(u)_{i}$
+\begin_inset Formula $\mathrm{D}f(u)_{i}$
 \end_inset
 
  (respectively 
-\begin_inset Formula $Jf(u)_{i}^{j})$
+\begin_inset Formula $\mathrm{\mathrm{D}}f(u)_{i}^{j})$
 \end_inset
 
  denote the 
@@ -305,8 +338,8 @@ th column vector (respectively the
 \begin_inset Formula $(j,i)$
 \end_inset
 
-th entry) of the matrix 
-\begin_inset Formula $Jf(u)$
+ entry) of the matrix 
+\begin_inset Formula $\mathrm{D}f(u)$
 \end_inset
 
 .
@@ -317,7 +350,7 @@ th entry) of the matrix
 , we see that 
 \begin_inset Formula 
 \[
-\frac{\|f(u+h)-f(u)-(Df(u))(h)\|}{\|h\|}=\left\Vert \frac{f(u_{1},\dots,u_{i}+h_{i},\dots,u_{m})^{\top}-f(u_{1},\dots,u_{m})^{\top}-h_{i}Jf(u)_{i}}{h_{i}}\right\Vert \to0
+\frac{\|f(u+h)-f(u)-(\mathrm{D}f(u))(h)\|}{\|h\|}=\left\Vert \frac{f(u_{1},\dots,u_{i}+h_{i},\dots,u_{m})^{\top}-f(u_{1},\dots,u_{m})^{\top}-h_{i}\mathrm{D}f(u)_{i}}{h_{i}}\right\Vert \to0
 \]
 
 \end_inset
@@ -331,10 +364,10 @@ as
 \begin_inset Formula $j$
 \end_inset
 
-th component of the vector 
+th component of the vector
 \begin_inset Formula 
 \[
-\frac{f(u_{1},\dots,u_{i}+h_{i},\dots,u_{m})^{\top}-f(u_{1},\dots,u_{m})^{\top}-h_{i}Jf(u)_{i}}{h_{i}}\in\mathbb{R}^{n}
+\frac{f(u_{1},\dots,u_{i}+h_{i},\dots,u_{m})^{\top}-f(u_{1},\dots,u_{m})^{\top}-h_{i}\mathrm{D}f(u)_{i}}{h_{i}}\in\mathbb{R}^{n}
 \]
 
 \end_inset
@@ -351,7 +384,7 @@ tends to zero as
 th component of this vector is 
 \begin_inset Formula 
 \[
-\frac{f_{j}(u_{1},\dots,u_{i}+h_{i},\dots,u_{n})-f_{j}(u_{1},\dots,u_{n})-h_{i}Jf(u)_{i}^{j}}{h_{i}}.
+\frac{f_{j}(u_{1},\dots,u_{i}+h_{i},\dots,u_{n})-f_{j}(u_{1},\dots,u_{n})-h_{i}\mathrm{D}f(u)_{i}^{j}}{h_{i}}.
 \]
 
 \end_inset
@@ -361,10 +394,11 @@ th component of this vector is
 
 \begin_layout Standard
 In particular, this means 
-\begin_inset Formula $Jf(u)_{i}^{j}=\partial_{x_{i}}f_{j}(u)$
+\begin_inset Formula $\mathrm{D}f(u)_{i}^{j}=\partial_{x_{i}}f_{j}(u)$
 \end_inset
 
 .
+ Thus our claim is proved.
  
 \end_layout
 
@@ -383,6 +417,46 @@ label{example}
 
 \end_inset
 
+ Let 
+\begin_inset Formula $f\colon\mathbb{R}^{2}\to\mathbb{R}$
+\end_inset
+
+ be given by 
+\begin_inset Formula $f(x)=x_{1}^{2}+x_{1}x_{2}+x_{2}$
+\end_inset
+
+ for all 
+\begin_inset Formula $x=(x_{1},x_{2})$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $f$
+\end_inset
+
+ is differentiable with its derivative defined by
+\begin_inset Formula 
+\[
+\mathrm{D}f(x)=\begin{pmatrix}2x_{1}+x_{2}\\
+x_{1}+1
+\end{pmatrix}
+\]
+
+\end_inset
+
+for all 
+\begin_inset Formula $x=(x_{1},x_{2})$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+.
  
 \begin_inset ERT
 status open
@@ -391,128 +465,8 @@ status open
 
 
 \backslash
-hfill
+end{example}
 \end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-Consider 
-\begin_inset Formula $f:\mathbb{R}^{2}\to\mathbb{R}$
-\end_inset
-
- where 
-\begin_inset Formula $f(x)=f(x_{1},x_{2})=x_{1}^{2}+x_{1}x_{2}+x_{2}$
-\end_inset
-
- for all 
-\begin_inset Formula $x\in\mathbb{R}^{2}$
-\end_inset
-
-.
- The Jacobian of 
-\begin_inset Formula $f$
-\end_inset
-
- at a point 
-\begin_inset Formula $u=(u_{1},u_{2})\in\mathbb{R}^{2}$
-\end_inset
-
- is given by
-\begin_inset Formula 
-\[
-Jf(u)=\begin{pmatrix}2u_{1}+u_{2}\\
-u_{1}+1
-\end{pmatrix}.
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-Consider 
-\begin_inset Formula $f=(f_{1},f_{2}):\mathbb{R}^{2}\to\mathbb{R}^{2}$
-\end_inset
-
- where 
-\begin_inset Formula $f_{1}(x)=f_{1}(x_{1},x_{2})=x_{1}^{2}x_{2}$
-\end_inset
-
- and 
-\begin_inset Formula $f_{2}(x)=f_{2}(x_{1},x_{2})=x_{2}^{2}+x_{1}$
-\end_inset
-
- for all 
-\begin_inset Formula $x\in\mathbb{R}^{2}$
-\end_inset
-
-.
- The Jacobian of 
-\begin_inset Formula $f$
-\end_inset
-
- at a point 
-\begin_inset Formula $u=(u_{1},u_{2})\in\mathbb{R}^{2}$
-\end_inset
-
- is given by
-\begin_inset Formula 
-\[
-Jf(u)=\begin{pmatrix}2u_{1}u_{2} & u_{1}^{2}\\
-1 & 2u_{2}
-\end{pmatrix}.
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-Consider 
-\begin_inset Formula $f=(f_{1},f_{2}):U\subset\mathbb{R}^{2}\to\mathbb{R}^{2}$
-\end_inset
-
- and where 
-\begin_inset Formula 
-\[
-U=\{x=(x_{1},x_{2})\in\mathbb{R}^{2}\mid x_{1}x_{2}\in(-\pi/2,\pi/2)\text{ and }x_{1}+x_{2}\in(0,\infty)\}
-\]
-
-\end_inset
-
-and for all 
-\begin_inset Formula $x=(x_{1},x_{2})\in\mathbb{R}$
-\end_inset
-
-,
-\begin_inset Formula 
-\[
-f_{1}(x)=\tan(x_{1}x_{2})\quad\text{and}\quad f_{2}(x)=\ln(x_{1}+x_{2}).
-\]
-
-\end_inset
-
- The Jacobian of 
-\begin_inset Formula $f$
-\end_inset
-
- at a point 
-\begin_inset Formula $u=(u_{1},u_{2})\in U$
-\end_inset
-
- is 
-\begin_inset Formula 
-\[
-Jf(u)=\begin{pmatrix}u_{2}\sec^{2}(u_{1}u_{2}) & u_{1}\sec^{2}(u_{1}u_{2})\\
-\frac{1}{u_{1}+u_{2}} & \frac{1}{u_{1}+u_{2}}
-\end{pmatrix}.
-\]
 
 \end_inset
 
@@ -520,6 +474,81 @@ Jf(u)=\begin{pmatrix}u_{2}\sec^{2}(u_{1}u_{2}) & u_{1}\sec^{2}(u_{1}u_{2})\\
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{example}
+\backslash
+label{example}
+\end_layout
+
+\end_inset
+
+ Let 
+\begin_inset Formula $U$
+\end_inset
+
+ be the open subset of 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+ given by
+\begin_inset Formula 
+\[
+U=\{(x_{1},x_{2})\in\mathbb{R}^{2}\mid x_{1}x_{2}\in\mathbb{R}\backslash\{\pi/2+\pi\mathbb{Z}\}\text{ and }x_{1}+x_{2}\in(0,\infty)\}
+\]
+
+\end_inset
+
+and let 
+\begin_inset Formula $f\colon U\to\mathbb{R}^{2}$
+\end_inset
+
+ be defined by 
+\begin_inset Formula 
+\[
+f(u)=(\tan(u_{1}u_{2}),\ln(u_{1}+u_{2}))
+\]
+
+\end_inset
+
+for all 
+\begin_inset Formula $u=(u_{1},u_{2})$
+\end_inset
+
+ in 
+\begin_inset Formula $U$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $f$
+\end_inset
+
+ is differentiable with its derivative defined by
+\begin_inset Formula 
+\[
+\mathrm{D}f(u)=\begin{pmatrix}u_{2}\sec^{2}(u_{1}u_{2}) & u_{1}\sec^{2}(u_{1}u_{2})\\
+\frac{1}{u_{1}+u_{2}} & \frac{1}{u_{1}+u_{2}}
+\end{pmatrix}
+\]
+
+\end_inset
+
+for all 
+\begin_inset Formula $u=(u_{1},u_{2})$
+\end_inset
+
+ in 
+\begin_inset Formula $U$
+\end_inset
+
+.
+ 
 \begin_inset ERT
 status open
 
@@ -536,497 +565,7 @@ end{example}
 \end_layout
 
 \begin_layout Subsection
-Abstract Vector Spaces
-\end_layout
-
-\begin_layout Standard
-Fix a bases 
-\begin_inset Formula $\beta=\{\beta_{1},\dots,\beta_{m}\}$
-\end_inset
-
- for 
-\begin_inset Formula $V$
-\end_inset
-
- and 
-\begin_inset Formula $\gamma=\{\gamma_{1},\dots,\gamma_{n}\}$
-\end_inset
-
- for 
-\begin_inset Formula $W$
-\end_inset
-
-.
- By identifying 
-\begin_inset Formula $\beta_{i}$
-\end_inset
-
- with 
-\begin_inset Formula $e_{i}$
-\end_inset
-
- (respecitvely 
-\begin_inset Formula $\gamma_{j}$
-\end_inset
-
- with 
-\begin_inset Formula $e_{j}$
-\end_inset
-
-), where 
-\begin_inset Formula $e_{i}$
-\end_inset
-
- (respectively 
-\begin_inset Formula $e_{j}$
-\end_inset
-
-) denotes the standard basis in 
-\begin_inset Formula $\mathbb{R}^{m}$
-\end_inset
-
- (respectively 
-\begin_inset Formula $\mathbb{R}^{n}$
-\end_inset
-
-), we can carry everything over to the previous case (where 
-\begin_inset Formula $V=\mathbb{R}^{m}$
-\end_inset
-
- and 
-\begin_inset Formula $W=\mathbb{R}^{n}$
-\end_inset
-
-).
- Let us describe this in a little more detail: Let 
-\begin_inset Formula $\varphi_{\beta}$
-\end_inset
-
- (respectively 
-\begin_inset Formula $\varphi_{\gamma}$
-\end_inset
-
-) be the unique 
-\begin_inset Formula $\mathbb{R}$
-\end_inset
-
--linear isomorphism from 
-\begin_inset Formula $V$
-\end_inset
-
- to 
-\begin_inset Formula $\mathbb{R}^{m}$
-\end_inset
-
- (respectively 
-\begin_inset Formula $W$
-\end_inset
-
- to 
-\begin_inset Formula $\mathbb{R}^{n}$
-\end_inset
-
-) such that 
-\begin_inset Formula $\varphi_{\beta}(\beta_{i})=e_{i}$
-\end_inset
-
- (respectively 
-\begin_inset Formula $\varphi_{\gamma}(\gamma_{j})=e_{j}$
-\end_inset
-
-).
- Let 
-\begin_inset Formula $f^{\gamma,\beta}:=\varphi_{\gamma}\circ f\circ\varphi_{\beta}^{-1}$
-\end_inset
-
- be the map from the open subset 
-\begin_inset Formula $U^{\beta}:=\varphi_{\beta}(U)$
-\end_inset
-
- of 
-\begin_inset Formula $\mathbb{R}^{m}$
-\end_inset
-
- to 
-\begin_inset Formula $\mathbb{R}^{n}$
-\end_inset
-
- with component functions 
-\begin_inset Formula $f_{j}^{\gamma,\beta}$
-\end_inset
-
- for 
-\begin_inset Formula $1\leq j\leq n$
-\end_inset
-
-.
- Then for all 
-\begin_inset Formula $\varphi_{\beta}(u)\in\varphi_{\beta}(U)$
-\end_inset
-
-, we have 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-Df^{\gamma,\beta}(\varphi_{\beta}(u))=Jf^{\gamma,\beta}(\varphi_{\beta}(u))=\begin{pmatrix}(\partial_{x_{1}}f_{1}^{\gamma,\beta})(\varphi_{\beta}(u)) & \cdots & (\partial_{x_{m}}f_{1}^{\gamma,\beta})(\varphi_{\beta}(u))\\
-\vdots & \ddots & \vdots\\
-(\partial_{x_{1}}f_{n}^{\gamma,\beta})(\varphi_{\beta}(u)) & \cdots & (\partial_{x_{m}}f_{n}^{\gamma,\beta})(\varphi_{\beta}(u))
-\end{pmatrix}.
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-Now suppose
-\begin_inset Formula $\beta'=\{\beta_{1}',\dots,\beta_{m}'\}$
-\end_inset
-
- is another basis for 
-\begin_inset Formula $V$
-\end_inset
-
- and suppose 
-\begin_inset Formula $\gamma'=\{\gamma_{1}',\dots,\gamma_{n}'\}$
-\end_inset
-
- is another basis for 
-\begin_inset Formula $W$
-\end_inset
-
-.
- Then 
-\begin_inset Formula 
-\[
-f^{\gamma',\beta'}=[1_{V}]_{\beta}^{\beta'}\circ f^{\gamma,\beta}\circ[1_{W}]_{\gamma'}^{\gamma}.
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-Recall how we calculate the matrix representation of a linear transformation
- 
-\begin_inset Formula $T:V\to W$
-\end_inset
-
- with respect to the bases 
-\begin_inset Formula $\beta$
-\end_inset
-
- and 
-\begin_inset Formula $\gamma$
-\end_inset
-
-.
- For each 
-\begin_inset Formula $1\leq i\leq m$
-\end_inset
-
-, we calculate 
-\begin_inset Formula 
-\[
-T(\beta_{i})=\sum_{j=1}^{n}a_{ji}\gamma_{j}.
-\]
-
-\end_inset
-
-where 
-\begin_inset Formula $a_{ji}\in\mathbb{R}$
-\end_inset
-
- are uniquely determined for 
-\begin_inset Formula $1\leq j\leq n$
-\end_inset
-
-.
- Then the matrix representation of 
-\begin_inset Formula $T$
-\end_inset
-
- with respect to the bases 
-\begin_inset Formula $\beta$
-\end_inset
-
- and 
-\begin_inset Formula $\gamma$
-\end_inset
-
- is 
-\begin_inset Formula 
-\[
-T^{\gamma,\beta}:=\varphi_{\gamma}\circ T\circ\varphi_{\beta}^{-1}=\begin{pmatrix}a_{11} & \cdots & a_{1m}\\
-\vdots & \ddots & \vdots\\
-a_{n1} & \cdots & a_{nm}
-\end{pmatrix},
-\]
-
-\end_inset
-
-that is, it is the 
-\begin_inset Formula $n\times m$
-\end_inset
-
- matrix whose 
-\begin_inset Formula $(j,i)$
-\end_inset
-
- entry is 
-\begin_inset Formula $a_{ji}$
-\end_inset
-
-.
- In particular, we see that (after identifying 
-\begin_inset Formula $V$
-\end_inset
-
- and 
-\begin_inset Formula $W$
-\end_inset
-
- to 
-\begin_inset Formula $\mathbb{R}^{m}$
-\end_inset
-
- and 
-\begin_inset Formula $\mathbb{R}^{n}$
-\end_inset
-
-) 
-\begin_inset Formula 
-\[
-[Df(u)]_{\beta}^{\gamma}=Jf
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-Now suppose
-\begin_inset Formula $\beta'=\{\beta_{1}',\dots,\beta_{m}'\}$
-\end_inset
-
- is another basis for 
-\begin_inset Formula $V$
-\end_inset
-
- and suppose 
-\begin_inset Formula $\gamma'=\{\gamma_{1}',\dots,\gamma_{n}'\}$
-\end_inset
-
- is another basis for 
-\begin_inset Formula $W$
-\end_inset
-
-.
- The matrix 
-\begin_inset Formula $[1_{W}]_{\gamma'}^{\gamma}\in\text{GL}_{n}(\mathbb{R})$
-\end_inset
-
- is called the 
-\series bold
-change of basis matrix from
-\series default
- 
-\begin_inset Formula $\gamma'$
-\end_inset
-
- 
-\series bold
-to
-\series default
- 
-\begin_inset Formula $\gamma$
-\end_inset
-
- and the matrix 
-\begin_inset Formula $[1_{V}]_{\beta'}^{\beta}\in\text{GL}_{m}(\mathbb{R})$
-\end_inset
-
- is called the the 
-\series bold
-change of basis matrix
-\series default
- 
-\series bold
-from
-\series default
- 
-\begin_inset Formula $\beta'$
-\end_inset
-
- 
-\series bold
-to
-\series default
- 
-\begin_inset Formula $\beta$
-\end_inset
-
-.
- A straightforward calculation shows
-\begin_inset Formula 
-\[
-[1_{W}]_{\gamma}^{\gamma'}[T]_{\beta}^{\gamma}[1_{V}]_{\beta'}^{\beta}=[1_{W}\circ T\circ1_{V}]_{\beta'}^{\gamma'}=[T]_{\beta'}^{\gamma'}.
-\]
-
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-By fixing the basis 
-\begin_inset Formula $\beta$
-\end_inset
-
- of 
-\begin_inset Formula $V$
-\end_inset
-
- (respectively 
-\begin_inset Formula $\gamma$
-\end_inset
-
- of 
-\begin_inset Formula $W$
-\end_inset
-
-), the matrix representation construction gives us a one-to-one correspondence
- between elements in 
-\begin_inset Formula $\text{GL}_{m}(\mathbb{R})$
-\end_inset
-
- (respectively 
-\begin_inset Formula $\text{GL}_{n}(\mathbb{R})$
-\end_inset
-
-) and bases 
-\begin_inset Formula $\beta'$
-\end_inset
-
- of 
-\begin_inset Formula $V$
-\end_inset
-
- (respectively 
-\begin_inset Formula $\gamma'$
-\end_inset
-
- of 
-\begin_inset Formula $W$
-\end_inset
-
-).
- Define a relation 
-\begin_inset Formula $\sim$
-\end_inset
-
- on 
-\begin_inset Formula $\text{Mat}_{n\times m}(\mathbb{R})$
-\end_inset
-
- as follows: for two matrices 
-\begin_inset Formula $M_{1},M_{2}\in\text{Mat}_{n\times m}(\mathbb{R})$
-\end_inset
-
-, we say 
-\begin_inset Formula $M_{1}\sim M_{2}$
-\end_inset
-
- if there exists 
-\begin_inset Formula $A\in\text{GL}_{n}(\mathbb{R})$
-\end_inset
-
- and 
-\begin_inset Formula $B\in\text{GL}_{m}(\mathbb{R})$
-\end_inset
-
- such that 
-\begin_inset Formula 
-\[
-AM_{1}B=M_{2}.
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-It is clear that 
-\begin_inset Formula $\sim$
-\end_inset
-
- is an equivalence relation.
- Denote the equivalence class of a matrix 
-\begin_inset Formula $M\in\text{Mat}_{n\times m}(\mathbb{R})$
-\end_inset
-
- by 
-\begin_inset Formula $\overline{M}$
-\end_inset
-
-.
- Then the representation construction gives us a map.
- 
-\begin_inset Formula 
-\[
-Df(u)\mapsto\overline{Jf(u)}
-\]
-
-\end_inset
-
-
+Chain Rule
 \end_layout
 
 \begin_layout Standard
@@ -1060,25 +599,45 @@ and
 \begin_inset Formula $\mathbb{R}$
 \end_inset
 
--vector spaces, 
-\begin_inset Formula $U\subseteq V$
+-vector spaces of dimensions 
+\begin_inset Formula $n$
+\end_inset
+
+, 
+\begin_inset Formula $n'$
+\end_inset
+
+, and 
+\begin_inset Formula $n''$
+\end_inset
+
+ respectively, let 
+\begin_inset Formula $U$
+\end_inset
+
+ be an open subset of 
+\begin_inset Formula $V$
+\end_inset
+
+, let 
+\begin_inset Formula $U'$
+\end_inset
+
+ be an open subset of 
+\begin_inset Formula $V'$
+\end_inset
+
+, and let 
+\begin_inset Formula $f\colon U\to V'$
 \end_inset
 
  and 
-\begin_inset Formula $U'\subseteq V'$
+\begin_inset Formula $g\colon U'\to V''$
 \end_inset
 
- be open subsets, and let 
-\begin_inset Formula $f:U\to V'$
-\end_inset
-
- and 
-\begin_inset Formula $g:U'\to V''$
-\end_inset
-
- be differentiable.
+ be differentiable functions.
  Then the map 
-\begin_inset Formula $g\circ f:U\cap f^{-1}(U')\to V''$
+\begin_inset Formula $g\circ f\colon U\cap f^{-1}(U')\to V''$
 \end_inset
 
  is differentiable and for all 
@@ -1088,7 +647,7 @@ and
 , we have 
 \begin_inset Formula 
 \begin{equation}
-D(g\circ f)(u)=Dg(f(u))\circ Df(u).\label{eq:chainrule}
+\mathrm{D}(g\circ f)(u)=\mathrm{D}g(f(u))\circ\mathrm{D}f(u).\label{eq:chainrule}
 \end{equation}
 
 \end_inset
@@ -1125,7 +684,7 @@ begin{proof}
 
 \end_inset
 
- Choosing a bases for 
+ After choosing bases for 
 \begin_inset Formula $V$
 \end_inset
 
@@ -1137,28 +696,52 @@ begin{proof}
 \begin_inset Formula $V''$
 \end_inset
 
- allows us to identity 
-\begin_inset Formula $D(g\circ f)(u)$
+, we may identify 
+\begin_inset Formula $\mathrm{D}(g\circ f)(u)$
 \end_inset
 
- with the matrix 
-\begin_inset Formula $[\partial_{x_{i}}(g\circ f)_{k}(u)]_{i}^{k}$
+ with the 
+\begin_inset Formula $n''\times n$
 \end_inset
 
-, 
-\begin_inset Formula $Dg(f(u))$
+ matrix whose 
+\begin_inset Formula $(i'',i)$
 \end_inset
 
- with the matrix 
-\begin_inset Formula $[\partial_{f_{j}}g{}_{k}(f(u))]_{j}^{k}$
+ entry is 
+\begin_inset Formula $\partial_{x_{i}}(g\circ f)_{i''}(u)$
 \end_inset
 
-, and 
-\begin_inset Formula $Df(u)$
+, we may identify 
+\begin_inset Formula $\mathrm{D}g(f(u))$
 \end_inset
 
- with the matrix 
-\begin_inset Formula $[\partial_{x_{i}}f_{j}(u)]_{i}^{j}$
+ with the 
+\begin_inset Formula $n''\times n'$
+\end_inset
+
+ matrix whose 
+\begin_inset Formula $(i'',i')$
+\end_inset
+
+ entry is 
+\begin_inset Formula $\partial_{f_{i'}}g{}_{i''}(f(u))$
+\end_inset
+
+, and we may identify 
+\begin_inset Formula $\mathrm{D}f(u)$
+\end_inset
+
+ with the 
+\begin_inset Formula $n'\times n$
+\end_inset
+
+ matrix whose 
+\begin_inset Formula $(i',i)$
+\end_inset
+
+ entry is 
+\begin_inset Formula $\partial_{x_{i}}f_{i'}(u)$
 \end_inset
 
 .
@@ -1178,12 +761,73 @@ ref{eq:chainrule})
  turns into the matrix equation
 \begin_inset Formula 
 \[
-[\partial_{x_{i}}(g\circ f)_{k}(u)]_{i}^{k}\stackrel{?}{=}[\partial_{f_{j}}g{}_{k}(f(u))]_{j}^{k}\cdot[\partial_{x_{i}}f_{j}(u)]_{i}^{j},
+(\partial_{x_{i}}(g\circ f)_{i''}(u))=(\partial_{f_{i'}}g{}_{i''}(f(u)))\cdot(\partial_{x_{i}}f_{i'}(u))
 \]
 
 \end_inset
 
- which follows from the classical Chain Rule.
+which gives us a system of equations
+\begin_inset Formula 
+\begin{equation}
+\partial_{x_{i}}(g\circ f)_{i''}(u)=\sum_{i'=1}^{n'}\partial_{f_{i'}}g{}_{i''}(f(u))\partial_{x_{i}}f_{i'}(u)\label{eq:classicalcasesystem}
+\end{equation}
+
+\end_inset
+
+for each 
+\begin_inset Formula $1\leq i\leq n$
+\end_inset
+
+ and 
+\begin_inset Formula $1\leq i''\leq n''$
+\end_inset
+
+.
+ Therefore 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+(
+\backslash
+ref{eq:chainrule})
+\end_layout
+
+\end_inset
+
+ holds if and only if 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+(
+\backslash
+ref{eq:classicalcasesystem})
+\end_layout
+
+\end_inset
+
+ holds for all 
+\begin_inset Formula $i,i''$
+\end_inset
+
+, and 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+(
+\backslash
+ref{eq:classicalcasesystem})
+\end_layout
+
+\end_inset
+
+ holds since this is just the chain rule in the classical case.
+ 
 \begin_inset ERT
 status open
 
@@ -1199,35 +843,32 @@ end{proof}
 
 \end_layout
 
+\begin_layout Subsection
+\begin_inset Formula $C^{1}$
+\end_inset
+
+ maps
+\end_layout
+
 \begin_layout Standard
-\begin_inset space ~
+Let 
+\begin_inset Formula $f\colon U\to W$
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-If 
-\begin_inset Formula $f$
-\end_inset
-
- is differentiable, then for each 
+ be differentiable as above.
+ Then for each 
 \begin_inset Formula $u\in U$
 \end_inset
 
  we get a linear map 
-\begin_inset Formula $Df(u):V\to W$
+\begin_inset Formula $\mathrm{D}f(u)\colon V\to W$
 \end_inset
 
 .
- Hence, we get a map 
+ Hence, we get a linear map 
 \begin_inset Formula 
 \[
-Df:U\to\text{Hom}(V,W)
+\mathrm{D}f\colon U\to\mathrm{Hom}(V,W)
 \]
 
 \end_inset
@@ -1237,7 +878,7 @@ into a
 new 
 \emph default
 target vector space, namely 
-\begin_inset Formula $\text{Hom}(V,W)$
+\begin_inset Formula $\mathrm{Hom}(V,W)$
 \end_inset
 
 .
@@ -1275,7 +916,7 @@ matrix-valued
 \end_inset
 
 What does it mean to say that 
-\begin_inset Formula $Df:U\to\text{Hom}(V,W)$
+\begin_inset Formula $\mathrm{D}f\colon U\to\mathrm{Hom}(V,W)$
 \end_inset
 
  is continuous? Upon fixing linear coordinates on 
@@ -1288,11 +929,11 @@ What does it mean to say that
 
 , such continuity amounts to continuity for each of the component functions
  
-\begin_inset Formula $\partial_{x_{i}}f_{j}:U\to\mathbb{R}$
+\begin_inset Formula $\partial_{x_{i}}f_{j}\colon U\to\mathbb{R}$
 \end_inset
 
  of the matrix-valued 
-\begin_inset Formula $Df$
+\begin_inset Formula $\mathrm{D}f$
 \end_inset
 
 , and so the concrete definition of 
@@ -1304,11 +945,11 @@ What does it mean to say that
 \end_inset
 
  is equivalent to the coordinate-free property that 
-\begin_inset Formula $f:U\to W$
+\begin_inset Formula $f\colon U\to W$
 \end_inset
 
  is differentiable and that the associated total derivative map 
-\begin_inset Formula $Df:U\to\text{Hom}(V,W)$
+\begin_inset Formula $\mathrm{D}f\colon U\to\mathrm{Hom}(V,W)$
 \end_inset
 
  from 
@@ -1316,12 +957,12 @@ What does it mean to say that
 \end_inset
 
  to a new vector space 
-\begin_inset Formula $\text{Hom}(V,W)$
+\begin_inset Formula $\mathrm{Hom}(V,W)$
 \end_inset
 
  is continuous.
  With this latter point of view, wherein 
-\begin_inset Formula $Df$
+\begin_inset Formula $\mathrm{D}f$
 \end_inset
 
  is a map from the open set 
@@ -1329,7 +970,7 @@ What does it mean to say that
 \end_inset
 
  into a finite-dimensional vector space 
-\begin_inset Formula $\text{Hom}(V,W)$
+\begin_inset Formula $\mathrm{Hom}(V,W)$
 \end_inset
 
 , a very natural question is: what does it mean to say that 
@@ -1355,7 +996,7 @@ label{lemma}
 \end_inset
 
  Suppose 
-\begin_inset Formula $f:U\to W$
+\begin_inset Formula $f\colon U\to W$
 \end_inset
 
  is a 
@@ -1363,7 +1004,7 @@ label{lemma}
 \end_inset
 
  map, and let 
-\begin_inset Formula $Df:U\to\text{Hom}(V,W)$
+\begin_inset Formula $\mathrm{D}f\colon U\to\mathrm{Hom}(V,W)$
 \end_inset
 
  be the associated total derivative map.
@@ -1372,7 +1013,7 @@ label{lemma}
 \end_inset
 
  to a finite-dimensional vector space, 
-\begin_inset Formula $Df$
+\begin_inset Formula $\mathrm{D}f$
 \end_inset
 
  is 
@@ -1388,7 +1029,7 @@ label{lemma}
 \end_inset
 
 ) all second-order partials 
-\begin_inset Formula $\partial_{x_{i_{1}}}\partial_{x_{i_{2}}}f_{j}:U\to\mathbb{R}$
+\begin_inset Formula $\partial_{x_{i_{1}}}\partial_{x_{i_{2}}}f_{j}\colon U\to\mathbb{R}$
 \end_inset
 
  exist and are continuous.
@@ -1422,15 +1063,15 @@ begin{proof}
 \end_inset
 
  Fixing linear coordinates identifies 
-\begin_inset Formula $Df$
+\begin_inset Formula $\mathrm{D}f$
 \end_inset
 
  with a map from an open set 
-\begin_inset Formula $U\subseteq\mathbb{R}^{n}$
+\begin_inset Formula $U\subseteq\mathbb{R}^{m}$
 \end_inset
 
  to a Euclidean space of 
-\begin_inset Formula $m\times n$
+\begin_inset Formula $n\times m$
 \end_inset
 
  matrices, with component functions 
@@ -1485,7 +1126,7 @@ end{proof}
 \end_inset
 
 Let us say that 
-\begin_inset Formula $f:U\to W$
+\begin_inset Formula $f\colon U\to W$
 \end_inset
 
  is 
@@ -1493,7 +1134,7 @@ Let us say that
 \end_inset
 
  when it is differentiable and 
-\begin_inset Formula $Df:U\to\text{Hom}(V,W)$
+\begin_inset Formula $\mathrm{D}f\colon U\to\mathrm{Hom}(V,W)$
 \end_inset
 
  is 
@@ -1515,14 +1156,14 @@ Let us say that
 \end_inset
 
 ) admit continuous second-order partials.
- What sort of structure is the total derivative of 
-\begin_inset Formula $Df$
+ Next let us consider the total derivative of 
+\begin_inset Formula $\mathrm{D}f$
 \end_inset
 
-? That is, what sense can we make of the map 
+, that is,
 \begin_inset Formula 
 \[
-D^{2}f=D(Df):U\to\text{Hom}(V,\text{Hom}(V,W))?
+\mathrm{D}^{2}f=\mathrm{D}(\mathrm{D}f)\colon U\to\mathrm{Hom}(V,\mathrm{Hom}(V,W)).
 \]
 
 \end_inset
@@ -1540,380 +1181,82 @@ More to the point, how do we work with the vector space
  setting over any field.
 \end_layout
 
-\begin_layout Subsection
-Hom-Spaces and Multilinear Mappings
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{defn}
+\backslash
+label{defn}
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
 \end_inset
 
-
-\begin_inset space ~
+ In general, for an integer 
+\begin_inset Formula $p\geq1$
 \end_inset
 
-
-\begin_inset space ~
+ we say that 
+\begin_inset Formula $f\colon U\to W$
 \end_inset
 
-Let 
-\begin_inset Formula $V,V',W$
+ is a 
+\begin_inset Formula $C^{p}$
 \end_inset
 
- be arbitrary vector spaces over a field 
-\begin_inset Formula $F$
-\end_inset
-
-.
- Let 
-\begin_inset Formula $\text{Bil}_{F}(V\times V',W)$
-\end_inset
-
- denote the set of 
-\begin_inset Formula $F$
-\end_inset
-
--bilinear maps 
-\begin_inset Formula $V\times V'\to W$
-\end_inset
-
-, endowed with its natural 
-\begin_inset Formula $F$
-\end_inset
-
--vector space structure, that is:
-\begin_inset Formula 
-\[
-a\psi(v,v')=\psi(av,av')\qquad\text{and}\qquad(\psi+\varphi)(v,v')=\psi(v,v')+\varphi(v,v')
-\]
-
-\end_inset
-
-for all 
-\begin_inset Formula $a\in F$
-\end_inset
-
- and 
-\begin_inset Formula $\varphi,\psi\in\text{Bil}_{F}(V\times V',W)$
-\end_inset
-
-.
  
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
+\series bold
+map
+\series default
+, or is 
+\begin_inset Formula $p$
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-Suppose we're given a bilinear map 
-\begin_inset Formula 
-\[
-\psi:V\times V'\to W.
-\]
-
-\end_inset
-
-Thus, for each fixed 
-\begin_inset Formula $v\in V$
-\end_inset
-
- we get a linear map 
-\begin_inset Formula 
-\[
-\psi(v,\cdot):V'\to W
-\]
-
-\end_inset
-
-given by 
-\begin_inset Formula $v'\mapsto\psi(v,v')$
-\end_inset
-
-.
- In other words, we have a set-theoretic map 
-\begin_inset Formula 
-\[
-V\to\text{Hom}_{F}(V',W)
-\]
-
-\end_inset
-
-which assigns to any 
-\begin_inset Formula $v\in V$
-\end_inset
-
- the linear map 
-\begin_inset Formula $\psi(v,\cdot)$
-\end_inset
-
-.
- This map is actually an isomorphism 
-\begin_inset Formula 
-\[
-\text{Bil}_{F}(V\times V',W)\to\text{Hom}_{F}(V,\text{Hom}_{F}(V',W))
-\]
-
-\end_inset
-
-of 
-\begin_inset Formula $F$
-\end_inset
-
--vector spaces.
- In fact, something more general is true:
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-For any positive integer 
-\begin_inset Formula $d$
-\end_inset
-
- and vector spaces 
-\begin_inset Formula $V_{1},\dots,V_{d}$
-\end_inset
-
- and 
-\begin_inset Formula $W$
-\end_inset
-
- over 
-\begin_inset Formula $F$
-\end_inset
-
-, there is an isomorphism 
-\begin_inset Formula 
-\[
-\text{Hom}_{F}(V_{1},\text{Hom}_{F}(V_{2},\text{Hom}_{F}(V_{3},\dots,\text{Hom}_{F}(V_{d},W)\dots)))\simeq\text{Mult}(V_{1},\dots,V_{d},W)
-\]
-
-\end_inset
-
-to the space of multilinear mappings 
-\begin_inset Formula 
-\[
-\mu:V_{1}\times\cdots\times V_{d}\to W,
-\]
-
-\end_inset
-
-(made into an 
-\begin_inset Formula $F$
-\end_inset
-
--vector space just as in the case of 
-\begin_inset Formula $\text{Bil}_{F}(V\times V',W)$
-\end_inset
-
-.
  
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{theorem}
-\backslash
-label{theorem}
-\end_layout
-
+\series bold
+times continuously differentiable
+\series default
+, if it is differentiable and 
+\begin_inset Formula $\mathrm{D}f\colon U\to\mathrm{Hom}(V,W)$
 \end_inset
 
- With the notation as introduced above, there is a natural linear isomorphism
+ is a 
+\begin_inset Formula $C^{p-1}$
+\end_inset
+
+ map.
+ If 
+\begin_inset Formula $f$
+\end_inset
+
+ is a 
+\begin_inset Formula $C^{p}$
+\end_inset
+
+ map for every 
+\begin_inset Formula $p$
+\end_inset
+
+, we shall say that 
+\begin_inset Formula $f$
+\end_inset
+
+ is a 
+\begin_inset Formula $C^{\infty}$
+\end_inset
+
  
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\xi:\text{Hom}_{F}(V_{1},\text{Hom}_{F}(V_{2},\text{Hom}_{F}(V_{3},\dots,\text{Hom}_{F}(V_{d},W)\dots)))\simeq\text{Mult}_{F}(V_{1},\dots,V_{d},W).
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{theorem}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{proof}
-\end_layout
-
-\end_inset
-
- We define 
-\begin_inset Formula $\xi$
-\end_inset
-
- as follows: for 
-\begin_inset Formula $\varphi\in\text{Hom}_{F}(V_{1},\text{Hom}_{F}(V_{2},\text{Hom}_{F}(V_{3},\dots,\text{Hom}_{F}(V_{d},W)\dots)))$
-\end_inset
-
-, 
-\begin_inset Formula $\xi(\varphi)$
-\end_inset
-
- is the multilinear mapping given by 
-\begin_inset Formula 
-\[
-\xi(\varphi)(v_{1},\dots,v_{n})=(\dots((\varphi(v_{1})(v_{2}))(\dots))(v_{d})\in W
-\]
-
-\end_inset
-
-If 
-\begin_inset Formula $d=3$
-\end_inset
-
- then 
-\begin_inset Formula 
-\[
-\xi(\varphi)(v_{1},v_{2},v_{3})=((\varphi(v_{1}))(v_{2}))(v_{3}).
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Let us see why this is multilinear.
- Let 
-\begin_inset Formula $v_{1}'\in V_{1}$
-\end_inset
-
- and 
-\begin_inset Formula $a\in F$
-\end_inset
-
-.
- Then
-\begin_inset Formula 
-\begin{align*}
-\xi(\varphi)(v_{1}+av_{1}',v_{2},v_{3}) & =((\varphi(v_{1}+av_{1}'))(v_{2}))(v_{3})\\
- & =((\varphi(v_{1})+a\varphi(v_{1}'))(v_{2}))(v_{3})\\
- & =((\varphi(v_{1}))(v_{2}))(v_{3})+a\varphi(v_{1}'))(v_{2}))(v_{3})\\
- & =\xi(\varphi)(v_{1},v_{2},v_{3})+a\xi(\varphi)(v_{1}',v_{2},v_{3})
-\end{align*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{proof}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{cor}
-\backslash
-label{coriso}
-\end_layout
-
-\end_inset
-
- Let 
-\begin_inset Formula $V$
-\end_inset
-
- and 
-\begin_inset Formula $W$
-\end_inset
-
- be vector spaces over a field.
- For any positive integer 
-\begin_inset Formula $d$
-\end_inset
-
-, there is a natural linear isomorphism
-\begin_inset Formula 
-\[
-\text{Hom}_{F}(V,\text{Hom}_{F}(V,\text{Hom}_{F}(V,\dots,\text{Hom}_{F}(V,W)\dots)))\simeq\text{Mult}_{F}(V^{d},W).
-\]
-
-\end_inset
-
-(with 
-\begin_inset Formula $d$
-\end_inset
-
- iterated Hom's) to the space of multilinear maps 
-\begin_inset Formula $V\times\cdots\times V\to W$
-\end_inset
-
- on a 
-\begin_inset Formula $d$
-\end_inset
-
--fold product of copies of 
-\begin_inset Formula $V$
-\end_inset
-
+\series bold
+map
+\series default
+, or is 
+\series bold
+infinitely differentiable
+\series default
 .
  
 \begin_inset ERT
@@ -1923,7 +1266,7 @@ status open
 
 
 \backslash
-end{cor}
+end{defn}
 \end_layout
 
 \end_inset
@@ -3048,46 +2391,47 @@ label{example}
 
 \end_inset
 
- When 
-\begin_inset Formula $p=2$
-\end_inset
-
-, 
+ Suppose 
 \begin_inset Formula $W=\mathbb{R}$
 \end_inset
 
-, and 
-\begin_inset Formula $\text{dim}(V)=n$
+ and let 
+\begin_inset Formula $x_{1},\dots,x_{m}$
 \end_inset
 
- with linear coordinates 
-\begin_inset Formula $x_{1},\dots,x_{n}$
+ be linear coordinates on 
+\begin_inset Formula $V$
+\end_inset
+
+ relative to some ordered basis 
+\begin_inset Formula $\boldsymbol{e}=(e_{1},\dots,e_{m})$
 \end_inset
 
  on 
 \begin_inset Formula $V$
 \end_inset
 
- relative to some ordered basis 
-\begin_inset Formula $\mathbf{e}=\{e_{1},\dots,e_{n}\}$
+.
+ Then 
+\begin_inset Formula $\mathrm{D}^{2}f(u)$
 \end_inset
 
-, then the 
+ is identified with the 
 \series bold
 Hessian 
 \series default
-
-\begin_inset Formula $H_{f}(u)=(D^{2}f)(u)$
+of 
+\begin_inset Formula $f$
 \end_inset
 
- is the symmetric bilinear form on 
-\begin_inset Formula $V$
+ at 
+\begin_inset Formula $u$
 \end_inset
 
- represented by the matrix 
+:
 \begin_inset Formula 
 \[
-_{\mathbf{e}^{*}}[H_{f}(u)]_{\mathbf{e}}=\left(\frac{\partial^{2}f}{\partial x_{i}\partial x_{j}}(u)\right).
+\mathrm{D}^{2}f(u)=\mathrm{H}_{f}(u)=\left(\frac{\partial^{2}f}{\partial x_{i}\partial x_{j}}(u)\right).
 \]
 
 \end_inset
@@ -3179,11 +2523,11 @@ Before we state the general case, let us first recall the
 \end_inset
 
 -variable Taylor formula for a 
-\begin_inset Formula $C^{\alpha}$
+\begin_inset Formula $C^{p}$
 \end_inset
 
  function 
-\begin_inset Formula $f:I\to\mathbb{R}$
+\begin_inset Formula $f\colon I\to\mathbb{R}$
 \end_inset
 
  on an interval 
@@ -3199,7 +2543,7 @@ Before we state the general case, let us first recall the
 \end_inset
 
  sufficiently small so that 
-\begin_inset Formula $(a-r,a+r)\in I$
+\begin_inset Formula $(a-h,a+h)\in I$
 \end_inset
 
  we have 
@@ -3210,16 +2554,20 @@ f(a+h)=f(a)+f'(a)h+\frac{f''(a)}{2!}h^{2}+\cdots+\frac{f^{(p)}(a)}{p!}h^{p}+R_{p
 
 \end_inset
 
-with error term given by 
+with error term 
+\begin_inset Formula $R_{p,a}$
+\end_inset
+
+ is given by 
 \begin_inset Formula 
 \[
-R_{p,a}(h)=\int_{0}^{1}\frac{f^{(p)}(a+th)-f^{(p)}(a)}{(p-1)!}\cdot(1-t)^{p-1}h^{p}dt=h^{p}(\cdots),
+R_{p,a}(h)=\int_{0}^{1}\frac{f^{(p)}(a+th)-f^{(p)}(a)}{(p-1)!}\cdot(1-t)^{p-1}h^{p}\mathrm{d}t=h^{p}\psi_{p,a}(h),
 \]
 
 \end_inset
 
 where 
-\begin_inset Formula $|(\cdots)|$
+\begin_inset Formula $|\psi_{p,a}(h)|$
 \end_inset
 
  can be made below any desired 
