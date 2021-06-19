@@ -270,7 +270,7 @@ restriction map
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $\mathrm{res}_{U}^{V}\circ\mathrm{res}_{V}^{W}=\text{res}_{U}^{W}$
+\begin_inset Formula $\mathrm{res}_{U}^{V}\circ\mathrm{res}_{V}^{W}=\mathrm{res}_{U}^{W}$
 \end_inset
 
  for all open sets 
@@ -465,7 +465,7 @@ is commutative.
 \begin_inset Formula $X$
 \end_inset
 
- which we denote 
+ which we denote by 
 \begin_inset Formula $\mathbf{Psh}(X)$
 \end_inset
 
@@ -480,6 +480,10 @@ is commutative.
 
  by 
 \begin_inset Formula $\varphi\psi$
+\end_inset
+
+ instead of 
+\begin_inset Formula $\varphi\circ\psi$
 \end_inset
 
 .
@@ -506,7 +510,7 @@ Category Theory
 \begin_layout Standard
 Using the language of category theory, we can define presheaves in a very
  concise way.
- We denote by 
+ Let 
 \series bold
 
 \begin_inset Formula $\mathbf{O}(X)$
@@ -514,11 +518,15 @@ Using the language of category theory, we can define presheaves in a very
 
  
 \series default
-to be the category whose objects are open subsets of 
+be the category whose objects are open sets 
+\begin_inset Formula $U$
+\end_inset
+
+ of 
 \begin_inset Formula $X$
 \end_inset
 
- and whose morphisms are inclusion maps.
+ and whose morphisms are the inclusion maps.
  Then a presheaf 
 \begin_inset Formula $\mathcal{F}$
 \end_inset
@@ -536,20 +544,29 @@ to
 \end_inset
 
 , and morphisms of presheaves are natural transformations between functors.
+ Alternatively, we can view 
+\begin_inset Formula $\mathcal{F}$
+\end_inset
+
+ as a covariant functor from 
+\begin_inset Formula $\mathbf{O}(X)^{\mathrm{op}}$
+\end_inset
+
+ to 
+\begin_inset Formula $\mathbf{Set}$
+\end_inset
+
+.
  We can also replace the category 
 \begin_inset Formula $\mathbf{Set}$
 \end_inset
 
  with any other category 
-\begin_inset Formula $\mathbf{C}$
+\begin_inset Formula $\mathbf{D}$
 \end_inset
 
- to obtain the notion of a presheaf 
-\begin_inset Formula $\mathcal{F}$
-\end_inset
-
- with values in 
-\begin_inset Formula $\mathbf{C}$
+ to obtain the notion of a presheaf with values in 
+\begin_inset Formula $\mathbf{D}$
 \end_inset
 
 .
@@ -570,6 +587,19 @@ to
 \end_inset
 
  and that the restriction maps are morphisms in 
+\begin_inset Formula $\mathbf{C}$
+\end_inset
+
+.
+ Similarly, we can replace the category 
+\begin_inset Formula $\mathbf{O}(X)$
+\end_inset
+
+ with a category 
+\begin_inset Formula $\mathbf{C}$
+\end_inset
+
+ to obtain the notion of a presheaf defined on a category 
 \begin_inset Formula $\mathbf{C}$
 \end_inset
 
@@ -718,125 +748,6 @@ status open
 
 \backslash
 end{defn}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{rem}
-\backslash
-label{rem}
-\end_layout
-
-\end_inset
-
- Let 
-\begin_inset Formula $X$
-\end_inset
-
- be a topological space, 
-\begin_inset Formula $\mathcal{F}$
-\end_inset
-
- a sheaf on 
-\begin_inset Formula $X$
-\end_inset
-
-, 
-\begin_inset Formula $U\subseteq X$
-\end_inset
-
- be open, and let 
-\begin_inset Formula $\{U_{i}\}_{i\in I}$
-\end_inset
-
- be an open covering of 
-\begin_inset Formula $U$
-\end_inset
-
-.
- Suppose for all 
-\begin_inset Formula $i\in I$
-\end_inset
-
-, we have 
-\begin_inset Formula $s_{i}\in\mathcal{F}(U_{i})$
-\end_inset
-
- such that 
-\begin_inset Formula $s_{i}|_{U_{ij}}=s_{j}|_{U_{ij}}$
-\end_inset
-
-.
- By the sheaf condition, there exists a unique 
-\begin_inset Formula $s\in\mathcal{F}(U)$
-\end_inset
-
- such that 
-\begin_inset Formula $s|_{U_{i}}=s_{i}$
-\end_inset
-
-.
- Conversely, if 
-\begin_inset Formula $s,s'\in\mathcal{F}(U)$
-\end_inset
-
- such that 
-\begin_inset Formula $s|_{U_{i}}=s'|_{U_{i}}$
-\end_inset
-
- for all 
-\begin_inset Formula $i\in I$
-\end_inset
-
-, then 
-\begin_inset Formula $s=s'$
-\end_inset
-
-.
- In particular, we can think of sections 
-\begin_inset Formula $s\in\mathcal{F}(U)$
-\end_inset
-
- as being a collection of compatible sections 
-\begin_inset Formula $s_{i}\in\mathcal{F}(U_{i})$
-\end_inset
-
- (compatible meaning 
-\begin_inset Formula $s_{i}|_{U_{ij}}=s_{j}|_{U_{ij}}$
-\end_inset
-
-).
- More formally, we have
-\begin_inset Formula 
-\[
-\mathcal{F}(U)=\left\{ (s_{i})_{i}\in\prod_{i}\mathcal{F}(U_{i})\mid s_{i}|_{U_{ij}}=s_{j}|_{U_{ij}}\text{ for all }i,j\in I.\right\} 
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{rem}
 \end_layout
 
 \end_inset
@@ -1382,21 +1293,7 @@ Sheaf of Continuous Functions
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{example}
-\backslash
-label{example}
-\end_layout
-
-\end_inset
-
- Let 
+Let 
 \begin_inset Formula $X$
 \end_inset
 
@@ -1528,19 +1425,6 @@ Then
 
 .
  
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{example}
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsubsection
@@ -1552,21 +1436,7 @@ Sheaf of
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{example}
-\backslash
-label{example}
-\end_layout
-
-\end_inset
-
- Let 
+Let 
 \begin_inset Formula $V$
 \end_inset
 
@@ -1631,90 +1501,6 @@ Then
 \end_inset
 
 .
- 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{example}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{example}
-\backslash
-label{example}
-\end_layout
-
-\end_inset
-
- Let 
-\begin_inset Formula $\alpha\in\widehat{\mathbb{N}}$
-\end_inset
-
-.
- For 
-\begin_inset Formula $X=\mathbb{R}$
-\end_inset
-
- and 
-\begin_inset Formula $U\subseteq\mathbb{R}$
-\end_inset
-
- open let 
-\begin_inset Formula $d_{U}:\mathcal{C}_{\mathbb{R}}^{\alpha}(U)\to\mathcal{C}_{\mathbb{R}}^{\alpha-1}(U)$
-\end_inset
-
- be the derivative 
-\begin_inset Formula $f\mapsto f'$
-\end_inset
-
-.
- Then 
-\begin_inset Formula $(d_{U})_{U}$
-\end_inset
-
- is a morphism of sheaves of 
-\begin_inset Formula $\mathbb{R}$
-\end_inset
-
--vector spaces (but not of 
-\begin_inset Formula $\mathbb{R}$
-\end_inset
-
--algebras because usually 
-\begin_inset Formula $(fg)'\neq f'g'$
-\end_inset
-
-).
- 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{example}
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsubsection
@@ -1722,21 +1508,7 @@ Sheaf of Holomorphic Functions
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{example}
-\backslash
-label{example}
-\end_layout
-
-\end_inset
-
- Let 
+Let 
 \begin_inset Formula $V$
 \end_inset
 
@@ -1782,20 +1554,6 @@ Then
 \end_inset
 
 -vector spaces.
- 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{example}
-\end_layout
-
-\end_inset
-
- 
 \end_layout
 
 \begin_layout Subsubsection
@@ -1803,21 +1561,7 @@ Constant Sheaf
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{example}
-\backslash
-label{example}
-\end_layout
-
-\end_inset
-
- Let 
+Let 
 \begin_inset Formula $X$
 \end_inset
 
@@ -1852,19 +1596,6 @@ constant sheaf with value
 \end_inset
 
 .
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{example}
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsection
@@ -2728,34 +2459,55 @@ begin{defn}
 \begin_inset Formula $X$
 \end_inset
 
-, considered as a contravariant functor 
-\begin_inset Formula $\mathcal{F}:\mathbf{O}(X)\to\mathbf{Set}$
+, considered as a covariant functor 
+\begin_inset Formula $\mathcal{F}\colon\mathbf{O}(X)^{\mathrm{op}}\to\mathbf{Set}$
 \end_inset
 
 , and let 
-\begin_inset Formula $x\in X$
+\begin_inset Formula $S\subseteq X$
 \end_inset
 
- be a point.
+ be a subset of 
+\begin_inset Formula $X$
+\end_inset
+
+.
  Let 
 \begin_inset Formula 
 \[
-\mathbf{U}(x):=\{U\subseteq X\mid U\text{ is an open neighborhood of }x\}
+\mathbf{U}(S):=\{U\subseteq X\mid U\text{ is an open neighborhood of }S\}
 \]
 
 \end_inset
 
 be the set of open neighborhoods of 
-\begin_inset Formula $x$
+\begin_inset Formula $S$
 \end_inset
 
 , ordered by inclusion.
- We consider 
+ If 
+\begin_inset Formula $x$
+\end_inset
+
+ is a point of 
+\begin_inset Formula $X$
+\end_inset
+
+, then we will denoted 
+\begin_inset Formula $\mathbf{U}(\{x\})$
+\end_inset
+
+ by 
 \begin_inset Formula $\mathbf{U}(x)$
 \end_inset
 
+.
+ We consider 
+\begin_inset Formula $\mathbf{U}(S)$
+\end_inset
+
  as a full subcategory of 
-\begin_inset Formula $\mathbf{O}(x)$
+\begin_inset Formula $\mathbf{O}(X)$
 \end_inset
 
 .
@@ -2764,19 +2516,27 @@ be the set of open neighborhoods of
 \end_inset
 
  to 
-\begin_inset Formula $\mathbf{O}(x)$
+\begin_inset Formula $\mathbf{U}(S)^{\mathrm{op}}$
 \end_inset
 
-, we obtain a contravariant functor 
-\begin_inset Formula $\mathcal{F}:\mathbf{U}(x)\to\mathbf{Set}$
+, we obtain a covariant functor (which we again denote by 
+\begin_inset Formula $\mathcal{F}$
+\end_inset
+
+) from 
+\begin_inset Formula $\mathbf{U}(S)^{\mathrm{op}}$
+\end_inset
+
+ to 
+\begin_inset Formula $\mathbf{Set}$
 \end_inset
 
 .
  Note that the category 
-\begin_inset Formula $\mathbf{U}(x)$
+\begin_inset Formula $\mathbf{U}(S)^{\mathrm{op}}$
 \end_inset
 
- is filtered: for any two neighborhoods 
+ is filtered since for any two neighborhoods 
 \begin_inset Formula $U_{1}$
 \end_inset
 
@@ -2785,7 +2545,7 @@ be the set of open neighborhoods of
 \end_inset
 
  of 
-\begin_inset Formula $x$
+\begin_inset Formula $S$
 \end_inset
 
  there exists a neighborhood 
@@ -2793,19 +2553,28 @@ be the set of open neighborhoods of
 \end_inset
 
  of 
-\begin_inset Formula $x$
+\begin_inset Formula $S$
 \end_inset
 
  with 
 \begin_inset Formula $V\subseteq U_{1}\cap U_{2}$
 \end_inset
 
-.
+ (namely 
+\begin_inset Formula $V=U_{1}\cap U_{2}$
+\end_inset
+
+).
  
 \end_layout
 
 \begin_layout Enumerate
-The colimit 
+Let 
+\begin_inset Formula $x\in X$
+\end_inset
+
+.
+ The filtered colimit 
 \begin_inset Formula 
 \[
 \mathcal{F}_{x}:=\mathrm{colim}_{U\in\mathbf{U}(x)}\mathcal{F}(U)
@@ -7299,10 +7068,7 @@ label{defn}
  by 
 \begin_inset Formula 
 \[
-f^{+}\mathcal{G}(U)=\lim_{\substack{V\supseteq f(U)\\
-V\subseteq Y\text{ open}
-}
-}\mathcal{G}(V).
+f^{+}\mathcal{G}(U)=\mathrm{colim}_{V\in\mathbf{U}(f(U))}\mathcal{G}(V).
 \]
 
 \end_inset
@@ -7320,11 +7086,57 @@ for all open sets
 \end_inset
 
 .
+ More concretely, one has 
+\begin_inset Formula 
+\[
+f^{+}\mathcal{G}(U)=\left\{ (V,t)\mid V\text{ is an open neighborhood of }f(U)\text{ in }Y\text{ and }t\in\mathcal{G}(V)\right\} \slash\sim,
+\]
+
+\end_inset
+
+where two pairs 
+\begin_inset Formula $(V,t)$
+\end_inset
+
+ and 
+\begin_inset Formula $(V',t')$
+\end_inset
+
+ are equivalent if there exists an open neighborhood 
+\begin_inset Formula $V''$
+\end_inset
+
+ of 
+\begin_inset Formula $S$
+\end_inset
+
+ with 
+\begin_inset Formula $V''\subseteq V\cap V'$
+\end_inset
+
+ such that 
+\begin_inset Formula $t|_{V''}=t'|_{V''}$
+\end_inset
+
+.
+ The equivalence class corresponding to 
+\begin_inset Formula $(V,t)$
+\end_inset
+
+ will be denoted 
+\begin_inset Formula $[V,t]_{f(U)}$
+\end_inset
+
+, or even more simply by 
+\begin_inset Formula $[t]_{f(U)}$
+\end_inset
+
+.
  We set 
 \begin_inset Formula $f^{-1}\mathcal{G}$
 \end_inset
 
- be the sheafification of 
+ to be the sheafification of 
 \begin_inset Formula $f^{+}\mathcal{G}$
 \end_inset
 
@@ -7345,6 +7157,24 @@ inverse image of
 
 \series default
 .
+ The construction of 
+\begin_inset Formula $f^{+}\mathcal{G}$
+\end_inset
+
+ and hence of 
+\begin_inset Formula $f^{-1}\mathcal{G}$
+\end_inset
+
+ is functorial in 
+\begin_inset Formula $\mathcal{G}$
+\end_inset
+
+.
+ Therefore we obtain a functor 
+\begin_inset Formula $f^{-1}\colon\mathbf{Psh}(Y)\to\mathbf{Sh}(X)$
+\end_inset
+
+.
  
 \begin_inset ERT
 status open
@@ -7362,170 +7192,73 @@ end{defn}
 \end_layout
 
 \begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
 
 
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-Here is a more concrete description of 
-\begin_inset Formula $f^{+}\mathcal{G}$
-\end_inset
-
-: for an open set 
-\begin_inset Formula $U$
-\end_inset
-
- of 
-\begin_inset Formula $X$
-\end_inset
-
-, we set
-\begin_inset Formula 
-\[
-f^{+}\mathcal{G}(U)=\left\{ (V,t)\mid V\text{ is open set of }Y\text{ such that }f(U)\subseteq V\text{ and }t\in\mathcal{G}(V)\right\} /\sim,
-\]
+\backslash
+begin{prop}
+\backslash
+label{prop}
+\end_layout
 
 \end_inset
 
-where two pairs 
-\begin_inset Formula $(V,t)$
+ Suppose 
+\begin_inset Formula $f\colon X\to Y$
 \end_inset
 
- and 
-\begin_inset Formula $(V',t')$
+ is an open continuous map and let 
+\begin_inset Formula $\mathcal{G}$
 \end_inset
 
- are equivalent if there exists an open neighborhood 
-\begin_inset Formula $V''$
-\end_inset
-
- of 
-\begin_inset Formula $x$
-\end_inset
-
- with 
-\begin_inset Formula $f(U)\subseteq V''\subseteq V\cap V'$
-\end_inset
-
- such that 
-\begin_inset Formula $t|_{V''}=t'|_{V''}$
-\end_inset
-
-.
- The equivalence class corresponding to 
-\begin_inset Formula $(V,t)$
-\end_inset
-
- will be denoted 
-\begin_inset Formula $[V,t]_{f(U)}$
-\end_inset
-
-, or even more simply 
-\begin_inset Formula $[t]_{f(U)}$
-\end_inset
-
-.
- If 
-\begin_inset Formula $U'$
-\end_inset
-
- is an open set of 
-\begin_inset Formula $X$
-\end_inset
-
- such that 
-\begin_inset Formula $U'\subseteq U$
-\end_inset
-
-, then the restriction map is defined as 
-\begin_inset Formula 
-\[
-[t]|_{f(U)}|_{U'}=[t]|_{f(U')}.
-\]
-
-\end_inset
-
-Let's see why 
-\begin_inset Formula $f^{+}\mathcal{G}$
-\end_inset
-
- can fail to be a sheaf.
- Let 
-\begin_inset Formula $\{U_{i}\}_{i\in I}$
-\end_inset
-
- be an open cover of 
-\begin_inset Formula $U$
-\end_inset
-
- and let 
-\begin_inset Formula $[V_{i},t_{i}]\in f^{+}\mathcal{G}(U_{i})$
-\end_inset
-
- such that 
-\begin_inset Formula 
-\[
-[V_{i},t_{i}]|_{U_{ij}}=[V_{j},t_{j}]|_{U_{ij}}
-\]
-
-\end_inset
-
-for all 
-\begin_inset Formula $i,j\in I$
-\end_inset
-
-.
- In particular, this means for each 
-\begin_inset Formula $i,j\in I$
-\end_inset
-
- there exists an open set 
-\begin_inset Formula $V'_{i,j}$
-\end_inset
-
- of 
+ be a presheaf on 
 \begin_inset Formula $Y$
 \end_inset
 
- such that 
-\begin_inset Formula 
-\[
-f(U_{ij})\subseteq V'_{i,j}\subseteq V_{ij}\quad\text{and}\quad t_{i}|_{V'_{i,j}}=t_{j}|_{V'_{i,j}}.
-\]
-
+.
+ Define a presheaf 
+\begin_inset Formula $f^{*}\mathcal{G}$
 \end_inset
 
-If there existed 
-\begin_inset Formula $[V,t]\in f^{+}\mathcal{G}(U)$
+ on 
+\begin_inset Formula $X$
 \end_inset
 
- such that 
-\begin_inset Formula $[V,t]|_{U_{i}}=[V_{i},t_{i}]$
+ by setting 
+\begin_inset Formula $f^{*}\mathcal{G}(U)=\mathcal{G}(f(U))$
 \end_inset
 
-, then for all 
-\begin_inset Formula $i\in I$
+ for all open 
+\begin_inset Formula $U\subseteq X$
 \end_inset
 
- there would exist an open subset 
-\begin_inset Formula $V'_{i}$
+ and letting the restrictions maps on 
+\begin_inset Formula $f^{*}\mathcal{G}$
 \end_inset
 
- of 
-\begin_inset Formula $Y$
+ be the ones induced from 
+\begin_inset Formula $\mathcal{G}$
 \end_inset
 
- such that 
-\begin_inset Formula 
-\[
-f(U_{i})\subseteq V'_{i}\subseteq V_{i}\quad\text{and}\quad t|_{V'_{i}}=t_{i}|_{V'_{i}}
-\]
+.
+ Then 
+\begin_inset Formula $f^{+}\mathcal{G}\cong f^{*}\mathcal{G}$
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{prop}
+\end_layout
 
 \end_inset
 
@@ -7540,14 +7273,74 @@ status open
 
 
 \backslash
-begin{rem}
+begin{proof}
 \backslash
-label{rem}
+label{proof}
 \end_layout
 
 \end_inset
 
+ Define 
+\begin_inset Formula $\varphi\colon f^{+}\mathcal{G}\to f^{\star}\mathcal{G}$
+\end_inset
 
+ by
+\begin_inset Formula 
+\[
+\varphi_{U}([V,t]_{f(U)})=t|_{f(U)}
+\]
+
+\end_inset
+
+for all open 
+\begin_inset Formula $U\subseteq X$
+\end_inset
+
+ and for all 
+\begin_inset Formula $[V,t]_{f(U)}\in f^{+}\mathcal{G}(U)$
+\end_inset
+
+.
+ It is straightforward to check that 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ is well-defined.
+ Similarly, define 
+\begin_inset Formula $\psi\colon f^{\star}\mathcal{G}\to f^{+}\mathcal{G}$
+\end_inset
+
+ by
+\begin_inset Formula 
+\[
+\psi_{U}(t)=[f(U),t]_{f(U)}
+\]
+
+\end_inset
+
+for all open 
+\begin_inset Formula $U\subseteq X$
+\end_inset
+
+ and for all 
+\begin_inset Formula $t\in f^{\star}\mathcal{G}(U)$
+\end_inset
+
+.
+ It is straightforward to check that 
+\begin_inset Formula $\psi$
+\end_inset
+
+ is the inverse of 
+\begin_inset Formula $\varphi$
+\end_inset
+
+, hence 
+\begin_inset Formula $f^{+}\mathcal{G}\cong f^{\star}\mathcal{G}$
+\end_inset
+
+.
+ 
 \begin_inset ERT
 status open
 
@@ -7555,15 +7348,26 @@ status open
 
 
 \backslash
-hfill
+end{proof}
 \end_layout
 
 \end_inset
 
-
+ 
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
 If 
 \begin_inset Formula $f$
 \end_inset
@@ -7584,85 +7388,7 @@ If
 \begin_inset Formula $f^{-1}\mathcal{G}$
 \end_inset
 
- and we write 
-\begin_inset Formula $\mathcal{G}(X):=(f^{-1}(\mathcal{G}))(X)$
-\end_inset
-
 .
-\end_layout
-
-\begin_layout Enumerate
-The construction of 
-\begin_inset Formula $f^{+}\mathcal{G}$
-\end_inset
-
- and hence of 
-\begin_inset Formula $f^{-1}\mathcal{G}$
-\end_inset
-
- is functorial in 
-\begin_inset Formula $\mathcal{G}$
-\end_inset
-
-.
- Therefore we obtain a functor 
-\begin_inset Formula 
-\[
-f^{-1}\colon\mathbf{PSh}(Y)\to\mathbf{Sh}(X)
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-If 
-\begin_inset Formula $f\colon X\to Y$
-\end_inset
-
- is an open continuous map, then for 
-\begin_inset Formula $U\subseteq X$
-\end_inset
-
- open one has 
-\begin_inset Formula $f^{+}\mathcal{G}(U)\cong\mathcal{G}(f(U))$
-\end_inset
-
-.
- Indeed, if 
-\begin_inset Formula $[t]_{f(U)}=[V,t]_{f(U)}$
-\end_inset
-
- and 
-\begin_inset Formula $[t']_{f(U)}=[V',t']_{f(U)}$
-\end_inset
-
- are two elements in 
-\begin_inset Formula $f^{+}\mathcal{G}(U)$
-\end_inset
-
- such that 
-\begin_inset Formula $[t]_{f(U)}=[t']_{f(U)}$
-\end_inset
-
-, then 
-\begin_inset Formula 
-\[
-[t]_{f(U)}=[t|_{f(U)}]_{f(U)}=[t']_{f(U)}.
-\]
-
-\end_inset
-
-Thus, the map sending the element 
-\begin_inset Formula $[V,t]_{f(U)}\in f^{+}\mathcal{G}(U)$
-\end_inset
-
- to the element 
-\begin_inset Formula $t|_{f(U)}\in\mathcal{G}(f(U))$
-\end_inset
-
- is well-defined and gives rise to an isomorphism of presheaves.
  Moreover, if 
 \begin_inset Formula $\mathcal{G}$
 \end_inset
@@ -7701,27 +7427,7 @@ Thus, the map sending the element
 \end_inset
 
  open, we have 
-\begin_inset Formula 
-\[
-\mathcal{G}|_{U}(U')=\mathcal{G}(U').
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{rem}
-\end_layout
-
+\begin_inset Formula $\mathcal{G}|_{U}(U')=\mathcal{G}(U')$
 \end_inset
 
 
@@ -7833,292 +7539,15 @@ It is straightforward to check that
 \end_inset
 
  is well-defined.
- 
-\end_layout
-
-\begin_layout Standard
-Recall that 
+ The inverse map is defined by
 \begin_inset Formula 
 \[
-(f^{+}\mathcal{G})_{x}=\left\{ (U,[V,t])\mid U\text{ is an open neighborhood of }x\text{ and }[V,t]\in f^{+}\mathcal{G}(U)\right\} /\sim,
+\lambda_{\mathcal{G},x}^{-1}([t]_{f(x)})=[[t]_{f(f^{-1}(U))}]_{x}.
 \]
 
 \end_inset
 
-where 
-\begin_inset Formula $[V,t]$
-\end_inset
 
- denotes the equivalence class of 
-\begin_inset Formula $(V,t)\in f^{+}\mathcal{G}(U)$
-\end_inset
-
- and 
-\begin_inset Formula $(U,[V,t])\sim(U',[V',t'])$
-\end_inset
-
- if there exists an open neighborhood 
-\begin_inset Formula $U''$
-\end_inset
-
- of 
-\begin_inset Formula $x$
-\end_inset
-
- such that 
-\begin_inset Formula $U''\subseteq U\cap U'$
-\end_inset
-
- and 
-\begin_inset Formula $[V,t]|_{U''}=[V',t']|_{U''}$
-\end_inset
-
-, i.e.
- and there exists an open neighborhood 
-\begin_inset Formula $V''$
-\end_inset
-
- of 
-\begin_inset Formula $f(U'')$
-\end_inset
-
- such that 
-\begin_inset Formula $V''\subseteq V\cap V'$
-\end_inset
-
- and 
-\begin_inset Formula $t|_{V''}=t'|_{V''}$
-\end_inset
-
-.
- Recall that 
-\begin_inset Formula $[U,[V,t]]_{x}$
-\end_inset
-
- denotes the equivalence class of 
-\begin_inset Formula $(U,[V,t])\in f^{+}\mathcal{G}_{x}$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-Let 
-\begin_inset Formula $\lambda_{\mathcal{G},x}:f^{+}\mathcal{G}_{x}\to\mathcal{G}_{f(x)}$
-\end_inset
-
- be given by 
-\begin_inset Formula $\lambda_{\mathcal{G},x}\left([U,[V,t]]_{x}\right)=[V,t]_{f(x)}$
-\end_inset
-
-.
- We need to show that this map is well-defined.
- Let 
-\begin_inset Formula $(U',[V',t'])$
-\end_inset
-
- be another representative of the equivalence class 
-\begin_inset Formula $[U,[V,t]]_{x}$
-\end_inset
-
-.
- Then as described above, there exists an open neighborhood 
-\begin_inset Formula $U''$
-\end_inset
-
- of 
-\begin_inset Formula $x$
-\end_inset
-
- such that 
-\begin_inset Formula $U''\subseteq U\cap U'$
-\end_inset
-
- and there exists an open neighborhood 
-\begin_inset Formula $V''$
-\end_inset
-
- of 
-\begin_inset Formula $f(U'')$
-\end_inset
-
- such that 
-\begin_inset Formula $f(U'')\subseteq V''\subseteq V\cap V'$
-\end_inset
-
- and 
-\begin_inset Formula $t|_{V''}=t'|_{V''}$
-\end_inset
-
-.
- As 
-\begin_inset Formula $V''$
-\end_inset
-
- is also an open neighborhood of 
-\begin_inset Formula $f(x)$
-\end_inset
-
-, this implies
-\begin_inset Formula 
-\begin{align*}
-\lambda_{\mathcal{G},x}\left([U',[V',t']]_{x}\right) & =[V',t']_{f(x)}\\
- & =[V,t]_{f(x)}.
-\end{align*}
-
-\end_inset
-
-Thus this map is well-defined.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-Next we show that 
-\begin_inset Formula $\lambda_{\mathcal{G},x}$
-\end_inset
-
- is injective.
- Suppose
-\begin_inset Formula 
-\begin{align*}
-\lambda_{\mathcal{G},x}\left([U,[V,t]]_{x}\right) & =[V,t]_{f(x)}\\
- & =[V',t']_{f(x)}\\
- & =\lambda_{\mathcal{G},x}\left([U',[V',t']]_{x}\right).
-\end{align*}
-
-\end_inset
-
-Then there exists an open neighborhood 
-\begin_inset Formula $V''$
-\end_inset
-
- of 
-\begin_inset Formula $f(x)$
-\end_inset
-
- such that 
-\begin_inset Formula $V''\subseteq V\cap V'$
-\end_inset
-
- and 
-\begin_inset Formula $t|_{V''}=t'|_{V''}$
-\end_inset
-
-.
- Setting 
-\begin_inset Formula $U''=f^{-1}(V'')\cap U\cap U'$
-\end_inset
-
-, we see that 
-\begin_inset Formula $U''$
-\end_inset
-
- is an open neighborhood of 
-\begin_inset Formula $x$
-\end_inset
-
- such that 
-\begin_inset Formula $U''\subseteq U\cap U'$
-\end_inset
-
-, 
-\begin_inset Formula $V''$
-\end_inset
-
- is an open neighborhood of 
-\begin_inset Formula $f(U'')$
-\end_inset
-
- such that 
-\begin_inset Formula $V''\subseteq V\cap V'$
-\end_inset
-
-, and 
-\begin_inset Formula $t|_{V''}=t|_{V''}$
-\end_inset
-
-.
- Therefore 
-\begin_inset Formula $[U,[V,t]]_{x}=[U',[V',t']]_{x}$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-Finally, we that 
-\begin_inset Formula $\lambda_{\mathcal{G},x}$
-\end_inset
-
- is is onto (which will imply that 
-\begin_inset Formula $\lambda_{\mathcal{G},x}$
-\end_inset
-
- is a bijection since we've already shown it is injective).
- Let 
-\begin_inset Formula $[V,t]_{f(x)}\in\mathcal{G}_{f(x)}$
-\end_inset
-
-.
- We just need to find an open neighborhood 
-\begin_inset Formula $U$
-\end_inset
-
- of 
-\begin_inset Formula $x$
-\end_inset
-
- such that 
-\begin_inset Formula $f(U)\subseteq V$
-\end_inset
-
-.
- Then 
-\begin_inset Formula $\lambda_{\mathcal{G},x}\left([U,[V,t]]_{x}\right)=[V,t]_{f(x)}$
-\end_inset
-
-.
- In fact 
-\begin_inset Formula $U=f^{-1}(V)$
-\end_inset
-
- does the trick, and we are done.
- 
 \begin_inset ERT
 status open
 
@@ -8127,6 +7556,63 @@ status open
 
 \backslash
 end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{example}
+\backslash
+label{example}
+\end_layout
+
+\end_inset
+
+ Let 
+\begin_inset Formula $\phi\colon A\to B$
+\end_inset
+
+ be a ring homomorphism and let 
+\begin_inset Formula $M$
+\end_inset
+
+ be an 
+\begin_inset Formula $A$
+\end_inset
+
+-module.
+ Let 
+\begin_inset Formula $X=\mathrm{Spec}\,A$
+\end_inset
+
+, let 
+\begin_inset Formula $Y=\mathrm{Spec}\,B$
+\end_inset
+
+, and let 
+\begin_inset Formula $f=^{\mathrm{a}}\phi$
+\end_inset
+
+ .
+ Recall that the 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{example}
 \end_layout
 
 \end_inset
@@ -8201,7 +7687,7 @@ which is functorial in
  is a sheaf, then there is a bijection
 \begin_inset Formula 
 \begin{eqnarray*}
-\mathrm{Hom}_{\mathbf{Sh}(X)}(f^{-1}\mathcal{G},\mathcal{F}) & \longleftrightarrow & \mathrm{Hom}_{\mathbf{Sh}(Y)}(\mathcal{G},f_{*}\mathcal{F})
+\mathrm{Hom}_{\mathbf{Sh}(X)}(f^{-1}\mathcal{G},\mathcal{F}) & \longleftrightarrow & \mathrm{Hom}_{\mathbf{Psh}(Y)}(\mathcal{G},f_{*}\mathcal{F})
 \end{eqnarray*}
 
 \end_inset
@@ -8253,29 +7739,52 @@ begin{proof}
 \end_inset
 
 .
- We define 
+ We define a morphism 
 \begin_inset Formula $\varphi^{\flat}\colon\mathcal{G}\to f_{*}\mathcal{F}$
 \end_inset
 
- as follows: let 
-\begin_inset Formula $V$
-\end_inset
-
- be an open set of 
+ of presheaves on 
 \begin_inset Formula $Y$
 \end_inset
 
- and let 
+ by
+\begin_inset Formula 
+\[
+\varphi_{V}^{\flat}(t)=\varphi_{U}([t]_{f(U)})
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $V$
+\end_inset
+
+ is an open subset of 
+\begin_inset Formula $Y$
+\end_inset
+
+, 
 \begin_inset Formula $t\in\mathcal{G}(V)$
 \end_inset
 
-.
- We set 
-\begin_inset Formula 
-\[
-\varphi_{V}^{\flat}(t)=\varphi_{f^{-1}(V)}\left([V,t]_{f\left(f^{-1}(V)\right)}\right).
-\]
+, and 
+\begin_inset Formula $U=f^{-1}(V)$
+\end_inset
 
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 Similarly, let 
@@ -8287,32 +7796,48 @@ Similarly, let
 \end_inset
 
 .
- We define 
+ We define a morphism 
 \begin_inset Formula $\psi^{\#}\colon f^{+}\mathcal{G}\to\mathcal{F}$
 \end_inset
 
- as follows: let 
-\begin_inset Formula $U$
-\end_inset
-
- be an open set of 
+ of presheaves on 
 \begin_inset Formula $X$
 \end_inset
 
- and let 
-\begin_inset Formula $[V,t]_{f(U)}\in f^{+}\mathcal{G}(U)$
-\end_inset
-
-.
- We set 
+ by
 \begin_inset Formula 
 \[
-\psi_{U}^{\#}\left([V,t]_{f(U)}\right)=\psi_{V}(t)|_{U}.
+\psi_{U}^{\#}([t]_{f(U)})=\psi_{V}(t)|_{U}
 \]
 
 \end_inset
 
-Notice that 
+where 
+\begin_inset Formula $U$
+\end_inset
+
+ is an open subset of 
+\begin_inset Formula $X$
+\end_inset
+
+, 
+\begin_inset Formula $V$
+\end_inset
+
+ is an open subset of 
+\begin_inset Formula $Y$
+\end_inset
+
+ which contains 
+\begin_inset Formula $f(U)$
+\end_inset
+
+, and where 
+\begin_inset Formula $t\in\mathcal{G}(V)$
+\end_inset
+
+.
+ Notice that 
 \begin_inset Formula $\psi_{V}(t)\in\mathcal{F}(f^{-1}(V))$
 \end_inset
 
@@ -11157,7 +10682,7 @@ ref{propadjunctiondirectinverse})
 \end_inset
 
 .
- Usually we simply write 
+ In particular, Usually we simply write 
 \begin_inset Formula $f$
 \end_inset
 
@@ -53475,10 +53000,18 @@ We start with the following basic definition.
 \end_inset
 
  be a ring.
- We set 
+ The 
+\series bold
+prime spectrum 
+\series default
+of 
+\begin_inset Formula $A$
+\end_inset
+
+ is the set
 \begin_inset Formula 
 \[
-\mathrm{Spec}\,A:=\left\{ \mathfrak{p}\subset A\mid\mathfrak{p}\text{ is a prime ideal}\right\} .
+\mathrm{Spec}\,A:=\left\{ \mathfrak{p}\mid\mathfrak{p}\text{ is a prime ideal of }A\right\} .
 \]
 
 \end_inset
@@ -53504,7 +53037,7 @@ We will now endow
 \begin_inset Formula $A$
 \end_inset
 
- containing 
+ which contain 
 \begin_inset Formula $S$
 \end_inset
 
@@ -53513,7 +53046,20 @@ We will now endow
 \begin_inset Formula $\mathrm{D}(S)$
 \end_inset
 
- to be the set of prime ideals of 
+ to be the complement of 
+\begin_inset Formula $\mathrm{V}(S)$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathrm{Spec}\,A$
+\end_inset
+
+.
+ In other words, 
+\begin_inset Formula $\mathrm{D}(S)$
+\end_inset
+
+ consists of the set of all prime ideals of 
 \begin_inset Formula $A$
 \end_inset
 
@@ -53560,6 +53106,23 @@ We will now endow
 \end_inset
 
  in order to simplify notation.
+ Let 
+\begin_inset Formula 
+\[
+\tau_{A}=\{\mathrm{D}(\mathfrak{a})\mid\mathfrak{a}\text{ is an ideal of }A\}.
+\]
+
+\end_inset
+
+It will follow from the following proposition that 
+\begin_inset Formula $\tau_{A}$
+\end_inset
+
+ gives 
+\begin_inset Formula $\mathrm{Spec}\,A$
+\end_inset
+
+ the structure of a topological space.
  
 \end_layout
 
@@ -53571,34 +53134,31 @@ status open
 
 
 \backslash
-begin{lemma}
+begin{prop}
 \backslash
-label{lemma}
+label{prop}
 \end_layout
 
 \end_inset
 
- The map 
-\begin_inset Formula $\mathfrak{a}\mapsto V(\mathfrak{a})$
-\end_inset
-
- is an inclusion reversing map from the set of ideals of 
-\begin_inset Formula $A$
-\end_inset
-
- to the set of subsets of 
-\begin_inset Formula $\mathrm{Spec}\,A$
-\end_inset
-
-.
- Moreover, the following relations hold:
+ The following statements holds.
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $V(0)=\text{Spec }A\text{ and }V(1)=\emptyset$
+We have 
+\begin_inset Formula $\mathrm{V}(0)=\mathrm{Spec}\,A\text{ and }\mathrm{V}(1)=\emptyset$
 \end_inset
 
 .
+ Equivalently, we have 
+\begin_inset Formula $\mathrm{D}(0)=\emptyset$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathrm{D}(1)=\mathrm{Spec}\,A$
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Enumerate
@@ -53613,7 +53173,15 @@ For two ideals
 , we have 
 \begin_inset Formula 
 \[
-V(\mathfrak{a}\cap\mathfrak{b})=V(\mathfrak{ab})=V(\mathfrak{a})\cup V(\mathfrak{b}).
+\mathrm{V}(\mathfrak{a}\cap\mathfrak{b})=\mathrm{V}(\mathfrak{ab})=\mathrm{V}(\mathfrak{a})\cup\mathrm{V}(\mathfrak{b}).
+\]
+
+\end_inset
+
+Equivalently, we have
+\begin_inset Formula 
+\[
+\mathrm{D}(\mathfrak{a}\cap\mathfrak{b})=\mathrm{D}(\mathfrak{a}\mathfrak{b})=\mathrm{D}(\mathfrak{a})\cap\mathrm{D}(\mathfrak{b}).
 \]
 
 \end_inset
@@ -53626,10 +53194,22 @@ For every family
 \begin_inset Formula $\{\mathfrak{a}_{i}\}_{i\in I}$
 \end_inset
 
- of ideals, we have 
+ of ideals of 
+\begin_inset Formula $A$
+\end_inset
+
+, we have 
 \begin_inset Formula 
 \[
-V\left(\bigcup_{i\in I}\mathfrak{a}_{i}\right)=V\left(\sum_{i\in I}\mathfrak{a}_{i}\right)=\bigcap_{i\in I}V(\mathfrak{a}_{i}).
+\mathrm{V}\left(\bigcup_{i\in I}\mathfrak{a}_{i}\right)=\mathrm{V}\left(\sum_{i\in I}\mathfrak{a}_{i}\right)=\bigcap_{i\in I}\mathrm{V}(\mathfrak{a}_{i}).
+\]
+
+\end_inset
+
+Equivalently, we have
+\begin_inset Formula 
+\[
+\mathrm{D}\left(\bigcup_{i\in I}\mathfrak{a}_{i}\right)=\mathrm{D}\left(\sum_{i\in I}\mathfrak{a}_{i}\right)=\bigcup_{i\in I}\mathrm{D}(\mathfrak{a}_{i}).
 \]
 
 \end_inset
@@ -53645,7 +53225,7 @@ status open
 
 
 \backslash
-end{lemma}
+end{prop}
 \end_layout
 
 \end_inset
@@ -53666,7 +53246,11 @@ begin{proof}
 
 \end_inset
 
+ 1.
+ This is trivial.
+\end_layout
 
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -53682,47 +53266,78 @@ hfill
 
 \end_layout
 
-\begin_layout Enumerate
-Trivial.
-\end_layout
-
-\begin_layout Enumerate
-Since 
-\begin_inset Formula $\mathfrak{ab}\subset\mathfrak{a}\cap\mathfrak{b}\subset\mathfrak{a}$
+\begin_layout Standard
+2.
+ Since 
+\begin_inset Formula $\mathfrak{ab}\subseteq\mathfrak{a}\cap\mathfrak{b}\subseteq\mathfrak{a}$
 \end_inset
 
  and 
-\begin_inset Formula $\mathfrak{ab}\subset\mathfrak{a}\cap\mathfrak{b}\subset\mathfrak{b}$
+\begin_inset Formula $\mathfrak{ab}\subseteq\mathfrak{a}\cap\mathfrak{b}\subseteq\mathfrak{b}$
 \end_inset
 
 , it follows that 
-\begin_inset Formula $V(\mathfrak{ab})\supset V(\mathfrak{a}\cap\mathfrak{b})\supset V(\mathfrak{a})\cup V(\mathfrak{b})$
+\begin_inset Formula $\mathrm{V}(\mathfrak{ab})\supseteq\mathrm{V}(\mathfrak{a}\cap\mathfrak{b})\supseteq\mathrm{V}(\mathfrak{a})\cup\mathrm{V}(\mathfrak{b})$
 \end_inset
 
-.
+ since 
+\begin_inset Formula $\mathrm{V}$
+\end_inset
+
+ is inclusion-reversing.
  It remains to show that 
-\begin_inset Formula $V(\mathfrak{ab})\subset V(\mathfrak{a})\cup V(\mathfrak{b})$
+\begin_inset Formula $\mathrm{V}(\mathfrak{ab})\subseteq\mathrm{V}(\mathfrak{a})\cup\mathrm{V}(\mathfrak{b})$
 \end_inset
 
 .
- Assume that 
-\begin_inset Formula $\mathfrak{p}\supset\mathfrak{ab}$
+ Assume for a contradiction that 
+\begin_inset Formula $\mathrm{V}(\mathfrak{a}\mathfrak{b})\not\subseteq\mathrm{V}(\mathfrak{a})\cup\mathrm{V}(\mathfrak{b})$
+\end_inset
+
+.
+ Then there exists a prime ideal 
+\begin_inset Formula $\mathfrak{p}$
+\end_inset
+
+ of 
+\begin_inset Formula $A$
+\end_inset
+
+ such that 
+\begin_inset Formula $\mathfrak{p}\in\mathrm{V}(\mathfrak{a}\mathfrak{b})$
 \end_inset
 
  but 
-\begin_inset Formula $\mathfrak{p}\not\supset\mathfrak{a}$
+\begin_inset Formula $\mathfrak{p}\notin\mathrm{V}(\mathfrak{a})$
 \end_inset
 
  and 
-\begin_inset Formula $\mathfrak{p}\not\supset\mathfrak{b}$
-\end_inset
-
- for some prime 
-\begin_inset Formula $\mathfrak{p}\in\text{Spec }A$
+\begin_inset Formula $\mathfrak{p}\notin\mathrm{V}(\mathfrak{b})$
 \end_inset
 
 .
- Then there exists 
+ In other words, there exists a prime ideal 
+\begin_inset Formula $\mathfrak{p}$
+\end_inset
+
+ of 
+\begin_inset Formula $A$
+\end_inset
+
+ such that 
+\begin_inset Formula $\mathfrak{p}\supseteq\mathfrak{ab}$
+\end_inset
+
+ but 
+\begin_inset Formula $\mathfrak{p}\not\supseteq\mathfrak{a}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathfrak{p}\not\supseteq\mathfrak{b}$
+\end_inset
+
+.
+ Hence there exists 
 \begin_inset Formula $x\in\mathfrak{a}$
 \end_inset
 
@@ -53735,24 +53350,40 @@ Since
 \end_inset
 
 .
- But 
+ However 
 \begin_inset Formula $xy\in\mathfrak{ab}\subset\mathfrak{p}$
 \end_inset
 
- contradicts the fact that 
+, which contradicts the fact that 
 \begin_inset Formula $\mathfrak{p}$
 \end_inset
 
  is prime.
- 
 \end_layout
 
-\begin_layout Enumerate
-That 
-\begin_inset Formula $V\left(\bigcup_{i\in I}\mathfrak{a}_{i}\right)=V\left(\sum_{i\in I}\mathfrak{a}_{i}\right)$
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill
+\end_layout
+
 \end_inset
 
- follows from the fact that 
+
+\end_layout
+
+\begin_layout Standard
+3.
+ We have 
+\begin_inset Formula $\mathrm{V}\left(\bigcup_{i\in I}\mathfrak{a}_{i}\right)=\mathrm{V}\left(\sum_{i\in I}\mathfrak{a}_{i}\right)$
+\end_inset
+
+ since 
 \begin_inset Formula $\sum_{i\in I}\mathfrak{a}_{i}$
 \end_inset
 
@@ -53761,24 +53392,28 @@ That
 \end_inset
 
 .
- That 
-\begin_inset Formula $V\left(\sum_{i\in I}\mathfrak{a}_{i}\right)=\bigcap_{i\in I}V(\mathfrak{a}_{i})$
+ We have 
+\begin_inset Formula $\mathrm{V}\left(\sum_{i\in I}\mathfrak{a}_{i}\right)=\bigcap_{i\in I}\mathrm{V}(\mathfrak{a}_{i})$
 \end_inset
 
- follows from the fact that 
-\begin_inset Formula $\mathfrak{p}\supset\sum_{i\in I}\mathfrak{a}_{i}$
+ since 
+\begin_inset Formula $\mathfrak{p}\supseteq\sum_{i\in I}\mathfrak{a}_{i}$
 \end_inset
 
  if and only if 
-\begin_inset Formula $\mathfrak{p}\supset\mathfrak{a}_{i}$
+\begin_inset Formula $\mathfrak{p}\supseteq\mathfrak{a}_{i}$
 \end_inset
 
  for all 
 \begin_inset Formula $i\in I$
 \end_inset
 
- and for all primes 
-\begin_inset Formula $\mathfrak{p}\in\text{Spec }A$
+ and for all prime ideals 
+\begin_inset Formula $\mathfrak{p}$
+\end_inset
+
+ of 
+\begin_inset Formula $A$
 \end_inset
 
 .
@@ -53802,20 +53437,74 @@ end{proof}
 \end_layout
 
 \begin_layout Standard
-The lemma shows that the subsets 
-\begin_inset Formula $V(\mathfrak{a})$
+\begin_inset space ~
 \end_inset
 
- of 
-\begin_inset Formula $\text{Spec }A$
+
+\begin_inset space ~
 \end_inset
 
- form the closed sets of a topology on 
-\begin_inset Formula $\text{Spec }A$
+
+\begin_inset space ~
+\end_inset
+
+Thus 
+\begin_inset Formula $\tau_{A}$
+\end_inset
+
+ gives 
+\begin_inset Formula $\mathrm{Spec}\,A$
+\end_inset
+
+ the structure of a topological space.
+ The topology 
+\begin_inset Formula $\tau_{A}$
+\end_inset
+
+ is called the 
+\series bold
+Zariski topology
+\series default
+.
+ The closed subsets of 
+\begin_inset Formula $\mathrm{Spec}\,A$
+\end_inset
+
+ are of the form 
+\begin_inset Formula $\mathrm{V}(\mathfrak{a})$
+\end_inset
+
+ and the open subsets of 
+\begin_inset Formula $\mathrm{Spec}\,A$
+\end_inset
+
+ are of the form 
+\begin_inset Formula $\mathrm{D}(\mathfrak{a})$
+\end_inset
+
+ where 
+\begin_inset Formula $\mathfrak{a}$
+\end_inset
+
+ is an ideal of 
+\begin_inset Formula $A$
 \end_inset
 
 .
- This leads us to the following definition.
+ Open sets of the form 
+\begin_inset Formula $\mathrm{D}(a)$
+\end_inset
+
+ where 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ are given a special name: they are called 
+\series bold
+principal open sets
+\series default
+.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -53826,61 +53515,284 @@ status open
 
 
 \backslash
-begin{defn}
+begin{prop}
 \backslash
-label{defn}
+label{prop}
+\end_layout
+
+\end_inset
+
+ The following two statements hold:
+\end_layout
+
+\begin_layout Enumerate
+The collection 
+\begin_inset Formula $\{\mathrm{D}(a)\mid a\in A\}$
+\end_inset
+
+ is a basis for 
+\begin_inset Formula $\mathrm{Spec}\,A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+The principal open sets are quasi-compact.
+ In particular, 
+\begin_inset Formula $\mathrm{Spec}\,A$
+\end_inset
+
+ is quasi-compact.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{prop}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proof}
+\backslash
+label{proof}
+\end_layout
+
+\end_inset
+
+ 1.
+ First note that 
+\begin_inset Formula $\{\mathrm{D}(a)\mid a\in A\}$
+\end_inset
+
+ covers 
+\begin_inset Formula $\mathrm{Spec}\,A$
+\end_inset
+
+ since 
+\begin_inset Formula $\mathrm{D}(1)=\mathrm{Spec}\,A$
+\end_inset
+
+.
+ Next, let 
+\begin_inset Formula $\mathrm{D}(\mathfrak{a})$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathrm{D}(\mathfrak{b})$
+\end_inset
+
+ be two open subsets of 
+\begin_inset Formula $\mathrm{Spec}\,A$
+\end_inset
+
+ and let 
+\begin_inset Formula $\mathfrak{p}$
+\end_inset
+
+ be a prime ideal of 
+\begin_inset Formula $A$
+\end_inset
+
+ such that 
+\begin_inset Formula $\mathfrak{p}\in\mathrm{D}(\mathfrak{a})\cap\mathrm{D}(\mathfrak{b})=\mathrm{D}(\mathfrak{a}\cap\mathfrak{b})$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $\mathfrak{p}\not\supseteq\mathfrak{a}\cap\mathfrak{b}$
+\end_inset
+
+, so there exists an 
+\begin_inset Formula $a\in\mathfrak{a}\cap\mathfrak{b}$
+\end_inset
+
+ such that 
+\begin_inset Formula $a\notin\mathfrak{p}$
+\end_inset
+
+, or equivalently 
+\begin_inset Formula $\mathfrak{p}\in\mathrm{D}(a)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\mathrm{D}$
+\end_inset
+
+ is inclusion-preserving, we see that 
+\begin_inset Formula $\mathfrak{p}\in\mathrm{D}(a)\subseteq\mathrm{D}(\mathfrak{a}\cap\mathfrak{b})$
+\end_inset
+
+.
+ It follows that 
+\begin_inset Formula $\{\mathrm{D}(a)\mid a\in A\}$
+\end_inset
+
+ is a basis for 
+\begin_inset Formula $\mathrm{Spec}\,A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ Let 
+\begin_inset Formula $x\in A$
+\end_inset
+
+ and let 
+\begin_inset Formula $\{y_{i}\}_{i\in I}$
+\end_inset
+
+ be a collection of elements of 
+\begin_inset Formula $A$
+\end_inset
+
+ such that 
+\begin_inset Formula $\mathrm{D}(x)\subseteq\bigcup_{i\in I}\mathrm{D}(y_{i})$
+\end_inset
+
+, or equivalently, such that
+\begin_inset Formula $\mathrm{V}(x)\supseteq\mathrm{V}\left(\langle y_{i}\mid i\in I\rangle\right)$
+\end_inset
+
+.
+ Applying 
+\begin_inset Formula $\mathrm{I}$
+\end_inset
+
+ to both sides gives us 
+\begin_inset Formula $x\in\sqrt{\langle x\rangle}\subseteq\sqrt{\langle y_{i}\mid i\in I\rangle}$
+\end_inset
+
+.
+ Hence there exists 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ such that 
+\begin_inset Formula $x^{n}\in\langle y_{i}\mid i\in I\rangle$
+\end_inset
+
+ which implies there exists 
+\begin_inset Formula $y_{i_{1}},\dots,y_{i_{k}}\in\{y_{i}\}_{i\in I}$
+\end_inset
+
+, and 
+\begin_inset Formula $a_{i_{1}},\dots,a_{i_{k}}\in A$
+\end_inset
+
+ such that
+\begin_inset Formula 
+\[
+x^{n}=a_{i_{1}}y_{i_{1}}+\cdots+a_{i_{k}}y_{i_{k}}.
+\]
+
+\end_inset
+
+In particular, we see that 
+\begin_inset Formula $\mathrm{V}(x)\supseteq\mathrm{V}(y_{i_{1}},\dots,y_{i_{k}})$
+\end_inset
+
+ or equivalently that 
+\begin_inset Formula $\mathrm{D}(x)\subseteq\mathrm{D}(y_{i_{1}})\cup\cdots\cup\mathrm{D}(y_{i_{k}})$
+\end_inset
+
+.
+ It follows that 
+\begin_inset Formula $\mathrm{D}(x)$
+\end_inset
+
+ is quasi-compact.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{prop}
+\backslash
+label{prop}
 \end_layout
 
 \end_inset
 
  Let 
-\begin_inset Formula $A$
+\begin_inset Formula $U$
 \end_inset
 
- be a ring.
- The set 
-\begin_inset Formula $\text{Spec }A$
-\end_inset
-
- of all prime ideals of 
-\begin_inset Formula $A$
-\end_inset
-
- with the topology whose closed sets are the sets 
-\begin_inset Formula $V(\mathfrak{a})$
-\end_inset
-
-, where 
-\begin_inset Formula $\mathfrak{a}$
-\end_inset
-
- runs through the set of ideals of 
-\begin_inset Formula $A$
-\end_inset
-
-, is called the 
-\series bold
-prime spectrum 
-\series default
-of 
-\begin_inset Formula $A$
-\end_inset
-
- or simply the 
-\series bold
-spectrum 
-\series default
-of 
-\begin_inset Formula $A$
+ be an open subset of 
+\begin_inset Formula $\mathrm{Spec}\,A$
 \end_inset
 
 .
- The topology thus defined is called the 
-\series bold
-Zariski topology 
-\series default
-on 
-\begin_inset Formula $\text{Spec }A$
+ Then 
+\begin_inset Formula $U$
+\end_inset
+
+ is quasi-compact if and only if it can be expressed in the form 
+\begin_inset Formula $U=\mathrm{D}(\mathfrak{a})$
+\end_inset
+
+ where 
+\begin_inset Formula $\mathfrak{a}$
+\end_inset
+
+ is a finitely generated ideal of 
+\begin_inset Formula $A$
 \end_inset
 
 .
@@ -53892,7 +53804,144 @@ status open
 
 
 \backslash
-end{defn}
+end{prop}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ Suppose 
+\begin_inset Formula $U=\mathrm{D}(\mathfrak{a})$
+\end_inset
+
+ where 
+\begin_inset Formula $\mathfrak{a}$
+\end_inset
+
+ is a finitely generated ideal of 
+\begin_inset Formula $A$
+\end_inset
+
+, say 
+\begin_inset Formula $\mathfrak{a}=\langle x_{1},\dots,x_{n}\rangle$
+\end_inset
+
+.
+ Then since 
+\begin_inset Formula $\mathrm{D}(x_{1},\dots,x_{n})=\mathrm{D}(x_{1})\cup\cdots\mathrm{D}(x_{n})$
+\end_inset
+
+, we see that 
+\begin_inset Formula $U$
+\end_inset
+
+ ios a finite union of quasi-compact spaces.
+ It follows that 
+\begin_inset Formula $U$
+\end_inset
+
+ is quasi-compact.
+ .
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Conversely, suppose that 
+\begin_inset Formula $U$
+\end_inset
+
+ is quasi-compact.
+ Write 
+\begin_inset Formula $U=\mathrm{D}(\mathfrak{b})$
+\end_inset
+
+ where 
+\begin_inset Formula $\mathfrak{b}=\langle b_{i}\mid i\in I\rangle$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $\{\mathrm{D}(b_{i})\}_{i\in I}$
+\end_inset
+
+ covers 
+\begin_inset Formula $U$
+\end_inset
+
+ since 
+\begin_inset Formula $U=\mathrm{D}(\mathfrak{b})=\bigcup_{i\in I}\mathrm{D}(b_{i})$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $U$
+\end_inset
+
+ is quasi-compact, there exists a finite subcovering of 
+\begin_inset Formula $\{\mathrm{D}(b_{i})\}_{i\in I}$
+\end_inset
+
+ which covers 
+\begin_inset Formula $U$
+\end_inset
+
+, say 
+\begin_inset Formula $\{\mathrm{D}(b_{i_{1}}),\dots,\mathrm{D}(b_{i_{n}})\}$
+\end_inset
+
+.
+ In particular, if we set 
+\begin_inset Formula $\mathfrak{a}=\langle b_{i_{1}},\dots,b_{i_{n}}\rangle$
+\end_inset
+
+, then we see that
+\begin_inset Formula 
+\[
+U=\mathrm{D}(b_{i_{1}})\cup\cdots\cup\mathrm{D}(b_{i_{n}})=\mathrm{D}(\mathfrak{a})
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\mathfrak{a}$
+\end_inset
+
+ is finitely generated.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
 \end_layout
 
 \end_inset
@@ -53920,7 +53969,7 @@ label{rem}
 \end_inset
 
  is a point in 
-\begin_inset Formula $\text{Spec }A$
+\begin_inset Formula $\mathrm{Spec}\,A$
 \end_inset
 
 , we will often write 
@@ -54112,7 +54161,7 @@ For every subset
 
 \end_inset
 
-We obtain an inclusion reversing map 
+We obtain an inclusion-reversing map 
 \begin_inset Formula $Y\mapsto\mathrm{I}(Y)$
 \end_inset
 
@@ -54656,627 +54705,6 @@ end{proof}
 \begin_layout Subsection
 Properties of 
 \begin_inset Formula $\text{Spec }A$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Let 
-\begin_inset Formula $A$
-\end_inset
-
- be a ring and let 
-\begin_inset Formula $\mathfrak{a}$
-\end_inset
-
- be an ideal in 
-\begin_inset Formula $A$
-\end_inset
-
-.
- We set 
-\begin_inset Formula 
-\[
-D(\mathfrak{a}):=\text{Spec}(A)\backslash V(\mathfrak{a}).
-\]
-
-\end_inset
-
-If 
-\begin_inset Formula $\mathfrak{a}$
-\end_inset
-
- is finitely generated, say 
-\begin_inset Formula $\mathfrak{a}=\langle f_{1},\dots,f_{n}\rangle$
-\end_inset
-
-, then we write 
-\begin_inset Formula $D(f_{1},\dots,f_{n})$
-\end_inset
-
- instead of 
-\begin_inset Formula $D(\langle f_{1},\dots,f_{n}\rangle)$
-\end_inset
-
-.
- Open subsets of 
-\begin_inset Formula $\text{Spec }A$
-\end_inset
-
- of the form 
-\begin_inset Formula $D(f)$
-\end_inset
-
- are called 
-\series bold
-principal open sets 
-\series default
-of 
-\begin_inset Formula $\text{Spec }A$
-\end_inset
-
-.
- Clearly, 
-\begin_inset Formula $D(0)=\emptyset$
-\end_inset
-
- and 
-\begin_inset Formula $D(u)=\text{Spec }A$
-\end_inset
-
- for any unit 
-\begin_inset Formula $u\in A$
-\end_inset
-
-.
- As for a prime ideal 
-\begin_inset Formula $\mathfrak{p}$
-\end_inset
-
- and two elements 
-\begin_inset Formula $f,g\in A$
-\end_inset
-
- we have 
-\begin_inset Formula $fg\notin\mathfrak{p}$
-\end_inset
-
- if and only if 
-\begin_inset Formula $f\notin\mathfrak{p}$
-\end_inset
-
- and 
-\begin_inset Formula $g\notin\mathfrak{p}$
-\end_inset
-
-, we find 
-\begin_inset Formula 
-\[
-D(f)\cap D(g)=D(fg).
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{lemma}
-\backslash
-label{lemma}
-\end_layout
-
-\end_inset
-
- Let 
-\begin_inset Formula $(f_{i})$
-\end_inset
-
- be a family of elements in 
-\begin_inset Formula $A$
-\end_inset
-
- and let 
-\begin_inset Formula $g\in A$
-\end_inset
-
-.
- Then 
-\begin_inset Formula $D(g)\subseteq\bigcup_{i}D(f_{i})$
-\end_inset
-
- if and only if there exists an integer 
-\begin_inset Formula $n>0$
-\end_inset
-
- such that 
-\begin_inset Formula $g^{n}$
-\end_inset
-
- is contained in the ideal 
-\begin_inset Formula $\mathfrak{a}$
-\end_inset
-
- generated by the 
-\begin_inset Formula $f_{i}$
-\end_inset
-
-.
- 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{lemma}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{proof}
-\end_layout
-
-\end_inset
-
- Indeed, 
-\begin_inset Formula $D(g)\subseteq\bigcup_{i}D(f_{i})$
-\end_inset
-
- is equivalent to 
-\begin_inset Formula $V(g)\supseteq V(\mathfrak{a})$
-\end_inset
-
- which is equivalent to 
-\begin_inset Formula $g\in\sqrt{\mathfrak{a}}$
-\end_inset
-
-.
- 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{proof}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{rem}
-\backslash
-label{rem}
-\end_layout
-
-\end_inset
-
- Applying this to 
-\begin_inset Formula $g=1$
-\end_inset
-
- it follows that 
-\begin_inset Formula $(D(f_{i}))_{i}$
-\end_inset
-
- is a covering of 
-\begin_inset Formula $\text{Spec}A$
-\end_inset
-
- if and only if the ideal generated by the 
-\begin_inset Formula $f_{i}$
-\end_inset
-
- is equal to 
-\begin_inset Formula $A$
-\end_inset
-
-.
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{rem}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{prop}
-\backslash
-label{prop}
-\end_layout
-
-\end_inset
-
- Let 
-\begin_inset Formula $A$
-\end_inset
-
- be a ring.
- The principal open subsets 
-\begin_inset Formula $D(f)$
-\end_inset
-
- for 
-\begin_inset Formula $f\in A$
-\end_inset
-
- form a basis of the topology of 
-\begin_inset Formula $\text{Spec }A$
-\end_inset
-
-.
- For all 
-\begin_inset Formula $f\in A$
-\end_inset
-
- the open sets 
-\begin_inset Formula $D(f)$
-\end_inset
-
- are quasi-compact.
- In particular, the space 
-\begin_inset Formula $\text{Spec }A$
-\end_inset
-
- is quasi-compact.
- 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{prop}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{proof}
-\end_layout
-
-\end_inset
-
- Every closed subset of 
-\begin_inset Formula $\text{Spec}A$
-\end_inset
-
- is the intersection of closed sets of the form 
-\begin_inset Formula $V(f)$
-\end_inset
-
-.
- By taking complements we see that the 
-\begin_inset Formula $D(f)$
-\end_inset
-
- form a basis for the topology.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-Let 
-\begin_inset Formula $(g_{i})_{i\in I}$
-\end_inset
-
- be a family of elements of 
-\begin_inset Formula $A$
-\end_inset
-
- such that 
-\begin_inset Formula $D(f)\subseteq\bigcup_{i\in I}D(g_{i})$
-\end_inset
-
-.
- Then there exists an integer 
-\begin_inset Formula $n\geq1$
-\end_inset
-
- such that 
-\begin_inset Formula $f^{n}=\sum_{i\in I}a_{i}g_{i}$
-\end_inset
-
- where 
-\begin_inset Formula $a_{i}\in A$
-\end_inset
-
- and 
-\begin_inset Formula $a_{i}=0$
-\end_inset
-
- for all 
-\begin_inset Formula $i\notin J$
-\end_inset
-
-, 
-\begin_inset Formula $J\subseteq I$
-\end_inset
-
- a suitable finite subset.
- Hence 
-\begin_inset Formula $D(f)\subseteq\bigcup_{j\in J}D(g_{j})$
-\end_inset
-
-.
- This proves that 
-\begin_inset Formula $D(f)$
-\end_inset
-
- is quasi-compact by the first part of the proposition.
- 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{proof}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{prop}
-\backslash
-label{prop}
-\end_layout
-
-\end_inset
-
- Let 
-\begin_inset Formula $A$
-\end_inset
-
- be a ring and let 
-\begin_inset Formula $U$
-\end_inset
-
- be an open subset of 
-\begin_inset Formula $\text{Spec }A$
-\end_inset
-
-.
- Then 
-\begin_inset Formula $U$
-\end_inset
-
- is quasi-compact if and only if it is the complement of a closed set of
- the form 
-\begin_inset Formula $V(\mathfrak{a})$
-\end_inset
-
-, where 
-\begin_inset Formula $\mathfrak{a}$
-\end_inset
-
- is a finitely generated ideal.
- 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{prop}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{proof}
-\end_layout
-
-\end_inset
-
- Suppose 
-\begin_inset Formula $U=D(\mathfrak{a})$
-\end_inset
-
- where 
-\begin_inset Formula $\mathfrak{a}$
-\end_inset
-
- is a finitely generated.
- Then 
-\begin_inset Formula $\mathfrak{a}=\langle f_{1},\dots,f_{n}\rangle$
-\end_inset
-
- for some 
-\begin_inset Formula $f_{1},\dots,f_{n}\in A$
-\end_inset
-
-.
- In particular, 
-\begin_inset Formula 
-\[
-U=D(f_{1},\dots,f_{n})=D(f_{1})\cup\cdots\cup D(f_{n}).
-\]
-
-\end_inset
-
-As 
-\begin_inset Formula $U$
-\end_inset
-
- is a finite union of compact spaces, it must be compact.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-Conversely, suppose that 
-\begin_inset Formula $U$
-\end_inset
-
- is quasi-compact.
- Since 
-\begin_inset Formula $\{D(g)\}_{g\in A}$
-\end_inset
-
- forms a basis for the topology, we can write 
-\begin_inset Formula 
-\[
-U=\bigcup_{i\in I}D(g_{i})
-\]
-
-\end_inset
-
-for some 
-\begin_inset Formula $g_{i}\in A$
-\end_inset
-
-.
- In particular, 
-\begin_inset Formula $\{D(g_{i})\}_{i\in I}$
-\end_inset
-
- is an open covering of 
-\begin_inset Formula $U$
-\end_inset
-
-.
- Since 
-\begin_inset Formula $U$
-\end_inset
-
- is quasi-compact, there exists a finite subcovering, say 
-\begin_inset Formula $\{D(g_{1}),\dots,D(g_{n})\}$
-\end_inset
-
-.
- Thus, 
-\begin_inset Formula 
-\[
-U=\bigcup_{i=1}^{n}D(g_{i})=D(g_{1},\dots,g_{n}).
-\]
-
-\end_inset
-
-In particular, setting 
-\begin_inset Formula $\mathfrak{a}=\langle g_{1},\dots,g_{n}\rangle$
-\end_inset
-
-, we can write 
-\begin_inset Formula $U=D(\mathfrak{a})$
-\end_inset
-
- where 
-\begin_inset Formula $\mathfrak{a}$
-\end_inset
-
- is finitely generated.
- 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{proof}
-\end_layout
-
 \end_inset
 
 
@@ -55924,7 +55352,7 @@ We will now show that
 
  is a prime ideal of.
  Therefore we obtain a map 
-\begin_inset Formula $^{\mathrm{a}}\varphi=\mathrm{Spec}\,\mathrm{\varphi}$
+\begin_inset Formula $^{\mathrm{a}}\varphi=\mathrm{Spec}\,\varphi$
 \end_inset
 
  from 
@@ -55948,6 +55376,11 @@ for all
 \end_inset
 
 .
+ The following proposition will show that 
+\begin_inset Formula $^{\mathrm{a}}\varphi$
+\end_inset
+
+ is a continuous map.
  
 \end_layout
 
@@ -55987,24 +55420,56 @@ label{prop}
 \end_layout
 
 \begin_layout Enumerate
+We have 
 \begin_inset Formula $(^{\mathrm{a}}\varphi)^{-1}(\mathrm{V}(S))=\mathrm{V}(\varphi(S))$
+\end_inset
+
+ and 
+\begin_inset Formula $(^{\mathrm{a}}\varphi)^{-1}(\mathrm{D}(S))=\mathrm{D}(\varphi(S))$
+\end_inset
+
+.
+ In particular, 
+\begin_inset Formula $^{\mathrm{a}}\varphi$
+\end_inset
+
+ is continuous.
+ 
+\end_layout
+
+\begin_layout Enumerate
+We have 
+\begin_inset Formula $\overline{^{\mathrm{a}}\varphi(\mathrm{V}(\mathfrak{b}))}=\mathrm{V}(\varphi^{-1}(\mathfrak{b}))$
+\end_inset
+
+.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:We-have-"
+
 \end_inset
 
 
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $\mathrm{V}(\varphi^{-1}(\mathfrak{b}))=\overline{^{\mathrm{a}}\varphi(\mathrm{V}(\mathfrak{b}))}$
+Assume that 
+\begin_inset Formula $\varphi\colon A\to B$
 \end_inset
 
-
-\begin_inset CommandInset label
-LatexCommand label
-name "eq:dom"
-
+ is an integral extension.
+ Then 
+\begin_inset Formula $^{\mathrm{a}}\varphi(\mathrm{V}(\mathfrak{b}))=\mathrm{V}(\varphi^{-1}(\mathfrak{b}))$
 \end_inset
 
+.
+ In particular, 
+\begin_inset Formula $^{\mathrm{a}}\varphi$
+\end_inset
 
+ is a closed map in this case.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -56037,27 +55502,44 @@ begin{proof}
 \end_inset
 
  1.
- A prime ideal 
+ Let 
 \begin_inset Formula $\mathfrak{q}$
 \end_inset
 
- of 
+ be a prime ideal of 
 \begin_inset Formula $B$
 \end_inset
 
- contains 
-\begin_inset Formula $\varphi(S)$
+.
+ Then
+\begin_inset Formula 
+\begin{align*}
+\mathfrak{q}\in(^{\mathrm{a}}\varphi)^{-1}(\mathrm{V}(S)) & \iff(^{\mathrm{a}}\varphi)(\mathfrak{q})\in\mathrm{V}(S)\\
+ & \iff\varphi^{-1}(\mathfrak{q})\in\mathrm{V}(S)\\
+ & \iff\varphi^{-1}(\mathfrak{q})\supseteq S\\
+ & \iff\mathfrak{q}\supseteq\varphi(S)\\
+ & \iff\mathfrak{q}\in\mathrm{V}(\varphi(S)).
+\end{align*}
+
 \end_inset
 
- if and only if 
-\begin_inset Formula $\varphi^{-1}(\mathfrak{q})$
-\end_inset
-
- contains 
-\begin_inset Formula $S$
+It follows that 
+\begin_inset Formula $(^{\mathrm{a}}\varphi)^{-1}(\mathrm{V}(S))=\mathrm{V}(\varphi(S))$
 \end_inset
 
 .
+ Similarly, we have
+\begin_inset Formula 
+\begin{align*}
+(^{\mathrm{a}}\varphi)^{-1}(\mathrm{D}(S)) & =(^{\mathrm{a}}\varphi)^{-1}((\mathrm{V}(S))^{c})\\
+ & =((^{\mathrm{a}}\varphi)^{-1}(\mathrm{V}(S)))^{c}\\
+ & =(\mathrm{V}(\varphi(S))^{c}\\
+ & =\mathrm{D}(\varphi(S)).
+\end{align*}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -56095,12 +55577,45 @@ ref{prop2.3})
 \begin_inset Formula 
 \begin{align*}
 \overline{^{\mathrm{a}}\varphi(\mathrm{V}(\mathfrak{b}))} & =\mathrm{VI}(^{\mathrm{a}}\varphi(\mathrm{V}(\mathfrak{b})))\\
+ & =\mathrm{VI}(\{^{\mathrm{a}}\varphi(\mathfrak{q})\mid\mathfrak{q}\in\mathrm{V}(\mathfrak{b})\})\\
+ & =\mathrm{VI}(\{\varphi^{-1}(\mathfrak{q})\mid\mathfrak{q}\in\mathrm{V}(\mathfrak{b})\})\\
  & =\mathrm{V}\left(\bigcap_{\mathfrak{q}\in\mathrm{V}(\mathfrak{b})}\varphi^{-1}(\mathfrak{q})\right)\\
+ & =\mathrm{V}\left(\varphi^{-1}\left(\bigcap_{\mathfrak{q}\in\mathrm{V}(\mathfrak{b})}\mathfrak{q}\right)\right)\\
  & =\mathrm{V}(\varphi^{-1}(\sqrt{\mathfrak{b}}))\\
  & =\mathrm{V}\left(\sqrt{\varphi^{-1}(\mathfrak{b})}\right)\\
  & =\mathrm{V}(\varphi^{-1}(\mathfrak{b}))
 \end{align*}
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+3.
+ We want to show 
+\begin_inset Formula $^{\mathrm{a}}\varphi(\mathrm{V}(\mathfrak{b}))=\mathrm{V}(\varphi^{-1}(\mathfrak{b}))$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\mathfrak{}$
 \end_inset
 
 
@@ -56176,11 +55691,11 @@ label{cor}
 
  is dominant (i.e.
  its image is dense in 
-\begin_inset Formula $\text{Spec }A$
+\begin_inset Formula $\mathrm{Spec}\,A$
 \end_inset
 
 ) if and only if every element of 
-\begin_inset Formula $\text{Ker}(\varphi)$
+\begin_inset Formula $\ker\varphi$
 \end_inset
 
  is nilpotent.
@@ -56227,6 +55742,19 @@ ref{eq:dom})
 \end_inset
 
  to 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+(
+\backslash
+ref{enu:We-have-})
+\end_layout
+
+\end_inset
+
+ 
 \begin_inset Formula $\mathfrak{b}=0$
 \end_inset
 
@@ -56272,7 +55800,7 @@ label{prop2.12}
 
 \begin_layout Enumerate
 Let 
-\begin_inset Formula $\varphi:A\to B$
+\begin_inset Formula $\varphi\colon A\to B$
 \end_inset
 
  be a surjective homomorphism of rings with kernel 
@@ -56281,19 +55809,23 @@ Let
 
 .
  Then 
-\begin_inset Formula $^{a}\varphi$
+\begin_inset Formula $^{\mathrm{a}}\varphi$
 \end_inset
 
- is a homeomorphism of 
-\begin_inset Formula $\text{Spec }B$
+ induces a homeomorphism of 
+\begin_inset Formula $^{\mathrm{a}}\varphi\colon\mathrm{Spec}\,B\to\mathrm{V}(\mathfrak{a})$
+\end_inset
+
+ from 
+\begin_inset Formula $\mathrm{Spec}\,B$
 \end_inset
 
  onto the closed subset 
-\begin_inset Formula $V(\mathfrak{a})$
+\begin_inset Formula $\mathrm{V}(\mathfrak{a})$
 \end_inset
 
  of 
-\begin_inset Formula $\text{Spec }A$
+\begin_inset Formula $\mathrm{Spec}\,A$
 \end_inset
 
 .
@@ -56310,31 +55842,40 @@ Let
 \end_inset
 
  and let 
-\begin_inset Formula $\varphi:A\to S^{-1}A=:B$
+\begin_inset Formula $\varphi\colon A\to S^{-1}A=:B$
 \end_inset
 
  be the canonical homomorphism.
  Then 
-\begin_inset Formula $^{a}\varphi$
+\begin_inset Formula $^{\mathrm{a}}\varphi$
 \end_inset
 
- is a homeomorphism of 
-\begin_inset Formula $\text{Spec }S^{-1}A$
+ induces a homeomorphism 
+\begin_inset Formula $^{\mathrm{a}}\varphi\colon\mathrm{Spec}\,A_{S}\to\{\mathfrak{p}\in\mathrm{Spec}\,A\mid\mathfrak{p}\cap S=\emptyset\}$
+\end_inset
+
+ from 
+\begin_inset Formula $\mathrm{Spec}\,A_{S}$
 \end_inset
 
  onto the subspace of 
-\begin_inset Formula $\text{Spec }A$
+\begin_inset Formula $\mathrm{Spec}\,A$
 \end_inset
 
- consisting of prime ideals 
-\begin_inset Formula $\mathfrak{p}\subset A$
+ consisting of prime ideal 
+\begin_inset Formula $\mathfrak{p}$
 \end_inset
 
- with 
-\begin_inset Formula $S\cap\mathfrak{p}=\emptyset$
+ of 
+\begin_inset Formula $A$
+\end_inset
+
+ such that 
+\begin_inset Formula $\mathfrak{p}\cap S=\emptyset$
 \end_inset
 
 .
+ 
 \end_layout
 
 \begin_layout Standard
@@ -56366,12 +55907,293 @@ begin{proof}
 
 \end_inset
 
- In both cases it is clear that 
-\begin_inset Formula $^{a}\varphi$
+ 1.
+ We first check that 
+\begin_inset Formula $^{\mathrm{a}}\varphi$
 \end_inset
 
- is injective with the stated image.
- Moreover in both cases a prime ideal 
+ lands in 
+\begin_inset Formula $\mathrm{V}(\mathfrak{a})$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\mathfrak{q}$
+\end_inset
+
+ be a prime ideal of 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ The 
+\begin_inset Formula $\varphi^{-1}(\mathfrak{q})$
+\end_inset
+
+ is a prime ideal of 
+\begin_inset Formula $A$
+\end_inset
+
+ which contains 
+\begin_inset Formula $\mathfrak{a}$
+\end_inset
+
+.
+ It follows that 
+\begin_inset Formula $^{\mathrm{a}}\varphi$
+\end_inset
+
+ lands in 
+\begin_inset Formula $\mathrm{V}(\mathfrak{a})$
+\end_inset
+
+.
+ Let us now show that 
+\begin_inset Formula $^{\mathrm{a}}\varphi$
+\end_inset
+
+ is a bijection.
+ Let 
+\begin_inset Formula $\mathfrak{q}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathfrak{q}'$
+\end_inset
+
+ be two distinct prime ideals of 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $\varphi^{-1}(\mathfrak{q}')\neq\varphi^{-1}(\mathfrak{q})$
+\end_inset
+
+ since 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ is surjective.
+ Thus 
+\begin_inset Formula $^{\mathrm{a}}\varphi$
+\end_inset
+
+ is injective.
+ To see that 
+\begin_inset Formula $^{\mathrm{a}}\varphi$
+\end_inset
+
+ is surjective, let 
+\begin_inset Formula $\mathfrak{p}$
+\end_inset
+
+ be a prime ideal of 
+\begin_inset Formula $A$
+\end_inset
+
+ which contains 
+\begin_inset Formula $\mathfrak{a}$
+\end_inset
+
+.
+ We claim that 
+\begin_inset Formula $\varphi(\mathfrak{p})$
+\end_inset
+
+ is a prime ideal of 
+\begin_inset Formula $B$
+\end_inset
+
+ and that 
+\begin_inset Formula $\mathfrak{p}=\varphi^{-1}(\varphi(\mathfrak{p}))$
+\end_inset
+
+ which will establish 
+\begin_inset Formula $^{\mathrm{a}}\varphi$
+\end_inset
+
+ being surjective.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+First, to see that 
+\begin_inset Formula $\varphi(\mathfrak{p})$
+\end_inset
+
+ is a prime ideal of 
+\begin_inset Formula $B$
+\end_inset
+
+, let 
+\begin_inset Formula $\varphi(a),\varphi(a')\in B$
+\end_inset
+
+ such that 
+\begin_inset Formula $\varphi(a)\varphi(a')\in\mathfrak{\varphi}(\mathfrak{p})$
+\end_inset
+
+ and 
+\begin_inset Formula $\varphi(a')\notin\varphi(\mathfrak{p})$
+\end_inset
+
+ where 
+\begin_inset Formula $a,a'\in A$
+\end_inset
+
+ (every element in 
+\begin_inset Formula $B$
+\end_inset
+
+ can be expressed in the form 
+\begin_inset Formula $\varphi(a)$
+\end_inset
+
+ for some 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ since 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ is surjective).
+ Then 
+\begin_inset Formula $a'\notin\mathfrak{p}$
+\end_inset
+
+ and there exists 
+\begin_inset Formula $x\in\mathfrak{p}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\varphi(a)\varphi(a')=\varphi(x)$
+\end_inset
+
+, or in other words, such that 
+\begin_inset Formula $aa'-x\in\mathfrak{a}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\mathfrak{p}\supseteq\mathfrak{a}$
+\end_inset
+
+, this implies 
+\begin_inset Formula $aa'\in\mathfrak{p}$
+\end_inset
+
+, and since 
+\begin_inset Formula $\mathfrak{p}$
+\end_inset
+
+ is prime and 
+\begin_inset Formula $a'\notin\mathfrak{p}$
+\end_inset
+
+, this implies 
+\begin_inset Formula $a\in\mathfrak{p}$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula $\varphi(a)\in\varphi(\mathfrak{p})$
+\end_inset
+
+.
+ It follows that 
+\begin_inset Formula $\varphi(\mathfrak{p})$
+\end_inset
+
+ is prime.
+ Next we will show that 
+\begin_inset Formula $\varphi^{-1}(\varphi(\mathfrak{p}))=\mathfrak{p}$
+\end_inset
+
+.
+ Clearly we have 
+\begin_inset Formula $\varphi^{-1}(\varphi(\mathfrak{p}))\supseteq\mathfrak{p}$
+\end_inset
+
+.
+ For the reverse inclusion, let 
+\begin_inset Formula $a\in\varphi^{-1}(\varphi(\mathfrak{p}))$
+\end_inset
+
+, so 
+\begin_inset Formula $\varphi(a)\in\varphi(\mathfrak{p})$
+\end_inset
+
+, which means 
+\begin_inset Formula $\varphi(a)=\varphi(x)$
+\end_inset
+
+ for some 
+\begin_inset Formula $x\in\mathfrak{p}$
+\end_inset
+
+.
+ It follows that 
+\begin_inset Formula $a-x\in\mathfrak{a}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\mathfrak{p}\supseteq\mathfrak{a}$
+\end_inset
+
+ and 
+\begin_inset Formula $x\in\mathfrak{p}$
+\end_inset
+
+, it follows that 
+\begin_inset Formula $a\in\mathfrak{p}$
+\end_inset
+
+.
+ Thus we have the reverse inclusion 
+\begin_inset Formula $\varphi^{-1}(\varphi(\mathfrak{p}))\subseteq\mathfrak{p}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Thus 
+\begin_inset Formula $^{\mathrm{a}}\varphi$
+\end_inset
+
+ is a continuous bijection.
+ To see that it is a homeomorphism, we need to show that 
+\begin_inset Formula $^{\mathrm{a}}\varphi$
+\end_inset
+
+ maps closed sets to closed sets.
+ To see this, note that a prime ideal 
 \begin_inset Formula $\mathfrak{q}$
 \end_inset
 
@@ -56379,7 +56201,7 @@ begin{proof}
 \begin_inset Formula $B$
 \end_inset
 
- contains an indeal 
+ contains an ideal 
 \begin_inset Formula $\mathfrak{b}$
 \end_inset
 
@@ -56387,26 +56209,58 @@ begin{proof}
 \begin_inset Formula $B$
 \end_inset
 
- if and only if 
+ if and only if the prime ideal 
 \begin_inset Formula $\varphi^{-1}(\mathfrak{q})$
 \end_inset
 
- contains 
+ of 
+\begin_inset Formula $A$
+\end_inset
+
+ contains the ideal 
 \begin_inset Formula $\varphi^{-1}(\mathfrak{b})$
 \end_inset
 
-.
- This shows that 
-\begin_inset Formula $^{a}\varphi(V(\mathfrak{b}))=V(\varphi^{-1}(\mathfrak{b}))\cap\text{Im}(^{a}\varphi)$
+ of 
+\begin_inset Formula $A$
 \end_inset
 
 .
- Therefore 
-\begin_inset Formula $^{a}\varphi$
+ In particular, we have
+\begin_inset Formula 
+\[
+^{\mathrm{a}}\varphi(\mathrm{V}(\mathfrak{b}))=\mathrm{V}(\varphi^{-1}(\mathfrak{b}))\cap\mathrm{V}(\mathfrak{a}).
+\]
+
+\end_inset
+
+Therefore 
+\begin_inset Formula $^{\mathrm{a}}\varphi$
 \end_inset
 
  is a homeomorphism onto its image.
  
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ Left as an exercise.
 \end_layout
 
 \begin_layout Standard
@@ -56433,22 +56287,138 @@ status open
 
 
 \backslash
-begin{rem}
+begin{cor}
 \backslash
-label{rem}
+label{cor}
 \end_layout
 
 \end_inset
 
  Let 
+\begin_inset Formula $A_{\mathrm{red}}$
+\end_inset
+
+ be the reduced ring of 
 \begin_inset Formula $A$
 \end_inset
 
- be a ring and let 
-\begin_inset Formula $\mathfrak{p},\mathfrak{q}\subset A$
+ obtained by quotienting out all nilpotent elements in 
+\begin_inset Formula $A$
 \end_inset
 
- be prime ideals.
+, and let 
+\begin_inset Formula $\pi\colon A\to A_{\mathrm{red}}$
+\end_inset
+
+ be the quotient homomorphism.
+ The 
+\begin_inset Formula $^{\mathrm{a}}\pi$
+\end_inset
+
+ induces a homeomorphism 
+\begin_inset Formula $\mathrm{Spec}\,A\cong\mathrm{Spec}\,A_{\mathrm{red}}$
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{cor}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proof}
+\backslash
+label{proof}
+\end_layout
+
+\end_inset
+
+ Recall that the set of all nilpotent elements of 
+\begin_inset Formula $A$
+\end_inset
+
+ is given by 
+\begin_inset Formula $\sqrt{0}$
+\end_inset
+
+.
+ In particular, since 
+\begin_inset Formula $\mathrm{V}(\sqrt{0})=\mathrm{V(}0)=\mathrm{Spec}\,A$
+\end_inset
+
+, the corrollary follows immediately from 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+Proposition~(
+\backslash
+ref{prop2.12})
+\end_layout
+
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Let 
+\begin_inset Formula $\mathfrak{p}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathfrak{q}$
+\end_inset
+
+ be prime ideals of 
+\begin_inset Formula $A$
+\end_inset
+
+.
  
 \begin_inset ERT
 status open
@@ -56480,7 +56450,7 @@ ref{prop2.12})
 \end_inset
 
  to 
-\begin_inset Formula $A/\mathfrak{q}$
+\begin_inset Formula $A\slash\mathfrak{q}$
 \end_inset
 
  cuts out all prime ideals except those containing 
@@ -56492,11 +56462,11 @@ ref{prop2.12})
 \begin_inset Formula $\mathfrak{q}\subseteq\mathfrak{p}$
 \end_inset
 
- localizing with respect to 
+, then by localizing with respect to 
 \begin_inset Formula $\mathfrak{p}$
 \end_inset
 
- and taking the quotient modulo 
+ and then taking the quotient modulo 
 \begin_inset Formula $\mathfrak{q}$
 \end_inset
 
@@ -56521,7 +56491,7 @@ ref{prop2.12})
 , we obtain the field
 \begin_inset Formula 
 \[
-\kappa(\mathfrak{p}):=A_{\mathfrak{p}}/\mathfrak{p}A_{\mathfrak{p}}=\mathrm{Frac}(A\slash\mathfrak{p}),
+\kappa(\mathfrak{p}):=A_{\mathfrak{p}}\slash\mathfrak{p}A_{\mathfrak{p}}=\mathrm{Frac}(A\slash\mathfrak{p}),
 \]
 
 \end_inset
@@ -56536,19 +56506,6 @@ at
 
 .
  
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{rem}
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Section
@@ -56626,7 +56583,7 @@ We set
 
 .
  Denote by 
-\begin_inset Formula $\iota_{f}:A\to A_{f}$
+\begin_inset Formula $\iota_{f}\colon A\to A_{f}$
 \end_inset
 
  the canonical ring homomorphism 
@@ -56793,11 +56750,7 @@ label{theorem}
 \begin_inset Formula $\mathcal{O}_{X}$
 \end_inset
 
- is a sheaf on 
-\begin_inset Formula $\mathcal{B}$
-\end_inset
-
-.
+ is a sheaf.
  
 \begin_inset ERT
 status open
@@ -56835,7 +56788,7 @@ We denote the sheaf of rings on
 , we have
 \begin_inset Formula 
 \[
-\mathcal{O}_{X,x}=\lim_{\mathrm{D}(f)\ni x}\mathcal{O}_{X}(\mathrm{D}(f))=\lim_{f\notin\mathfrak{p}_{x}}A_{f}=A_{\mathfrak{p}_{x}}.
+\mathcal{O}_{X,x}=\mathrm{colim}_{\mathrm{D}(f)\ni x}\mathcal{O}_{X}(\mathrm{D}(f))=\mathrm{colim}_{f\notin\mathfrak{p}_{x}}A_{f}=A_{\mathfrak{p}_{x}}.
 \]
 
 \end_inset
@@ -57313,8 +57266,18 @@ affine scheme
 \begin_inset Formula $(X,\mathcal{O}_{X})$
 \end_inset
 
- is isomorphism to 
-\begin_inset Formula $(\text{Spec }A,\mathcal{O}_{\text{Spec }A})$
+ is isomorphic to 
+\begin_inset Formula $(\mathrm{Spec}\,A,\mathcal{O}_{\mathrm{Spec}\,A})$
+\end_inset
+
+.
+ A 
+\series bold
+morphism 
+\series default
+of affine schemes is a morphism of locally ringed spaces.
+ We obtain the category of affine schemes which we denote by 
+\begin_inset Formula $\mathbf{Aff}$
 \end_inset
 
 .
@@ -57327,6 +57290,76 @@ status open
 
 \backslash
 end{defn}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{prop}
+\backslash
+label{prop}
+\end_layout
+
+\end_inset
+
+ Let 
+\begin_inset Formula $A_{\mathrm{red}}$
+\end_inset
+
+ be the reduced ring of 
+\begin_inset Formula $A$
+\end_inset
+
+ obtained by quotienting out the nilpotent elements of 
+\begin_inset Formula $A$
+\end_inset
+
+ and let 
+\begin_inset Formula $\pi\colon A\to A_{\mathrm{red}}$
+\end_inset
+
+ be the quotient map.
+ Set 
+\begin_inset Formula $X=\mathrm{Spec}\,A$
+\end_inset
+
+, set 
+\begin_inset Formula $Y=\mathrm{Spec}\,A_{\mathrm{red}}$
+\end_inset
+
+, and set 
+\begin_inset Formula $f=^{\mathrm{a}}\pi$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $ $
+\end_inset
+
+We have 
+\begin_inset Formula $\mathrm{Spec}\,A\cong\mathrm{Spec}\,A_{\mathrm{red}}$
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{prop}
 \end_layout
 
 \end_inset

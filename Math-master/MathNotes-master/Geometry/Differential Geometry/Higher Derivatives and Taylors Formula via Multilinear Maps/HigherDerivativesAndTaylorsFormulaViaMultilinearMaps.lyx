@@ -441,9 +441,7 @@ label{example}
  is differentiable with its derivative defined by
 \begin_inset Formula 
 \[
-\mathrm{D}f(x)=\begin{pmatrix}2x_{1}+x_{2}\\
-x_{1}+1
-\end{pmatrix}
+\mathrm{D}f(x)=\begin{pmatrix}2x_{1}+x_{2} & x_{1}+1\end{pmatrix}
 \]
 
 \end_inset

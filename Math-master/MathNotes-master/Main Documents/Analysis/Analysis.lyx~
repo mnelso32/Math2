@@ -118568,7 +118568,9 @@ status open
 
 
 \backslash
-begin{proof}
+begin{defn}
+\backslash
+label{defn}
 \end_layout
 
 \end_inset
@@ -118603,7 +118605,7 @@ if for all
 \end_inset
 
  and 
-\begin_inset Formula $x,y\in S$
+\begin_inset Formula $x,y\in C$
 \end_inset
 
 , we have 
@@ -118619,7 +118621,7 @@ status open
 
 
 \backslash
-end{proof}
+end{defn}
 \end_layout
 
 \end_inset
@@ -118720,7 +118722,7 @@ begin{proof}
 \end_inset
 
  is minimal in the sense that if 
-\begin_inset Formula $x=\sum_{i'=1}^{n'}t_{i'}'x_{i'}$
+\begin_inset Formula $x=\sum_{i'=1}^{n'}t_{i'}'x_{i'}'$
 \end_inset
 
  is another representation of 
@@ -118728,7 +118730,7 @@ begin{proof}
 \end_inset
 
 , where each 
-\begin_inset Formula $x_{i'}\in S$
+\begin_inset Formula $x_{i'}'\in C$
 \end_inset
 
  and 
@@ -118748,7 +118750,7 @@ begin{proof}
 \begin_inset Formula $x\notin C$
 \end_inset
 
-, so 
+, so necessarily 
 \begin_inset Formula $n>2$
 \end_inset
 
@@ -118765,7 +118767,11 @@ begin{proof}
 
 \end_inset
 
-gives another representation with 
+gives another representation of 
+\begin_inset Formula $x$
+\end_inset
+
+ with 
 \begin_inset Formula $n-1$
 \end_inset
 
@@ -143450,23 +143456,14 @@ trajectory
 \begin_inset Formula $\gamma$
 \end_inset
 
- is a 
+ is a path in
 \series bold
-path in 
+ 
 \begin_inset Formula $D$
 \end_inset
 
 
 \series default
-.
- The space of all paths in 
-\begin_inset Formula $D$
-\end_inset
-
- is denoted 
-\begin_inset Formula $\mathcal{P}(D)$
-\end_inset
-
 .
  The points 
 \begin_inset Formula $\gamma(a)$
@@ -143498,19 +143495,19 @@ of
 simple 
 \series default
 if 
-\begin_inset Formula $\gamma(s)=\gamma(t)$
+\begin_inset Formula $\gamma(t_{1})=\gamma(t_{2})$
 \end_inset
 
  with 
-\begin_inset Formula $s<t$
+\begin_inset Formula $t_{1}<t_{2}$
 \end_inset
 
  implies 
-\begin_inset Formula $s=a$
+\begin_inset Formula $t_{1}=a$
 \end_inset
 
  and 
-\begin_inset Formula $t=b$
+\begin_inset Formula $t_{2}=b$
 \end_inset
 
 .
@@ -143520,12 +143517,16 @@ if
 
  is a 
 \series bold
-loop in 
-\begin_inset Formula $D$
-\end_inset
-
- based at 
-\begin_inset Formula $z$
+loop 
+\series default
+in
+\series bold
+ 
+\series default
+based at
+\series bold
+ 
+\begin_inset Formula $z\in D$
 \end_inset
 
  
@@ -143535,15 +143536,23 @@ if
 \end_inset
 
 .
- The space of all loops in 
+ The space of all paths in 
 \begin_inset Formula $D$
 \end_inset
 
  is denoted 
-\begin_inset Formula $\mathcal{L}(D)$
+\begin_inset Formula $\mathrm{Path}(D)$
 \end_inset
 
- and the space of all loops in 
+, the space of all loops in 
+\begin_inset Formula $D$
+\end_inset
+
+ is denoted 
+\begin_inset Formula $\mathrm{Loop}(D)$
+\end_inset
+
+, and the space of all loops in 
 \begin_inset Formula $D$
 \end_inset
 
@@ -143552,7 +143561,7 @@ if
 \end_inset
 
  is denoted 
-\begin_inset Formula $\mathcal{L}(D,z)$
+\begin_inset Formula $\mathrm{Loop}(D,z)$
 \end_inset
 
 .
@@ -144074,7 +144083,21 @@ Homotopy of Paths
 \end_layout
 
 \begin_layout Standard
-Let 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{defn}
+\backslash
+label{defn}
+\end_layout
+
+\end_inset
+
+ Let 
 \begin_inset Formula $\alpha\colon I\to D$
 \end_inset
 
@@ -144087,7 +144110,11 @@ Let
 \end_inset
 
 .
- We say that 
+ 
+\end_layout
+
+\begin_layout Enumerate
+We say that 
 \begin_inset Formula $\alpha$
 \end_inset
 
@@ -144101,9 +144128,9 @@ to
 \begin_inset Formula $\beta$
 \end_inset
 
- 
+
 \series default
-as paths, denoted 
+, denoted 
 \begin_inset Formula $\alpha\sim\beta$
 \end_inset
 
@@ -144132,58 +144159,44 @@ as paths, denoted
 \series bold
 homotopy 
 \series default
-joining 
+from 
 \begin_inset Formula $\alpha$
 \end_inset
 
  to 
 \begin_inset Formula $\beta$
-\end_inset
-
-.
- It is easy to check that 
-\begin_inset Formula $\sim$
-\end_inset
-
- is an equivalence relation in the set 
-\begin_inset Formula $\mathcal{P}(D)$
 \end_inset
 
 .
  
 \end_layout
 
-\begin_layout Subsection
-Homotopy of Paths with Fixed Endpoints
-\end_layout
-
-\begin_layout Standard
-Let 
-\begin_inset Formula $\alpha\colon I\to D$
+\begin_layout Enumerate
+Assume 
+\begin_inset Formula $\alpha$
 \end_inset
 
  and 
-\begin_inset Formula $\beta\colon I\to D$
+\begin_inset Formula $\beta$
 \end_inset
 
- be two paths in 
-\begin_inset Formula $D$
-\end_inset
-
- with the same source and target, say 
-\begin_inset Formula $\alpha(0)=w=\beta(0)$
+ have the same source and target, say 
+\begin_inset Formula $\alpha(0)=z=\beta(0)$
 \end_inset
 
  and 
-\begin_inset Formula $\alpha(1)=z=\beta(1)$
+\begin_inset Formula $\alpha(1)=w=\beta(1)$
 \end_inset
 
-.
- Then a homotopy 
+ for some 
+\begin_inset Formula $z,w\in D$
+\end_inset
+
+, and let 
 \begin_inset Formula $H$
 \end_inset
 
- from 
+ be a homotopy from 
 \begin_inset Formula $\alpha$
 \end_inset
 
@@ -144191,16 +144204,21 @@ Let
 \begin_inset Formula $\beta$
 \end_inset
 
- is called a 
+.
+ Then we say 
+\begin_inset Formula $H$
+\end_inset
+
+ is a 
 \series bold
-homotopy with fixed endpoints 
+fixed endpoint homotopy 
 \series default
-if we additionally have 
-\begin_inset Formula $H(s,0)=w$
+if in addition to being a homotopy, we have 
+\begin_inset Formula $H(s,0)=z$
 \end_inset
 
  and 
-\begin_inset Formula $H(s,1)=z$
+\begin_inset Formula $H(s,1)=w$
 \end_inset
 
  for all 
@@ -144208,15 +144226,28 @@ if we additionally have
 \end_inset
 
 .
+ In this case, we say 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is 
+\series bold
+fixed endpoint homotopic 
+\series default
+to
+\series bold
  
-\end_layout
+\begin_inset Formula $\beta$
+\end_inset
 
-\begin_layout Subsection
-Homotopy of Loops
-\end_layout
+ 
+\series default
+(or more simply FEP homotopic), and we shall denote this by 
+\begin_inset Formula $\alpha\sim_{z,w}\beta$
+\end_inset
 
-\begin_layout Standard
-Let 
+.
+ In the case where 
 \begin_inset Formula $\alpha$
 \end_inset
 
@@ -144224,76 +144255,49 @@ Let
 \begin_inset Formula $\beta$
 \end_inset
 
- be two loops in 
-\begin_inset Formula $D$
-\end_inset
-
- based at 
+ are loops based at 
 \begin_inset Formula $z$
 \end_inset
 
-.
- We say 
-\begin_inset Formula $\alpha$
+, so 
+\begin_inset Formula $\alpha(0)=z=\beta(0)$
 \end_inset
 
- is homotopic to 
-\begin_inset Formula $\beta$
+ and 
+\begin_inset Formula $\alpha(1)=z=\beta(1)$
 \end_inset
 
- as loops based at 
-\begin_inset Formula $z$
-\end_inset
-
-, denoted 
+, then we shall simplify our notation and write 
 \begin_inset Formula $\alpha\sim_{z}\beta$
 \end_inset
 
-, if there exists a homotopy 
-\begin_inset Formula $H\colon I\times I\to D$
-\end_inset
-
- with fixed endpoints from 
-\begin_inset Formula $\alpha$
-\end_inset
-
- to 
-\begin_inset Formula $\beta$
+ instead of 
+\begin_inset Formula $\alpha\sim_{z,w}\beta$
 \end_inset
 
 .
- The space of all loops in 
-\begin_inset Formula $D$
-\end_inset
-
- based at 
-\begin_inset Formula $z$
-\end_inset
-
- is denoted 
-\begin_inset Formula $\mathcal{L}(D,z)$
-\end_inset
-
-.
- It is easy to check that 
+ It is straightforward to check that 
 \begin_inset Formula $\sim_{z}$
 \end_inset
 
- is an equivalence relation in the set 
-\begin_inset Formula $\mathcal{L}(D,z)$
+ is an equivalence relation on 
+\begin_inset Formula $\mathrm{Loop}(D,z)$
 \end_inset
 
 .
+ We set 
+\begin_inset Formula 
+\[
+\pi_{1}(D,z)=\mathrm{Loop}(D,z)\slash\sim_{z}.
+\]
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Subsection
-Free Homotopy of Loops
-\end_layout
-
-\begin_layout Standard
-There is a slightly more general notion of homotopy in the context of loops
- which we will also consider.
- Let 
+\begin_layout Enumerate
+Assume 
 \begin_inset Formula $\alpha$
 \end_inset
 
@@ -144301,12 +144305,8 @@ There is a slightly more general notion of homotopy in the context of loops
 \begin_inset Formula $\beta$
 \end_inset
 
- be two loops in 
-\begin_inset Formula $D$
-\end_inset
-
- based at 
-\begin_inset Formula $z$
+ are two loops based at 
+\begin_inset Formula $z\in D$
 \end_inset
 
 .
@@ -144316,14 +144316,14 @@ There is a slightly more general notion of homotopy in the context of loops
 
  is 
 \series bold
-freely homotopic 
+free endpoint homotopic 
 \series default
 to 
 \begin_inset Formula $\beta$
 \end_inset
 
 , denoted 
-\begin_inset Formula $\alpha\sim_{\text{free}}\beta$
+\begin_inset Formula $\alpha\sim_{z}^{\mathrm{free}}\beta$
 \end_inset
 
  if there exists a homotopy 
@@ -144349,7 +144349,7 @@ to
 .
  Such a homotopy is called a 
 \series bold
-free homotopy 
+free endpoint homotopy 
 \series default
 from 
 \begin_inset Formula $\alpha$
@@ -144384,8 +144384,7 @@ from
 \begin_inset Formula $H(s,-)\colon I\to D$
 \end_inset
 
- is a loop.
- So the base point is allowed to move freely as 
+ is a loop, however the base point is allowed to move freely as 
 \begin_inset Formula $s$
 \end_inset
 
@@ -144400,6 +144399,22 @@ from
 .
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{defn}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 The Fundamental Group 
 \begin_inset Formula $\pi(D,z)$
@@ -144409,51 +144424,119 @@ The Fundamental Group
 \end_layout
 
 \begin_layout Standard
-Let 
-\begin_inset Formula $z\in D$
+The concatenation operations 
+\begin_inset Formula $\oplus$
 \end_inset
 
-.
- Concatenation serves as a natural binary operation on 
-\begin_inset Formula $\mathcal{L}(D,z)$
+ introduced above serves as a natural binary operation on 
+\begin_inset Formula $\mathrm{Loop}(D,z)$
 \end_inset
 
-.
- However, this binary operation is rather complicated.
+, however this binary operation is rather complicated.
  For example, it isn't associative, it has no identity, and it has no inverses.
- It turns out however, if we consider loops up to homotopy with fixed endpoints,
- then we do get these properties.
- In fact, we will show that 
-\begin_inset Formula $(\mathcal{L}(D,z)\slash\sim_{z},\oplus)$
+ It turns out however that the concatenation induces a well-defined binary
+ operation on 
+\begin_inset Formula $\pi_{1}(D,z)$
 \end_inset
 
- forms a group, called the 
+, and this operation gives 
+\begin_inset Formula $\pi_{1}(D,z)$
+\end_inset
+
+ the structure of a group, which we call the 
 \series bold
 fundamental group of 
 \begin_inset Formula $D$
 \end_inset
 
- based at 
+ at 
 \begin_inset Formula $z$
 \end_inset
 
 
 \series default
 .
- Let us show this in the following sequence of steps:
-\end_layout
-
-\begin_layout Subsubsection
-Concatenation Passes to Quotient
+ Let us state and prove this now:
 \end_layout
 
 \begin_layout Standard
-First we need to show that concatenation passes to the quotient 
-\begin_inset Formula $\mathcal{L}(D,z)\slash\sim_{z}$
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{theorem}
+\backslash
+label{theorem}
+\end_layout
+
+\end_inset
+
+ Concatenation induces a well-defined binary operation on 
+\begin_inset Formula $\pi_{1}(D,z)$
+\end_inset
+
+ making it into a group.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{theorem}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proof}
+\backslash
+label{proof}
+\end_layout
+
+\end_inset
+
+ The proof will consist of a sequence of steps.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Step 1.
+ First we need to show that concatenation passes to the quotient 
+\begin_inset Formula $\pi_{1}(D,z)$
 \end_inset
 
 , thus giving a well-defined binary operation on 
-\begin_inset Formula $\mathcal{L}(D,z)\slash\sim_{z}$
+\begin_inset Formula $\pi_{1}(D,z)$
 \end_inset
 
 .
@@ -144499,7 +144582,7 @@ First we need to show that concatenation passes to the quotient
 \begin_inset Formula $H_{\beta}$
 \end_inset
 
- be their respective homotopies with endpoints.
+ be their respective FEP homotopies.
  Define 
 \begin_inset Formula $H\colon I\times I\to X$
 \end_inset
@@ -144528,7 +144611,7 @@ for all
 \begin_inset Formula $H$
 \end_inset
 
- is easily seen to be a homotopy with fixed endpoints from 
+ is easily seen to be a FEP homotopy from 
 \begin_inset Formula $\beta\oplus\alpha$
 \end_inset
 
@@ -144712,13 +144795,26 @@ end{center}
 
 \end_layout
 
-\begin_layout Subsubsection
-Associativity
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Next we show that 
-\begin_inset Formula $(\mathcal{L}(D,z)\slash\sim_{z},\oplus)$
+Step 2.
+ Next we show that this binary operation on 
+\begin_inset Formula $\pi_{1}(D,z)$
 \end_inset
 
  is associative.
@@ -144764,7 +144860,7 @@ for all
 \begin_inset Formula $H$
 \end_inset
 
- is easily seen to be a homotopy with fixed endpoints from 
+ is easily seen to be an FEP homotopy from 
 \begin_inset Formula $(\alpha\oplus\beta)\oplus\gamma$
 \end_inset
 
@@ -144961,20 +145057,33 @@ end{center}
 
 \end_layout
 
-\begin_layout Subsubsection
-Identity
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Next, we want to show that 
+Step 3.
+ Next we want to show that 
 \begin_inset Formula $c_{z}$
 \end_inset
 
  represents the identity element in 
-\begin_inset Formula $(\mathcal{L}(D,z)\slash\sim_{z},\oplus)$
+\begin_inset Formula $\pi_{1}(D,z)$
 \end_inset
 
-.
+ under this binary operation.
  Let 
 \begin_inset Formula $\alpha$
 \end_inset
@@ -145012,11 +145121,7 @@ for all
 \begin_inset Formula $H$
 \end_inset
 
- is easily seen to be a homotopy fixed at 
-\begin_inset Formula $z$
-\end_inset
-
- from 
+ is easily seen to be an FEP homotopy from 
 \begin_inset Formula $\alpha\oplus c_{z}$
 \end_inset
 
@@ -145157,11 +145262,7 @@ end{center}
 \end_layout
 
 \begin_layout Standard
-A similar argument gives a homotopy fixed at 
-\begin_inset Formula $z$
-\end_inset
-
- from 
+A similar argument gives an FEP homotopy from 
 \begin_inset Formula $c_{z}\oplus\alpha$
 \end_inset
 
@@ -145172,16 +145273,29 @@ A similar argument gives a homotopy fixed at
 .
 \end_layout
 
-\begin_layout Subsubsection
-Inverses
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Finally, we want to show that 
-\begin_inset Formula $(\mathcal{L}(D,z)\slash\sim_{z},\oplus)$
+Step 4.
+ Finally we want to show that 
+\begin_inset Formula $\pi_{1}(D,z)$
 \end_inset
 
- has inverses.
+ has inverses under this operation.
  Suppose 
 \begin_inset Formula $\alpha$
 \end_inset
@@ -145216,11 +145330,7 @@ for all
 \begin_inset Formula $H$
 \end_inset
 
- is easily seen to be a homotopy fixed at 
-\begin_inset Formula $z$
-\end_inset
-
- from 
+ is easily seen to be an FEP homotopy from 
 \begin_inset Formula $\alpha^{-}\oplus\alpha$
 \end_inset
 
@@ -145381,6 +145491,20 @@ A similar argument gives a homotopy fixed at
 \end_inset
 
 .
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -145388,28 +145512,11 @@ Changing the Base Point
 \end_layout
 
 \begin_layout Standard
-We have shown that 
-\begin_inset Formula $(\mathcal{L}(D,z)\slash\sim_{z},\oplus)$
-\end_inset
-
- forms a group.
- This group is called the 
-\series bold
-fundamental group of 
-\begin_inset Formula $D$
-\end_inset
-
- based at 
-\begin_inset Formula $z$
-\end_inset
-
- 
-\series default
-and is denoted as 
+We have shown that concatenation of paths gives 
 \begin_inset Formula $\pi_{1}(D,z)$
 \end_inset
 
-.
+ the structure of a group.
  We now what to consider what happens if we change the base point 
 \begin_inset Formula $z\in D$
 \end_inset
@@ -145474,11 +145581,11 @@ begin{proof}
 
 \end_inset
 
- Choose a path 
+ Let 
 \begin_inset Formula $\gamma$
 \end_inset
 
- from 
+ be a path from 
 \begin_inset Formula $z$
 \end_inset
 

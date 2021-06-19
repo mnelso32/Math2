@@ -13078,7 +13078,7 @@ begin{theorem}
 
 .
  Then 
-\begin_inset Formula $n_{p}=[G:N_{G}(P)]$
+\begin_inset Formula $n_{p}=[G:\mathrm{N}_{G}(P)]$
 \end_inset
 
 , where 
@@ -13135,14 +13135,14 @@ begin{proof}
 \end_inset
 
  act on 
-\begin_inset Formula $Syl_{p}(G)$
+\begin_inset Formula $\mathrm{Syl}_{p}(G)$
 \end_inset
 
  by conjugation.
  By the orbit-stabilizer formula,
 \begin_inset Formula 
 \[
-n_{p}=[G:\mbox{Stab}_{\{P\}}]=[G:N_{G}(P)].
+n_{p}=[G:\mathrm{Stab}_{\{P\}}]=[G:\mathrm{N}_{G}(P)].
 \]
 
 \end_inset
@@ -137111,6 +137111,1224 @@ end{proof}
  
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lemma}
+\backslash
+label{lemmasuminjective}
+\end_layout
+
+\end_inset
+
+ Let 
+\begin_inset Formula $E$
+\end_inset
+
+ an 
+\begin_inset Formula $R$
+\end_inset
+
+-module.
+ The following statements are equivalent:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $E$
+\end_inset
+
+ is an injective 
+\begin_inset Formula $R$
+\end_inset
+
+-module;
+\end_layout
+
+\begin_layout Enumerate
+Every short exact sequence of the form
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{equation}
+\backslash
+label{injectivesplits}
+\backslash
+begin{tikzcd} 0  
+\backslash
+arrow[r] & E   
+\backslash
+arrow[r] & M 
+\backslash
+arrow[r] & N 
+\backslash
+arrow[r] & 0 
+\backslash
+end{tikzcd}
+\backslash
+end{equation}
+\end_layout
+
+\end_inset
+
+splits.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $E$
+\end_inset
+
+ is a submodule of an 
+\begin_inset Formula $R$
+\end_inset
+
+-module 
+\begin_inset Formula $M$
+\end_inset
+
+, then 
+\begin_inset Formula $E$
+\end_inset
+
+ is a direct summand of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lemma}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ We first show 2 implies 1.
+ Suppose that any short exact sequence of the form 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+(
+\backslash
+ref{injectivesplits})
+\end_layout
+
+\end_inset
+
+ splits.
+ This means, equivalently, that any injective 
+\begin_inset Formula $R$
+\end_inset
+
+-linear map out of 
+\begin_inset Formula $E$
+\end_inset
+
+ splits.
+ Let 
+\begin_inset Formula $\varphi\colon M\to N$
+\end_inset
+
+ be an injective 
+\begin_inset Formula $R$
+\end_inset
+
+-linear map and let 
+\begin_inset Formula $\psi\colon M\to E$
+\end_inset
+
+ be any 
+\begin_inset Formula $R$
+\end_inset
+
+-linear map.
+ We need to construct a map 
+\begin_inset Formula $\widetilde{\psi}\colon N\to E$
+\end_inset
+
+ such that 
+\begin_inset Formula $\widetilde{\psi}\varphi=\psi$
+\end_inset
+
+.
+ To do this, consider the pushout module
+\begin_inset Formula 
+\[
+E+_{M}N=(E\times N)\slash\{(\psi(u),-\varphi(u))\mid u\in M\}
+\]
+
+\end_inset
+
+together its natural maps 
+\begin_inset Formula $\iota_{1}\colon E\to E+_{M}N$
+\end_inset
+
+ and 
+\begin_inset Formula $\iota_{2}\colon N\to E+_{M}N$
+\end_inset
+
+, given by 
+\begin_inset Formula $\iota_{1}(v)=[v,0]$
+\end_inset
+
+ and 
+\begin_inset Formula $\iota_{2}(w)=[0,w]$
+\end_inset
+
+ for all 
+\begin_inset Formula $v\in E$
+\end_inset
+
+ and 
+\begin_inset Formula $w\in N$
+\end_inset
+
+ where 
+\begin_inset Formula $[v,w]$
+\end_inset
+
+ denotes the equivalence class in 
+\begin_inset Formula $E+_{M}N$
+\end_inset
+
+ with 
+\begin_inset Formula $(v,w)$
+\end_inset
+
+ as one of its representatives.
+ Observe that
+\begin_inset Formula 
+\begin{align*}
+\iota_{1}(\psi(u)) & =[\psi(u),0]\\
+ & =[0,\varphi(u)]\\
+ & =\iota_{2}(\varphi(u))
+\end{align*}
+
+\end_inset
+
+for all 
+\begin_inset Formula $u\in M$
+\end_inset
+
+.
+ Therefore, we have a commutative diagram
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\backslash
+begin{tikzcd}  M 
+\backslash
+arrow[r, "
+\backslash
+varphi "] 
+\backslash
+arrow[d, "
+\backslash
+psi ", swap] & N 
+\backslash
+arrow[d, "
+\backslash
+iota _2 "]  
+\backslash
+
+\backslash
+ E 
+\backslash
+arrow[r, "
+\backslash
+iota _1 ", swap] & E + _M N 
+\backslash
+end{tikzcd}
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+ We claim that 
+\begin_inset Formula $\iota_{1}$
+\end_inset
+
+ is injective.
+ Indeed, suppose 
+\begin_inset Formula $v\in\ker\iota_{1}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $[v,0]=0$
+\end_inset
+
+ implies if 
+\begin_inset Formula $(v,0)=(\psi(u),-\varphi(u))$
+\end_inset
+
+ for some 
+\begin_inset Formula $u\in M$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $\varphi(u)=0$
+\end_inset
+
+ implies 
+\begin_inset Formula $u=0$
+\end_inset
+
+ since 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ is injective, and therefore
+\begin_inset Formula 
+\begin{align*}
+v & =\psi(u)\\
+ & =\psi(0)\\
+ & =0.
+\end{align*}
+
+\end_inset
+
+Thus 
+\begin_inset Formula $\iota_{1}$
+\end_inset
+
+ is injective.
+ Therefore by hypothesis the map 
+\begin_inset Formula $\iota_{1}\colon E\to E+_{M}N$
+\end_inset
+
+ splits, say by 
+\begin_inset Formula $\lambda\colon E+_{M}N\to E$
+\end_inset
+
+, where 
+\begin_inset Formula $\lambda\iota_{1}=1_{E}$
+\end_inset
+
+.
+ Finally, we obtain a map 
+\begin_inset Formula $\widetilde{\psi}\colon N\to E$
+\end_inset
+
+ by setting 
+\begin_inset Formula $\widetilde{\psi}:=\lambda\iota_{2}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula 
+\begin{align*}
+\widetilde{\psi}\varphi & =\lambda\iota_{2}\varphi\\
+ & =\lambda\iota_{1}\psi\\
+ & =\psi,
+\end{align*}
+
+\end_inset
+
+shows that 
+\begin_inset Formula $\widetilde{\psi}$
+\end_inset
+
+ has the desired property.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Now we will show 1 implies 2.
+ Suppose that 
+\begin_inset Formula $E$
+\end_inset
+
+ is an injective 
+\begin_inset Formula $R$
+\end_inset
+
+-module.
+ Let 
+\begin_inset Formula $\varphi\colon E\to M$
+\end_inset
+
+ be an injective homomorphism.
+ Since 
+\begin_inset Formula $E$
+\end_inset
+
+ is an injective 
+\begin_inset Formula $R$
+\end_inset
+
+-module and since 
+\begin_inset Formula $1_{E}\colon E\to E$
+\end_inset
+
+ is an injective 
+\begin_inset Formula $R$
+\end_inset
+
+-module homomorphism, there exists an 
+\begin_inset Formula $R$
+\end_inset
+
+-linear map 
+\begin_inset Formula $\widetilde{\varphi}\colon M\to E$
+\end_inset
+
+ such that 
+\begin_inset Formula $\widetilde{\varphi}\varphi=1_{E}$
+\end_inset
+
+.
+ That is, 
+\begin_inset Formula $\widetilde{\varphi}$
+\end_inset
+
+ splits 
+\begin_inset Formula $\varphi\colon E\to M$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Now we will show 2 implies 3.
+ Suppose that any short exact sequence of the form 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+(
+\backslash
+ref{injectivesplits})
+\end_layout
+
+\end_inset
+
+ splits.
+ Let 
+\begin_inset Formula $M$
+\end_inset
+
+ be an 
+\begin_inset Formula $R$
+\end_inset
+
+-module such that 
+\begin_inset Formula $E\subseteq M$
+\end_inset
+
+.
+ Then the short exact sequence
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\backslash
+begin{tikzcd} 0 
+\backslash
+arrow[r] &  E 
+\backslash
+arrow[r, 
+\begin_inset Quotes eld
+\end_inset
+
+
+\backslash
+iota 
+\begin_inset Quotes eld
+\end_inset
+
+]   & M   
+\backslash
+arrow[r, 
+\begin_inset Quotes eld
+\end_inset
+
+
+\backslash
+pi 
+\begin_inset Quotes eld
+\end_inset
+
+] & M
+\backslash
+slash E 
+\backslash
+arrow[r] & 0 
+\backslash
+end{tikzcd}
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+splits, where 
+\begin_inset Formula $\iota\colon E\to M$
+\end_inset
+
+ denotes the inclusion map and 
+\begin_inset Formula $\pi\colon M\to M\slash E$
+\end_inset
+
+ denotes the quotient map.
+ Therefore we may choose a 
+\begin_inset Formula $\widetilde{\pi}\colon M\slash E\to M$
+\end_inset
+
+ such that 
+\begin_inset Formula $\pi\widetilde{\pi}=1_{M\slash E}$
+\end_inset
+
+.
+ We claim that
+\begin_inset Formula 
+\[
+M=E\oplus\widetilde{\pi}(M\slash E).
+\]
+
+\end_inset
+
+Indeed, they are both submodules of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Furthermore, observe that we have 
+\begin_inset Formula $E\cap\widetilde{\pi}(M\slash E)=\{0\}$
+\end_inset
+
+.
+ Indeed, suppose 
+\begin_inset Formula $u\in E\cap\widetilde{\pi}(M\slash E)$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $u\in E$
+\end_inset
+
+ implies 
+\begin_inset Formula $\pi(u)=0$
+\end_inset
+
+.
+ Also 
+\begin_inset Formula $u\in\widetilde{\pi}(M\slash E)$
+\end_inset
+
+ implies 
+\begin_inset Formula $u=\widetilde{\pi}(\overline{v})$
+\end_inset
+
+ for some 
+\begin_inset Formula $\overline{v}\in M\slash E$
+\end_inset
+
+.
+ Therefore
+\begin_inset Formula 
+\begin{align*}
+0 & =\widetilde{\pi}(0)\\
+ & =\widetilde{\pi}\pi(u)\\
+ & =\widetilde{\pi}\pi\widetilde{\pi}(\overline{v})\\
+ & =\widetilde{\pi}(\overline{v})\\
+ & =u.
+\end{align*}
+
+\end_inset
+
+Finally, note that if 
+\begin_inset Formula $u\in M$
+\end_inset
+
+, then we can write
+\begin_inset Formula 
+\[
+u=u-\widetilde{\pi}\pi(u)+\widetilde{\pi}\pi(u),
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\widetilde{\pi}\pi(u)\in\widetilde{\pi}(M\slash E)$
+\end_inset
+
+ and where 
+\begin_inset Formula $u-\widetilde{\pi}\pi(u)\in E$
+\end_inset
+
+ since
+\begin_inset Formula 
+\begin{align*}
+\pi(u-\widetilde{\pi}\pi(u)) & =\pi(u)-\pi\widetilde{\pi}\pi(u)\\
+ & =\pi(u)-\pi(u)\\
+ & =0
+\end{align*}
+
+\end_inset
+
+implies 
+\begin_inset Formula $u-\widetilde{\pi}\pi(u)\in\ker\pi=E$
+\end_inset
+
+.
+ This implies 
+\begin_inset Formula $M=E+\widetilde{\pi}(M\slash E)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Finally we show 3 implies 2.
+ Suppose that 
+\begin_inset Formula $E$
+\end_inset
+
+ satisfies the property that if 
+\begin_inset Formula $E$
+\end_inset
+
+ is a submodule of an 
+\begin_inset Formula $R$
+\end_inset
+
+-module 
+\begin_inset Formula $M$
+\end_inset
+
+, then it must be a direct summand of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ We show that any short exact sequence of the form 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+(
+\backslash
+ref{injectivesplits})
+\end_layout
+
+\end_inset
+
+ splits by showing that any injective 
+\begin_inset Formula $R$
+\end_inset
+
+-linear map out of 
+\begin_inset Formula $E$
+\end_inset
+
+ splits.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Step 1: 
+\series default
+Before we show that any injective 
+\begin_inset Formula $R$
+\end_inset
+
+-linear map out of 
+\begin_inset Formula $E$
+\end_inset
+
+ splits, we need to show that if 
+\begin_inset Formula $\varphi\colon E\to F$
+\end_inset
+
+ is an isomorphism of 
+\begin_inset Formula $R$
+\end_inset
+
+-modules, then 
+\begin_inset Formula $F$
+\end_inset
+
+ satisfies the same property as 
+\begin_inset Formula $E$
+\end_inset
+
+; namely if 
+\begin_inset Formula $N$
+\end_inset
+
+ is an 
+\begin_inset Formula $R$
+\end_inset
+
+-module such that 
+\begin_inset Formula $F\subseteq N$
+\end_inset
+
+, then 
+\begin_inset Formula $F$
+\end_inset
+
+ is a direct summand of 
+\begin_inset Formula $N$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\varphi\colon E\to F$
+\end_inset
+
+ be an isomorphism, let 
+\begin_inset Formula $\psi\colon F\to E$
+\end_inset
+
+ denote its inverse, and let 
+\begin_inset Formula $N$
+\end_inset
+
+ be an 
+\begin_inset Formula $R$
+\end_inset
+
+-module such that 
+\begin_inset Formula $F\subseteq N$
+\end_inset
+
+.
+ We define an 
+\begin_inset Formula $R$
+\end_inset
+
+-module 
+\begin_inset Formula $\psi(N)$
+\end_inset
+
+, where as a set we have
+\begin_inset Formula 
+\[
+\psi(N)=E\cup\{\psi(v)\mid v\in N\backslash F\},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\psi(v)$
+\end_inset
+
+ is understood to be a formal symbol if 
+\begin_inset Formula $v\in N\backslash F$
+\end_inset
+
+ and is understood to be an element in 
+\begin_inset Formula $E$
+\end_inset
+
+ if 
+\begin_inset Formula $v\in F$
+\end_inset
+
+.
+ Here, 
+\begin_inset Formula $E$
+\end_inset
+
+ is 
+\emph on
+literally 
+\emph default
+a subset of 
+\begin_inset Formula $\psi(N)$
+\end_inset
+
+.
+ We extend the 
+\begin_inset Formula $R$
+\end_inset
+
+-linear structure on 
+\begin_inset Formula $E$
+\end_inset
+
+ to an 
+\begin_inset Formula $R$
+\end_inset
+
+-linear structure on 
+\begin_inset Formula $\psi(N)$
+\end_inset
+
+ by defining addition and scalar multiplication by
+\begin_inset Formula 
+\[
+\psi(v_{1})+\psi(v_{2})=\psi(v_{1}+v_{2})\quad\text{and}\quad a\psi(v)=\psi(av).
+\]
+
+\end_inset
+
+for all 
+\begin_inset Formula $v,v_{1},v_{2}\in N\backslash F$
+\end_inset
+
+ and 
+\begin_inset Formula $a\in R$
+\end_inset
+
+.
+ Defining the 
+\begin_inset Formula $R$
+\end_inset
+
+-linear structure on 
+\begin_inset Formula $\psi(N)$
+\end_inset
+
+ in this way makes it so that 
+\begin_inset Formula $\psi\colon F\to E$
+\end_inset
+
+ and 
+\begin_inset Formula $\varphi\colon E\to F$
+\end_inset
+
+ extends to an isomorphism 
+\begin_inset Formula $\psi\colon N\to\psi(N)$
+\end_inset
+
+ with corresponding inverse 
+\begin_inset Formula $\varphi\colon\psi(N)\to N$
+\end_inset
+
+.
+ With this construction in place, we see that 
+\begin_inset Formula $E$
+\end_inset
+
+ is 
+\emph on
+literally 
+\emph default
+a
+\emph on
+ 
+\emph default
+submodule of 
+\begin_inset Formula $\psi(N)$
+\end_inset
+
+.
+ Therefore 
+\begin_inset Formula $\psi(N)$
+\end_inset
+
+ is an internal direct sum, say
+\begin_inset Formula 
+\[
+\psi(N)=E\oplus K,
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $K$
+\end_inset
+
+ is another submodule of 
+\begin_inset Formula $\psi(N)$
+\end_inset
+
+ such that 
+\begin_inset Formula $E\cap K=\{0\}$
+\end_inset
+
+ and 
+\begin_inset Formula $E+K=\psi(N)$
+\end_inset
+
+.
+ Then since 
+\begin_inset Formula $\varphi\colon\psi(N)\to N$
+\end_inset
+
+ is an isomorphism, we see that
+\begin_inset Formula 
+\begin{align*}
+N & =\varphi(E)\oplus\varphi(K)\\
+ & =F\oplus\varphi(K).
+\end{align*}
+
+\end_inset
+
+Thus 
+\begin_inset Formula $F$
+\end_inset
+
+ satisfies the same property as 
+\begin_inset Formula $E$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Step 2: 
+\series default
+Now we will show that any injective 
+\begin_inset Formula $R$
+\end_inset
+
+-linear map out of 
+\begin_inset Formula $E$
+\end_inset
+
+ splits.
+ Let 
+\begin_inset Formula $\varphi\colon E\to M$
+\end_inset
+
+ be any injective 
+\begin_inset Formula $R$
+\end_inset
+
+-linear map.
+ We claim that 
+\begin_inset Formula $\varphi\colon E\to M$
+\end_inset
+
+ splits if and only if 
+\begin_inset Formula $\iota\colon\varphi(E)\to M$
+\end_inset
+
+ splits, where 
+\begin_inset Formula $\iota$
+\end_inset
+
+ denotes the inclusion map.
+ Indeed, denote 
+\begin_inset Formula $\varphi^{-1}\colon E\to\varphi(E)$
+\end_inset
+
+ to be the inverse of 
+\begin_inset Formula $\varphi\colon E\to\varphi(E)$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\varphi\colon E\to M$
+\end_inset
+
+ splits, then there exists an 
+\begin_inset Formula $R$
+\end_inset
+
+-linear map 
+\begin_inset Formula $\widetilde{\varphi}\colon M\to E$
+\end_inset
+
+ such that 
+\begin_inset Formula $\widetilde{\varphi}\varphi=1_{E}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $\varphi\widetilde{\varphi}\colon M\to\varphi(E)$
+\end_inset
+
+ splits 
+\begin_inset Formula $\iota\colon\varphi(E)\to M$
+\end_inset
+
+ since 
+\begin_inset Formula 
+\begin{align*}
+(\varphi\widetilde{\varphi}\iota)(\varphi(u)) & =\varphi\widetilde{\varphi}(\varphi(u))\\
+ & =\varphi(\widetilde{\varphi}\varphi(u))\\
+ & =\varphi(u)
+\end{align*}
+
+\end_inset
+
+for all 
+\begin_inset Formula $\varphi(u)\in\varphi(E)$
+\end_inset
+
+.
+ Similarly, if 
+\begin_inset Formula $\iota\colon\varphi(E)\to M$
+\end_inset
+
+ splits, then there exists an 
+\begin_inset Formula $R$
+\end_inset
+
+-linear map 
+\begin_inset Formula $\widetilde{\iota}\colon M\to\varphi(E)$
+\end_inset
+
+ such that 
+\begin_inset Formula $\widetilde{\iota}\iota=1_{\varphi(E)}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $\varphi^{-1}\widetilde{\iota}\colon M\to E$
+\end_inset
+
+ splits 
+\begin_inset Formula $\varphi\colon E\to M$
+\end_inset
+
+ since 
+\begin_inset Formula 
+\begin{align*}
+(\varphi^{-1}\widetilde{\iota}\varphi)(u) & =(\varphi^{-1}\widetilde{\iota})(\varphi(u))\\
+ & =(\varphi^{-1}\widetilde{\iota})(\iota\varphi(u))\\
+ & =(\varphi^{-1}\widetilde{\iota}\iota)(\varphi(u))\\
+ & =(\varphi^{-1})(\varphi(u))\\
+ & =u
+\end{align*}
+
+\end_inset
+
+for all 
+\begin_inset Formula $u\in E$
+\end_inset
+
+.
+ Thus to show that 
+\begin_inset Formula $\varphi\colon E\to M$
+\end_inset
+
+ splits, it suffices to show that 
+\begin_inset Formula $\iota\colon\varphi(E)\to M$
+\end_inset
+
+ splits.
+ In this case, 
+\begin_inset Formula $\varphi(E)$
+\end_inset
+
+ is a submodule of 
+\begin_inset Formula $M$
+\end_inset
+
+, and by step 1, we see that 
+\begin_inset Formula $M$
+\end_inset
+
+ is an internal direct sum, say
+\begin_inset Formula 
+\[
+M=\varphi(E)\oplus K
+\]
+
+\end_inset
+
+for some 
+\begin_inset Formula $R$
+\end_inset
+
+-module 
+\begin_inset Formula $K\subseteq M$
+\end_inset
+
+.
+ The projection map 
+\begin_inset Formula $\pi_{1}\colon M\to\varphi(E)$
+\end_inset
+
+ is easily seen to split the inclusion map 
+\begin_inset Formula $\iota\colon\varphi(E)\to M$
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Baer's Criterion
 \end_layout
@@ -152101,7 +153319,7 @@ end{equation}
 
 \end_inset
 
-is split exact.
+splits.
 \end_layout
 
 \begin_layout Enumerate
@@ -152151,21 +153369,25 @@ begin{proof}
 \end_inset
 
  is projective.
- Then there exists an 
+ Then since 
+\begin_inset Formula $\varphi\colon N\to P$
+\end_inset
+
+ is surjective, there exists an 
 \begin_inset Formula $R$
 \end_inset
 
 -linear map 
-\begin_inset Formula $\widetilde{\psi}\colon P\to M$
+\begin_inset Formula $\widetilde{\varphi}\colon P\to N$
 \end_inset
 
  such that 
-\begin_inset Formula $\varphi\circ\widetilde{\psi}=1_{P}$
+\begin_inset Formula $\varphi\circ\widetilde{\varphi}=1_{P}$
 \end_inset
 
 .
  In other words, 
-\begin_inset Formula $\widetilde{\psi}$
+\begin_inset Formula $\widetilde{\varphi}$
 \end_inset
 
  splits 
@@ -152183,6 +153405,22 @@ ref{projectivesplit})
 
 .
  
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -152211,7 +153449,7 @@ ref{projectivesplit})
 
 \end_inset
 
- is split exact.
+ splits.
  Let 
 \begin_inset Formula $\varphi\colon F\to P$
 \end_inset
@@ -152287,7 +153525,7 @@ arrow[r] & 0
 \backslash
 end{tikzcd}
 \backslash
-end{center}.
+end{center}
 \end_layout
 
 \end_inset
@@ -152310,6 +153548,22 @@ This short exact sequence splits by assumption, and thus we have
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset space ~
 \end_inset
 
@@ -152326,7 +153580,7 @@ Finally we show 3 implies 1.
 \begin_inset Formula $P$
 \end_inset
 
- is a direct summan of a free 
+ is a direct summand of a free 
 \begin_inset Formula $R$
 \end_inset
 
@@ -165727,11 +166981,108 @@ ref{eq:conemapdsifods})
 \begin_inset Formula $x_{n}$
 \end_inset
 
-, we obtain a long exact sequence in homology
-\begin_inset Formula 
-\begin{equation}
-\cdots\to\mathrm{H}_{i}(\boldsymbol{x}',M)\to\mathrm{H}_{i}(\boldsymbol{x},M)\to\mathrm{H}_{i-1}(\boldsymbol{x}',M)\xrightarrow{x_{n}}\mathrm{H}_{i-1}(\boldsymbol{x}',M)\to\cdots.\label{eq:longdskljflksef}
-\end{equation}
+, we obtain a long exact sequence in homology 
+\begin_inset Formula $\boldsymbol{x}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{equation}
+\backslash
+label{longdskljflksef}
+\backslash
+begin{tikzcd}[row sep=30]  && 
+\backslash
+cdots 
+\backslash
+arrow[r] 
+\backslash
+arrow[d, phantom, ""{coordinate, name=Z'}] & 
+\backslash
+mathrm{H}_{i} (
+\backslash
+boldsymbol{x} ' , M ) 
+\backslash
+arrow[dll, 
+\begin_inset Quotes eld
+\end_inset
+
+x_n 
+\begin_inset Quotes erd
+\end_inset
+
+, swap, rounded corners, to path={ -- ([xshift=2ex]
+\backslash
+tikztostart.east) |- (Z') [near end]
+\backslash
+tikztonodes -| ([xshift=-2ex]
+\backslash
+tikztotarget.west) -- (
+\backslash
+tikztotarget)}] 
+\backslash
+
+\backslash
+  & 
+\backslash
+mathrm{H}_{i} (
+\backslash
+boldsymbol{x} ' , M ) 
+\backslash
+arrow[r] & 
+\backslash
+mathrm{H}_{i} (
+\backslash
+boldsymbol{x}  , M ) 
+\backslash
+arrow[r] 
+\backslash
+arrow[d, phantom, ""{coordinate, name=Z}] & 
+\backslash
+mathrm{H}_{i-1} (
+\backslash
+boldsymbol{x} ' , M ) 
+\backslash
+arrow[dll, 
+\begin_inset Quotes eld
+\end_inset
+
+x_n 
+\begin_inset Quotes erd
+\end_inset
+
+, swap, rounded corners, to path={ -- ([xshift=2ex]
+\backslash
+tikztostart.east) |- (Z) [near end]
+\backslash
+tikztonodes -| ([xshift=-2ex]
+\backslash
+tikztotarget.west) -- (
+\backslash
+tikztotarget)}] 
+\backslash
+
+\backslash
+ & 
+\backslash
+mathrm{H}_{i-1} (
+\backslash
+boldsymbol{x} ' , M ) 
+\backslash
+arrow[r] & 
+\backslash
+cdots 
+\backslash
+end{tikzcd}
+\backslash
+end{equation}
+\end_layout
 
 \end_inset
 
@@ -165764,7 +167115,7 @@ status open
 
 (
 \backslash
-ref{eq:longdskljflksef})
+ref{longdskljflksef})
 \end_layout
 
 \end_inset
@@ -165794,7 +167145,7 @@ status open
 
 (
 \backslash
-ref{eq:longdskljflksef})
+ref{longdskljflksef})
 \end_layout
 
 \end_inset
